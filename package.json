@@ -1,0 +1,28 @@
+{
+  "name": "MISW-4103-ABP-W5",
+  "version": "1.0.0",
+  "description": "Ejercicio de pruebas autoamtizadas E2E",
+  "main": "index.js",
+  "dependencies": {
+    "kraken-node": "^1.0.24"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0"
+  },
+  "scripts": {
+    "kraken-run": "kraken-node run",
+    "playwright-run": "npx playwright test && npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosRicoS/MISW-4103-ABP-W5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosRicoS/MISW-4103-ABP-W5/issues"
+  },
+  "homepage": "https://github.com/CarlosRicoS/MISW-4103-ABP-W5#readme"
+}
