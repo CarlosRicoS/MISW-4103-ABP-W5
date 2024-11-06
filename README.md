@@ -6,7 +6,7 @@ Ejercicio de pruebas autoamtizadas E2E
 
 - Carlos Arturo Rico Salazar / [c.ricos@uniandes.edu.co](c.ricos@uniandes.edu.co)
 - Angel Yecid Henao Bedoya / [ay.henao@uniandes.edu.co](ay.henao@uniandes.edu.co)
-- Nombre / [email@uniandes.edu.co](email@uniandes.edu.co)
+- Julian Ricardo Villate Torres / [j.villatet@uniandes.edu.co](j.villatet@uniandes.edu.co)
 - Nombre / [email@uniandes.edu.co](email@uniandes.edu.co)
 
 ## Requerimientos
