@@ -54,6 +54,19 @@ class Members extends PageObject {
     );
     return await leaveFormButton.click();
   }
+
+  async getMemberActionsButton() {
+    return await this.getElementByAttribute(
+      'button[data-test-button="member-actions"]'
+    );
+  }
+
+  async getSignupInfo() {
+    let signupInfoContent = await this.getElementByAttribute(
+      "section.gh-member-details .gh-member-details-attribution h4.gh-main-section-header"
+    );
+    return await this.getInnerText(signupInfoContent);
+  }
 }
 
 module.exports = Members;

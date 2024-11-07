@@ -27,11 +27,21 @@ When("I add member name and invalid email", async function () {
   return;
 });
 
+When("I add all the required member data", async function () {
+  await this.members.fillName(faker.person.fullName());
+  await this.members.fillEmail(faker.internet.email());
+  return;
+});
+
 When("I submit the creation form empty", async function () {
   return await this.members.saveNewMember();
 });
 
 When("I submit the creation form with invalid email", async function () {
+  return await this.members.saveNewMember();
+});
+
+When("I submit the creation form with correct data", async function () {
   return await this.members.saveNewMember();
 });
 
@@ -71,5 +81,17 @@ Then("the browser redirects to members list", async function () {
   return await expect(this.driver).toHaveUrl(
     expect.stringContaining("/members"),
     { atEnd: true }
+  );
+});
+
+Then("it should render member actions button", async function () {
+  const button = await this.members.getMemberActionsButton();
+  return await assert.isTrue(await button.isDisplayed());
+});
+
+Then("it should render signup info", async function () {
+  return await assert(
+    (await this.members.getSignupInfo()) === "SIGNUP INFO",
+    "The site does not show the member signup info"
   );
 });

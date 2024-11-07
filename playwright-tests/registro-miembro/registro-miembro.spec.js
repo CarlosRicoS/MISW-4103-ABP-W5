@@ -60,7 +60,6 @@ test.describe("Feature: Registro de un miembro", () => {
   });
   test("EP-019 Mostrar advertencia al intentar salir de formulario de creación de miembro", async ({
     page,
-    browser,
   }) => {
     await startLogin(`Given I navigate to page "${properties.URL}"`, page);
     await loginWithCredentials(
@@ -79,6 +78,25 @@ test.describe("Feature: Registro de un miembro", () => {
       "And the browser redirects to members list",
       page
     );
+  });
+  test("EP-020 Guardar nuevo miembro exitoso.", async ({ page }) => {
+    await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+    await loginWithCredentials(
+      `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+      login
+    );
+    await navigateToMembers("And I go to members section", navBar);
+    await openMemberForm("And I open member form", members);
+    await fillFormRightData("And I add all the required member data", members);
+    await saveNewMemberForm(
+      "And I submit the creation form with correct data",
+      members
+    );
+    await showMemberActions(
+      "Then it should render member actions button",
+      members
+    );
+    await showSignUpInfo("And it should render signup info", members);
   });
 });
 
@@ -131,8 +149,27 @@ async function fillFormWrongEmail(label, members) {
   });
 }
 
+async function fillFormRightData(label, members) {
+  await test.step(label, async () => {
+    await members.fillName(faker.person.fullName());
+    await members.fillEmail(faker.internet.email());
+  });
+}
+
 async function saveNewMemberForm(label, members) {
   await test.step(label, async () => {
-    members.saveNewMember();
+    await members.saveNewMember();
+  });
+}
+
+async function showMemberActions(label, members) {
+  await test.step(label, async () => {
+    await expect(await members.getMemberActionsButton()).toBeVisible();
+  });
+}
+
+async function showSignUpInfo(label, members) {
+  await test.step(label, async () => {
+    await expect(await members.getSignupInfo()).toEqual("SIGNUP INFO");
   });
 }

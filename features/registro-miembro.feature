@@ -38,3 +38,17 @@ Feature: Registro de un miembro
     And I continue leaving the new member form
     And the browser redirects to members list
 
+  @user4 @web
+  Scenario: EP-020 Guardar nuevo miembro exitoso.
+    Given I navigate to page "<URL>"
+    And I wait for 1 seconds
+    When I login with email "<USERNAME>" and password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I go to members section
+    And I open member form
+    And I add all the required member data
+    And I submit the creation form with correct data
+    And I wait for 1 seconds
+    Then it should render member actions button
+    And it should render signup info
+
