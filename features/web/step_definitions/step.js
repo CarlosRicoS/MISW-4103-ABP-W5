@@ -13,6 +13,10 @@ When("I go to members section", async function () {
   return await this.navBar.goToMembers();
 });
 
+When("I go back to members section", async function () {
+  return await this.navBar.goToMembers();
+});
+
 When("I open member form", async function () {
   return await this.members.openNewMemberForm();
 });
@@ -50,3 +54,22 @@ Then(
     );
   }
 );
+
+Then("warning modal opens", async function () {
+  assert.exists(
+    await this.members.getWarningModal(),
+    "The modal is not opening"
+  );
+});
+
+Then("I continue leaving the new member form", async function () {
+  return await this.members.discardChanges();
+});
+
+Then("the browser redirects to members list", async function () {
+  const { expect } = await import("expect-webdriverio");
+  return await expect(this.driver).toHaveUrl(
+    expect.stringContaining("/members"),
+    { atEnd: true }
+  );
+});

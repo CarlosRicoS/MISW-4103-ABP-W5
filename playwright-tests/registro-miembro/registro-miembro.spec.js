@@ -58,6 +58,28 @@ test.describe("Feature: Registro de un miembro", () => {
       );
     });
   });
+  test("EP-019 Mostrar advertencia al intentar salir de formulario de creación de miembro", async ({
+    page,
+    browser,
+  }) => {
+    await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+    await loginWithCredentials(
+      `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+      login
+    );
+    await navigateToMembers("And I go to members section", navBar);
+    await openMemberForm("And I open member form", members);
+    await navigateToMembers("And I go back to members section", navBar);
+    await onWarningModalOpen("Then warning modal opens", members);
+    await closeNewMemberForm(
+      "And I continue leaving the new member form",
+      members
+    );
+    await browserRedirectsToMemberList(
+      "And the browser redirects to members list",
+      page
+    );
+  });
 });
 
 async function startLogin(label, page) {
@@ -81,6 +103,24 @@ async function navigateToMembers(label, navBar) {
 async function openMemberForm(label, members) {
   await test.step(label, async () => {
     await members.openNewMemberForm();
+  });
+}
+
+async function onWarningModalOpen(label, members) {
+  await test.step(label, async () => {
+    await expect(await members.getWarningModal()).toBeVisible();
+  });
+}
+
+async function closeNewMemberForm(label, members) {
+  await test.step(label, async () => {
+    await members.discardChanges();
+  });
+}
+
+async function browserRedirectsToMemberList(label, page) {
+  await test.step(label, async () => {
+    await expect(await page.url()).toMatch(/\/members$/);
   });
 }
 

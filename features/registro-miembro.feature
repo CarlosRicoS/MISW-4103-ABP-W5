@@ -24,3 +24,17 @@ Feature: Registro de un miembro
     And I add member name and invalid email
     And I submit the creation form with invalid email
     Then Form should display error "<EMAIL_MSG_MEMBER_CREATION>" for invalid email
+
+  @user3 @web
+  Scenario: EP-019 Mostrar advertencia al intentar salir de formulario de creación de miembro.
+    Given I navigate to page "<URL>"
+    And I wait for 1 seconds
+    When I login with email "<USERNAME>" and password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I go to members section
+    And I open member form
+    And I go back to members section
+    Then warning modal opens
+    And I continue leaving the new member form
+    And the browser redirects to members list
+
