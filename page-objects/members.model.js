@@ -25,6 +25,24 @@ class Members extends PageObject {
     );
     return await this.getInnerText(errorLabel);
   }
+
+  async getNameFormInput() {
+    return await this.getElementById("#member-name");
+  }
+
+  async getEmailFormInput() {
+    return await this.getElementById("#member-email");
+  }
+
+  async fillName(name) {
+    let inputName = await this.getNameFormInput();
+    return await this.fillInput(inputName, name);
+  }
+
+  async fillEmail(email) {
+    let inputEmail = await this.getEmailFormInput();
+    return await this.fillInput(inputEmail, email);
+  }
 }
 
 module.exports = Members;

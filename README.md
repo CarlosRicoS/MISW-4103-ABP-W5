@@ -15,6 +15,8 @@ Ejercicio de pruebas autoamtizadas E2E
 - **@playwright/test:** v1.48.2
 - **@types/node:** v22.9.0
 - **kraken-node:** v1.0.24
+- **chai:** v4.3.6
+- **@faker-js/faker:** v9.2.0
 
 ## Kraken
 
