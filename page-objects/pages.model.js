@@ -106,21 +106,32 @@ class Pages extends PageObject {
         return await closeModalButton.click();
     }
 
-    async getPageByTitle(title) {
-        return await this.page.locator(`a.gh-post-list-title:has-text("${title}")`);
+    async getPageByTitle(title, tool='playwright') {
+        if (tool === 'kraken') {
+            return await this.getElementByAttribute(`a.gh-post-list-title:nth-child(1)`);
+        } else{
+            return await this.page.locator(`a.gh-post-list-title:has-text("${title}")`);
+        }
     }
 
-    async openCurrentPageForm(title) {
-        let pageForm = await this.getPageByTitle(title);
+    async goToPublishedPages(){
+        let optionLists = await this.getElementByAttribute('span[class="ember-power-select-selected-item"]');
+        await optionLists.click();
+        let publishedPagesButton = await this.getElementByAttribute('li[data-option-index="2"]');
+        return await publishedPagesButton.click();
+    }
+
+    async openCurrentPageForm(title, tool='playwright') {
+        let pageForm = await this.getPageByTitle(title, tool);
         return await pageForm.click();
     }
 
     async showUpdatedPage() {
-        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]:has-text("Page updated")');
+        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
     }
 
     async showUnpublishedPage() {
-        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]:has-text("Page reverted to a draft.")');
+        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
     }
 
     async unPublishPage() {
@@ -130,6 +141,8 @@ class Pages extends PageObject {
         return await revertButton.click();
 
     }
+
+
 }
 
 module.exports = Pages;
