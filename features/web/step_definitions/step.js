@@ -64,13 +64,59 @@ When("I select the order", async function () {
 
 Then(
   "The url now shouldn't have parameters",
-  async function (errorMessage) {
-    assert(
-      (await this.posts.getEmailInputError()) === errorMessage,
-      "http://localhost:2368/ghost/#/posts"
+  async function () {
+    const { expect } = await import("expect-webdriverio");
+    return await expect(this.driver).toHaveUrl(
+      expect.stringContaining("/ghost/#/posts"),
+      { atEnd: true }
     );
   }
 );
+
+Then(
+  "The url now should have visibility for members parameter",
+  async function () {
+    const { expect } = await import("expect-webdriverio");
+    return await expect(this.driver).toHaveUrl(
+      expect.stringContaining("visibility=members"),
+      { atEnd: true }
+    );
+  }
+);
+
+Then(
+  "The url now should have the autor parameter",
+  async function () {
+    const { expect } = await import("expect-webdriverio");
+    return await expect(this.driver).toHaveUrl(
+      expect.stringContaining("author="),
+      { atEnd: true }
+    );
+  }
+);
+
+Then(
+  "The url now should have the news tag parameter",
+  async function () {
+    const { expect } = await import("expect-webdriverio");
+    return await expect(this.driver).toHaveUrl(
+      expect.stringContaining("tag=news"),
+      { atEnd: true }
+    );
+  }
+);
+
+Then(
+  "The url now should have the order parameter",
+  async function () {
+    const { expect } = await import("expect-webdriverio");
+    return await expect(this.driver).toHaveUrl(
+      expect.stringContaining("?order=published_at%20asc"),
+      { atEnd: true }
+    );
+  }
+);
+
 
 Then(
   "Form should display error {kraken-string} for empty email",

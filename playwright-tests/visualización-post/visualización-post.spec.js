@@ -47,7 +47,7 @@ test.describe("Feature: Visualizar los post", () => {
         );
         await navigateToPosts("And I go to posts section", navBar);
         await selectFilterAccess("And I select the access filter", posts);
-        await test.step(`The url now should have visibility for members parameter `, async () => {
+        await test.step(`The url now should have visibility for members parameter`, async () => {
             await expect(await getCurrentUrl(posts)).toEqual(
                 "http://localhost:2368/ghost/#/posts?visibility=members"
             );
