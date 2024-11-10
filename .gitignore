@@ -136,3 +136,4 @@ dist
 reports/*
 .kraken/*
 tests-examples/*
+.idea
