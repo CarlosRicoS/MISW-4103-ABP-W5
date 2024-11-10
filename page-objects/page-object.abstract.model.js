@@ -28,6 +28,12 @@ class PageObject {
       : await this.page.locator(cssAttr);
   }
 
+  async getCurrentUrl() {
+    return this.isKraken
+      ? await this.driver.getCurrentUrl()
+      : await this.page.url()
+  }
+
   async getInnerText(element) {
     return this.isKraken ? await element.getText() : await element.innerText();
   }

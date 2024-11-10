@@ -12,6 +12,14 @@ class NavBar extends PageObject {
     return await membersOption.click();
   }
 
+
+  async goToPosts() {
+    let postsOption = await this.getElementByAttribute(
+      'a[href="#/posts/"][data-test-nav="posts"]'
+    );
+    return await postsOption.click();
+  }
+
   async goToPages() {
       let pagesOption = await this.getElementByAttribute(
       'a[href="#/pages/"][data-test-nav="pages"]'
