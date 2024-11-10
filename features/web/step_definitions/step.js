@@ -85,7 +85,7 @@ Then(
 );
 
 Then(
-  "The url now should have the autor parameter",
+  "The url now should have the author parameter",
   async function () {
     const { expect } = await import("expect-webdriverio");
     return await expect(this.driver).toHaveUrl(

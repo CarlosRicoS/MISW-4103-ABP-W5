@@ -8,21 +8,21 @@ class Posts extends PageObject {
 
     async selectType() {
         let filter = await this.getElementByAttribute(
-            'text="All posts"'
+            '(//*[normalize-space()="All posts"])[1]'
         );
         return await filter.click();
     }
 
     async selectAccess() {
         let filter = await this.getElementByAttribute(
-            'text="All access"'
+            '(//*[normalize-space()="All access"])[1]'
         );
         return await filter.click();
     }
 
     async selectAuthors() {
         let filter = await this.getElementByAttribute(
-            'text="All authors"'
+            '(//*[normalize-space()="All authors"])[1]'
         );
         return await filter.click();
     }
@@ -30,14 +30,14 @@ class Posts extends PageObject {
 
     async selectTags() {
         let filter = await this.getElementByAttribute(
-            'text="All tags"'
+            '(//*[normalize-space()="All tags"])[1]'
         );
         return await filter.click();
     }
 
     async selectOrder() {
         let filter = await this.getElementByAttribute(
-            'text="Newest first"'
+            '(//*[normalize-space()="Newest first"])[1]'
         );
         return await filter.click();
     }
