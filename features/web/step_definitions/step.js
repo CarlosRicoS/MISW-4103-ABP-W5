@@ -1,6 +1,7 @@
 const assert = require("chai").assert;
 const { faker } = require("@faker-js/faker");
 const { Given, When, Then } = require("@cucumber/cucumber");
+const pageTitle = faker.lorem.words(3);
 
 When(
   "I login with email {kraken-string} and password {kraken-string}",
@@ -13,12 +14,30 @@ When("I go to members section", async function () {
   return await this.navBar.goToMembers();
 });
 
+When("I go to pages section", async function () {
+  return await this.navBar.goToPages();
+});
+
+When("I return to pages section", async function () {
+    return await this.pages.returnToPages();
+});
+
 When("I go back to members section", async function () {
   return await this.navBar.goToMembers();
 });
 
 When("I open member form", async function () {
   return await this.members.openNewMemberForm();
+});
+
+When("I open page form", async function () {
+    return await this.pages.openNewPageForm();
+});
+
+When("I fill page form", async function () {
+  await this.pages.fillPageTitle(pageTitle);
+  await this.pages.fillPageContent(faker.lorem.paragraphs(3));
+  return;
 });
 
 When("I add member name and invalid email", async function () {
@@ -43,6 +62,39 @@ When("I submit the creation form with invalid email", async function () {
 
 When("I submit the creation form with correct data", async function () {
   return await this.members.saveNewMember();
+});
+
+When("I publish page", async function () {
+    return await this.pages.publishPageNow();
+});
+
+When("I preview page", async function () {
+    return await this.pages.previewPage();
+});
+
+
+When("I close the published page modal", async function () {
+    return await this.pages.closePublishedModal();
+});
+
+When("I open current page form", async function () {
+    await this.pages.goToPublishedPages();
+    return await this.pages.openCurrentPageForm(pageTitle, 'kraken');
+});
+
+When("I fill page form with new title and content", async function () {
+    await this.pages.fillPageTitle(faker.lorem.words(3));
+    await this.pages.fillPageContent(faker.lorem.paragraphs(3));
+    return;
+});
+
+When("I update page", async function () {
+    return await this.pages.updatePage();
+});
+
+
+When("I edit published status to unpublished", async function () {
+    return await this.pages.unPublishPage();
 });
 
 Then(
@@ -94,4 +146,30 @@ Then("it should render signup info", async function () {
     (await this.members.getSignupInfo()) === "SIGNUP INFO",
     "The site does not show the member signup info"
   );
+});
+
+Then("I should see the published page confirmation", async function () {
+    const published = await this.pages.getPublishedPage();
+    return await assert.isTrue(await published.isDisplayed());
+});
+
+Then("I should see the page in the admin section as a draft", async function () {
+    const draft = await this.pages.getPageByTitle(pageTitle, 'kraken');
+    console.log(draft);
+    return await assert.isTrue(await draft.isDisplayed());
+});
+
+Then("I should see the preview of the new page", async function () {
+    const preview = await this.pages.getPreviewPage();
+    return await assert.isTrue(await preview.isDisplayed());
+});
+
+Then("I should see the updated notification", async function () {
+    const update = await this.pages.showUpdatedPage();
+    return await assert.isTrue(await update.isDisplayed());
+});
+
+Then("I should see revert to draft notification", async function () {
+    const revert = await this.pages.showUnpublishedPage();
+    return await assert.isTrue(await revert.isDisplayed());
 });
