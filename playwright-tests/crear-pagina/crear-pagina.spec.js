@@ -45,7 +45,7 @@ test.describe("Feature: Crear una página", () => {
         let content = faker.lorem.paragraphs(3);
         await fillPageForm("And I fill page form", title, content, pages);
         await returnToPages("And I return to pages section", pages);
-        await showAdminPageSection("And I should see the page in the admin section as a draft", title, pages);
+        await showAdminPageSection("Then I should see the page in the admin section as a draft", title, pages);
     });
     test("EP-03 Crear una página nueva y previsualizar la publicación", async ({ page }) => {
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
