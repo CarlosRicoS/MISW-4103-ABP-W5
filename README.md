@@ -20,8 +20,9 @@ Ejercicio de pruebas autoamtizadas E2E
 
 Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
 
-Username: "jamie@example.com"
-Password: "}WTdx6}h}ZLJTz4"
+**Username:** "jamie@example.com"
+
+**Password:** "}WTdx6}h}ZLJTz4"
 
 
 
