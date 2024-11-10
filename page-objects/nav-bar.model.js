@@ -11,6 +11,13 @@ class NavBar extends PageObject {
     );
     return await membersOption.click();
   }
+
+  async goToPages() {
+      let pagesOption = await this.getElementByAttribute(
+      'a[href="#/pages/"][data-test-nav="pages"]'
+      );
+      return await pagesOption.click();
+  }
 }
 
 module.exports = NavBar;
