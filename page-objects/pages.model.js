@@ -110,7 +110,7 @@ class Pages extends PageObject {
         if (tool === 'kraken') {
             return await this.getElementByAttribute(`a.gh-post-list-title:nth-child(1)`);
         } else{
-            return await this.page.locator(`a.gh-post-list-title:has-text("${title}")`);
+            return await this.getElementByAttribute(`a.gh-post-list-title:has-text("${title}")`);
         }
     }
 
