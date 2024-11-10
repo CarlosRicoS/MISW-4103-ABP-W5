@@ -16,6 +16,15 @@ Ejercicio de pruebas autoamtizadas E2E
 - **@types/node:** v22.9.0
 - **kraken-node:** v1.0.24
 
+## Ghost
+
+Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
+
+Username: "jamie@example.com"
+Password: "}WTdx6}h}ZLJTz4"
+
+
+
 ## Kraken
 
 ### Instalación
