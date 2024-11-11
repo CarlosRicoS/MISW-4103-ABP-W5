@@ -6,8 +6,8 @@ Ejercicio de pruebas autoamtizadas E2E
 
 - Carlos Arturo Rico Salazar / [c.ricos@uniandes.edu.co](c.ricos@uniandes.edu.co)
 - Angel Yecid Henao Bedoya / [ay.henao@uniandes.edu.co](ay.henao@uniandes.edu.co)
-- Nombre / [email@uniandes.edu.co](email@uniandes.edu.co)
-- Nombre / [email@uniandes.edu.co](email@uniandes.edu.co)
+- Julian Ricardo Villate Torres / [j.villatet@uniandes.edu.co](j.villatet@uniandes.edu.co)
+- Santiago Gómez Perdomo / [s.gomezp2345@uniandes.edu.co](s.gomezp2345@uniandes.edu.co)
 
 ## Requerimientos
 - **ghost:** v5.96.0
@@ -20,13 +20,17 @@ Ejercicio de pruebas autoamtizadas E2E
 
 ## Ghost
 
-Se recomienda realizar una instalación limpia de Ghost para la correcta ejecución de las pruebas.
-Adicionalmente se recomienda registrar un usuario con el correo y contraseña que se encuentran en el archivo **properties.json**.
+Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
 
 ```shell
     docker run --name some-ghost -e NODE_ENV=development -p 2368:2368 ghost:5.96.0
     docker rm some-ghost
 ```
+
+**Username:** "jamie@example.com"
+**Password:** "}WTdx6}h}ZLJTz4"
+
+
 
 ## Kraken
 

@@ -44,6 +44,18 @@ class Pages extends PageObject {
         return await this.getElementByAttribute('button[data-test-button="confirm-publish"]');
     }
 
+    async getSettingsButton() {
+        return await this.getElementByAttribute('button[data-test-psm-trigger]');
+    }
+
+    async getTagInput(){
+        return await this.getElementByAttribute('div[id="tag-input"] input[class="ember-power-select-trigger-multiple-input"]');
+    }
+
+    async selectFirstTag(){
+        return await this.getElementByAttribute('li[data-option-index="0"]');
+    }
+
     async getPublishedModal() {
         return await this.getElementByAttribute('div[data-test-publish-flow="complete"]')
     }
@@ -97,6 +109,16 @@ class Pages extends PageObject {
 
     }
 
+    async updatePageTag() {
+        let settingsButton = await this.getSettingsButton();
+        let tagInput = await this.getTagInput();
+        let tag = await this.selectFirstTag();
+        await settingsButton.click();
+        await tagInput.click()
+        await tag.click();
+        return;
+    }
+
     async getPublishedPage() {
         return await this.getPublishedModal();
     }
@@ -121,6 +143,13 @@ class Pages extends PageObject {
         return await publishedPagesButton.click();
     }
 
+    async goToTagPages(){
+        let tagsLists = await this.getElementByAttribute('div[data-test-tag-select="true"] span[class="ember-power-select-selected-item"]');
+        await tagsLists.click();
+        let tagPagesButton = await this.getElementByAttribute('li[data-option-index="1"]');
+        return await tagPagesButton.click();
+    }
+
     async openCurrentPageForm(title, tool='playwright') {
         let pageForm = await this.getPageByTitle(title, tool);
         return await pageForm.click();
@@ -142,7 +171,9 @@ class Pages extends PageObject {
 
     }
 
-
+    async showTagPage(title, tool='playwright') {
+        return await this.getPageByTitle(title, tool);
+    }
 }
 
 module.exports = Pages;
