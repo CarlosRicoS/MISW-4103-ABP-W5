@@ -181,6 +181,17 @@ When("I update page", async function () {
     return await this.pages.updatePage();
 });
 
+When("I update page tag", async function () {
+    return await this.pages.updatePageTag();
+});
+
+When("I return to pages", async function () {
+    return await this.pages.returnToPages();
+});
+
+When("I go to tag pages", async function () {
+    return await this.pages.goToTagPages();
+});
 
 When("I edit published status to unpublished", async function () {
     return await this.pages.unPublishPage();
@@ -261,4 +272,9 @@ Then("I should see the updated notification", async function () {
 Then("I should see revert to draft notification", async function () {
     const revert = await this.pages.showUnpublishedPage();
     return await assert.isTrue(await revert.isDisplayed());
+});
+
+Then("I should see the tagged page", async function () {
+    const tag = await this.pages.showTagPage(pageTitle, 'kraken');
+    return await assert.isTrue(await tag.isDisplayed());
 });

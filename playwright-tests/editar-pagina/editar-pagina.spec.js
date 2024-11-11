@@ -58,6 +58,28 @@ test.describe("Feature: Editar una página", () => {
         await unPublishPage("And I edit published status to unpublished", pages);
         await showUnpublishedPage("Then I should see revert to draft notification", pages);
     });
+    test("EP-16 Editar una página asignando un tag", async ({ page }) => {
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await navigateToPages("And I go to pages section", navBar);
+        await openPageForm("And I open page form", pages);
+        let title = faker.lorem.words(3);
+        let content = faker.lorem.paragraphs(3);
+        await fillPageForm("And I fill page form", title, content, pages);
+        await publishPageNow("And I publish page", pages);
+        await showPublishedPage("Then I should see the published page confirmation", pages);
+        await closePublishedModal("And I close the published page modal", pages);
+        await openCurrentPageForm("And I open current page form", title, pages);
+        await updatePageTag("And I update page tag", pages);
+        await updatePage("And I update page", pages);
+        await showUpdatedPage("Then I should see the updated notification", pages);
+        await returnToPages("And I return to pages", pages);
+        await goToTagPages("And I go to tag pages", pages);
+        await showTagPage("Then I should see the tagged page", title, pages);
+    });
 
 });
 
@@ -130,6 +152,24 @@ async function openCurrentPageForm(label, title, pages) {
 async function updatePage(label, pages) {
     await test.step(label, async () => {
         await pages.updatePage();
+    });
+}
+
+async function updatePageTag(label, pages) {
+    await test.step(label, async () => {
+        await pages.updatePageTag();
+    });
+}
+
+async function goToTagPages(label, pages) {
+    await test.step(label, async () => {
+        await pages.goToTagPages();
+    });
+}
+
+async function showTagPage(label, title, pages) {
+    await test.step(label, async () => {
+        await expect(await pages.showTagPage(title)).toBeVisible();
     });
 }
 

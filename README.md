@@ -20,20 +20,14 @@ Ejercicio de pruebas autoamtizadas E2E
 
 ## Ghost
 
-Se recomienda realizar una instalación limpia de Ghost para la correcta ejecución de las pruebas.
-Adicionalmente se recomienda registrar un usuario con el correo y contraseña que se encuentran en el archivo **properties.json**.
+Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
 
 ```shell
     docker run --name some-ghost -e NODE_ENV=development -p 2368:2368 ghost:5.96.0
     docker rm some-ghost
 ```
 
-## Ghost
-
-Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
-
 **Username:** "jamie@example.com"
-
 **Password:** "}WTdx6}h}ZLJTz4"
 
 
