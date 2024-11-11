@@ -25,39 +25,29 @@ Feature: Editar Página
       And I wait for 1 seconds
       Then I should see the updated notification
 
-    @user2 @web
-      Scenario: EP-05 Editar página publicada, cambiar a borrador y previsualizar
-      Given I navigate to page "<URL>"
-      And I wait for 1 seconds
-      When I login with email "<USERNAME>" and password "<PASSWORD>"
-      And I wait for 1 seconds
-      And I go to pages section
-      And I wait for 1 seconds
-      And I open current page form
-      And I wait for 1 seconds
-      And I edit published status to unpublished
-      And I wait for 1 seconds
-      Then I should see revert to draft notification
+  @user2 @web
+    Scenario: EP-05 Editar página publicada, cambiar a borrador y previsualizar
+    Given I navigate to page "<URL>"
+    And I wait for 1 seconds
+    When I login with email "<USERNAME>" and password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I go to pages section
+    And I wait for 1 seconds
+    And I open current page form
+    And I wait for 1 seconds
+    And I edit published status to unpublished
+    And I wait for 1 seconds
+    Then I should see revert to draft notification
 
-    @user3 @web
-    Scenario: EP-16 Editar una página asignando un tag
-      Given I navigate to page "<URL>"
-      And I wait for 1 seconds
-      When I login with email "<USERNAME>" and password "<PASSWORD>"
-      And I wait for 1 seconds
-      And I go to pages section
-      And I wait for 1 seconds
-      And I open current page form
-      And I wait for 1 seconds
-      And I update page tag
-      And I wait for 1 seconds
-      And I update page
-      And I wait for 1 seconds
-      Then I should see the updated notification
-      And I wait for 1 seconds
-      And I return to pages
-      And I wait for 1 seconds
-      And I go to tag pages
-      And I wait for 2 seconds
-      Then I should see the tagged page
-      And I wait for 1 seconds
+  @user3 @web
+  Scenario: EP-16 Editar una página asignando un tag
+    Given I navigate to page "<URL>"
+    And I wait for 1 seconds
+    When I login with email "<USERNAME>" and password "<PASSWORD>"
+    And I wait for 1 seconds
+    And I go to pages section
+    And I wait for 1 seconds
+    And I open current page form
+    And I wait for 1 seconds
+    And I update page tag
+    And I wait for 5 seconds

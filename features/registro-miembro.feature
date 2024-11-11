@@ -20,8 +20,11 @@ Feature: Registro de un miembro
     When I login with email "<USERNAME>" and password "<PASSWORD>"
     And I wait for 1 seconds
     And I go to members section
+    And I wait for 1 seconds
     And I open member form
+    And I wait for 1 seconds
     And I add member name and invalid email
+    And I wait for 1 seconds
     And I submit the creation form with invalid email
     Then Form should display error "<EMAIL_MSG_MEMBER_CREATION>" for invalid email
 
@@ -35,7 +38,9 @@ Feature: Registro de un miembro
     And I open member form
     And I go back to members section
     Then warning modal opens
+    And I wait for 1 seconds
     And I continue leaving the new member form
+    And I wait for 1 seconds
     And the browser redirects to members list
 
   @user4 @web
@@ -46,9 +51,12 @@ Feature: Registro de un miembro
     And I wait for 1 seconds
     And I go to members section
     And I open member form
+    And I wait for 1 seconds
     And I add all the required member data
+    And I wait for 1 seconds
     And I submit the creation form with correct data
     And I wait for 1 seconds
     Then it should render member actions button
+    And I wait for 1 seconds
     And it should render signup info
 

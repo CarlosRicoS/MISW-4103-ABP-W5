@@ -76,6 +76,13 @@ Para correr las pruebas de Kraken se debe ejecutar en la terminal el siguiente e
     npm run kraken-run
 ```
 
+Una vez finalizada la ejecución de las pruebas, el reporte completo de las pruebas se debe encontrar en la carpeta **reports**.
+
+```shell
+    reports/*/index.html
+```
+Para visualizar las pruebas se debe abrir el archivo **index.html** en un navegador.
+
 ## Playwright
 
 ### Instalación
