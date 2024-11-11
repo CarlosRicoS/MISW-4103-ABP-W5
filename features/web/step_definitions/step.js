@@ -75,6 +75,14 @@ When("I fill post form", async function () {
     return;
 });
 
+When("I schedule post", async function () {
+  return await this.posts.schedulePost();
+});
+
+When("I draft the post", async function () {
+  return await this.posts.draftAPost();
+});
+
 When("I publish post", async function () {
     return await this.posts.publishPost();
 });
@@ -295,4 +303,16 @@ Then("I should see the tagged page", async function () {
 Then("I should see the published post confirmation", async function () {
     const published = await this.posts.getPublishedModal();
     return await assert.isTrue(await published.isDisplayed());
+});
+
+Then("I should see the post in the admin section as a draft", async function () {
+  const draft = await this.posts.getPostByTitle(pageTitle, 'kraken');
+  console.log(draft);
+  return await assert.isTrue(await draft.isDisplayed());
+});
+
+Then("I shouldnt see the post in the admin section", async function () {
+  const draft = await this.posts.getPostByTitle(pageTitle, 'kraken');
+  console.log(draft);
+  return await assert.isFalse(await draft.isDisplayed());
 });
