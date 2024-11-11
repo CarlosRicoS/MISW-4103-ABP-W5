@@ -31,6 +31,56 @@ test.describe("Feature: Crear Post", () => {
         await publishPost("And I publish post", posts);
         await showPublishedPost("Then I should see the published post confirmation", posts);
     });
+    test("EP-07 Crear un post y programar fecha de lanzamiento", async ({ page }) => {
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form", posts);
+        await schedulePost("And I schedule post", posts);
+        await showPublishedPost("Then I should see the published post confirmation", posts);
+    });
+    test("EP-08 Guardar un post en la seccion de borradores y luego crearlo", async ({ page }) => {
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form", posts);
+        await draftAPost("And I draft the post", posts);
+        await showPublishedPost("Then I should see the published post confirmation", posts);
+        //PPENDIENTE SELECCIONAR PRIMER DRAFTTT
+    });
+    test("EP-09 Actualizar un post ya publicado", async ({ page }) => {
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await draftPosts("And I draft and publish post", posts);
+        await updatePost("And I update a post", navBar);
+        
+        await showPublishedPost("Then I should see the published post confirmation", posts);
+        //PPENDIENTE SELECCIONAR PRIMER POST
+    });
+    test("EP-10 Eliminar un post desde los borradores", async ({ page }) => {
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await draftPost("And I draft and publish post", posts);
+        
+        await showPublishedPost("Then I should see the published post confirmation", posts);
+        //PPENDIENTE SELECCIONAR PRIMER POST
+    });
+
 });
 
 
@@ -68,6 +118,30 @@ async function fillPostForm(label, posts) {
 async function publishPost(label, posts) {
     await test.step(label, async () => {
         await posts.publishPost();
+    });
+}
+
+async function schedulePost(label, posts) {
+    await test.step(label, async () => {
+        await posts.schedulePost();
+    });
+}
+
+async function draftPosts(label, posts) {
+    await test.step(label, async () => {
+        await posts.draftPost();
+    });
+}
+
+async function draftAPost(label, posts) {
+    await test.step(label, async () => {
+        await posts.draftAPost();
+    });
+}
+
+async function updatePost(label, posts) {
+    await test.step(label, async () => {
+        await posts.updatePost();
     });
 }
 
