@@ -4,15 +4,20 @@
   "description": "Ejercicio de pruebas autoamtizadas E2E",
   "main": "index.js",
   "dependencies": {
-    "kraken-node": "^1.0.24"
+    "chai": "^4.3.6",
+    "expect": "^29.7.0",
+    "expect-webdriverio": "^5.0.3",
+    "kraken-node": "^1.0.24",
+    "selenium-webdriver": "^4.26.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.2.0",
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.9.0"
   },
   "scripts": {
-    "kraken-run": "kraken-node run",
-    "playwright-run": "npx playwright test && npx playwright show-report"
+    "kraken-run": "rm -rf reports/; kraken-node run",
+    "playwright-run": "npx playwright test --headed && npx playwright show-report"
   },
   "repository": {
     "type": "git",

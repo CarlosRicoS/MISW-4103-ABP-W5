@@ -10,11 +10,23 @@ Ejercicio de pruebas autoamtizadas E2E
 - Santiago Gómez Perdomo / [s.gomezp2345@uniandes.edu.co](s.gomezp2345@uniandes.edu.co)
 
 ## Requerimientos
-
+- **ghost:** v5.96.0
 - **NodeJS:** v20.18.0
 - **@playwright/test:** v1.48.2
 - **@types/node:** v22.9.0
 - **kraken-node:** v1.0.24
+- **chai:** v4.3.6
+- **@faker-js/faker:** v9.2.0
+
+## Ghost
+
+Se recomienda realizar una instalación limpia de Ghost para la correcta ejecución de las pruebas.
+Adicionalmente se recomienda registrar un usuario con el correo y contraseña que se encuentran en el archivo **properties.json**.
+
+```shell
+    docker run --name some-ghost -e NODE_ENV=development -p 2368:2368 ghost:5.96.0
+    docker rm some-ghost
+```
 
 ## Ghost
 
@@ -46,6 +58,18 @@ Para la instalación del framework desde este repositorio, únicamente se debe e
 
 ```shell
     npm install
+```
+
+Adicionalmente se requiere la instalación de Appium para la ejecución de las pruebas de Kraken.
+
+```shell
+    npm install -g appium
+```
+
+Finalmente se requiere tener instalado Android adb para la ejecución de las pruebas de Kraken.
+
+```shell
+    https://stackoverflow.com/questions/31374085/installing-adb-on-macos
 ```
 
 ### Pruebas
