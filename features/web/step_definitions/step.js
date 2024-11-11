@@ -65,6 +65,19 @@ When("I go to posts section", async function () {
   return await this.navBar.goToPosts();
 });
 
+When("I open post form", async function () {
+    return await this.posts.openPostForm();
+});
+
+When("I fill post form", async function () {
+    await this.posts.fillTitle(faker.lorem.words(3));
+    await this.posts.fillContent(faker.lorem.paragraphs(3));
+    return;
+});
+
+When("I publish post", async function () {
+    return await this.posts.publishPost();
+});
 
 When("I select the all filter", async function () {
   await this.posts.selectType();
@@ -277,4 +290,9 @@ Then("I should see revert to draft notification", async function () {
 Then("I should see the tagged page", async function () {
     const tag = await this.pages.showTagPage(pageTitle, 'kraken');
     return await assert.isTrue(await tag.isDisplayed());
+});
+
+Then("I should see the published post confirmation", async function () {
+    const published = await this.posts.getPublishedModal();
+    return await assert.isTrue(await published.isDisplayed());
 });
