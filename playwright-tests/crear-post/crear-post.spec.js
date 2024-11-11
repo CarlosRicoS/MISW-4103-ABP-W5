@@ -53,8 +53,10 @@ test.describe("Feature: Crear Post", () => {
         await openPostForm("And I open post form", posts);
         await fillPostForm("And I fill post form", posts);
         await draftAPost("And I draft the post", posts);
-        await showPublishedPost("Then I should see the published post confirmation", posts);
         //PPENDIENTE SELECCIONAR PRIMER DRAFTTT
+        await publishPost("And I publish post", posts);
+        await showPublishedPost("Then I should see the published post confirmation", posts);
+
     });
     test("EP-09 Actualizar un post ya publicado", async ({ page }) => {
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
@@ -64,9 +66,8 @@ test.describe("Feature: Crear Post", () => {
         );
         await draftPosts("And I draft and publish post", posts);
         await updatePost("And I update a post", navBar);
-        
+        //PPENDIENTE SELECCIONAR PRIMER POST 
         await showPublishedPost("Then I should see the published post confirmation", posts);
-        //PPENDIENTE SELECCIONAR PRIMER POST
     });
     test("EP-10 Eliminar un post desde los borradores", async ({ page }) => {
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
@@ -75,10 +76,12 @@ test.describe("Feature: Crear Post", () => {
             login
         );
         await navigateToPosts("And I go to posts section", navBar);
-        await draftPost("And I draft and publish post", posts);
-        
+        await draftPosts("And I draft and publish post", posts);
+        //PPENDIENTE SELECCIONAR PRIMER Borrador
+        await deletePosts("And I delete the post", posts);
+
         await showPublishedPost("Then I should see the published post confirmation", posts);
-        //PPENDIENTE SELECCIONAR PRIMER POST
+        
     });
 
 });
@@ -142,6 +145,12 @@ async function draftAPost(label, posts) {
 async function updatePost(label, posts) {
     await test.step(label, async () => {
         await posts.updatePost();
+    });
+}
+
+async function deletePost(label, posts) {
+    await test.step(label, async () => {
+        await posts.deletePost();
     });
 }
 
