@@ -102,6 +102,14 @@ class Posts extends PageObject {
         return;
     }
 
+    async publishedPosts() {
+        let skipConfirmation = await this.getElementByAttribute('button[data-test-button="close-publish-flow"]');
+        let goToPublished = await this.getElementByAttribute('a[href="#/posts/?type=published"]'); 
+        await skipConfirmation.click();
+        await goToPublished.click();
+        return;
+    }
+
     async schedulePost() {
         let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
         let scheduleButton = await this.getElementByAttribute('div[data-test-setting="publish-at"] button[class="gh-publish-setting-title "]');
@@ -119,12 +127,6 @@ class Posts extends PageObject {
     async draftPosts() {
         let goToDrafts = await this.getElementByAttribute('a[href="#/posts/?type=draft"]'); 
         await goToDrafts.click();
-        return;
-    }
-
-    async publishedPosts() {
-        let goToPublished = await this.getElementByAttribute('a[href="#/posts/?type=published"]'); 
-        await goToPublished.click();
         return;
     }
 
@@ -163,7 +165,7 @@ class Posts extends PageObject {
             let postSelected =  await this.getElementByAttribute(`a.gh-post-list-title:nth-child(1)`);
             await postSelected.click()
         } else{
-            let postSelected = await this.getElementByAttribute(`a.gh-post-list-title:has-text("suspendo ustilo studio")`);
+            let postSelected = await this.getElementByAttribute(`a.gh-post-list-title:has-text("${title}")`);
             await postSelected.click()
         }
         return;
@@ -179,6 +181,10 @@ class Posts extends PageObject {
 
     async getPublishedModal() {
         return await this.getElementByAttribute('div[data-test-publish-flow="complete"]')
+    }
+
+    async confirmUpdate() {
+        return await this.getElementByAttribute('div[data-test-text="notification-content"]')
     }
 }
 
