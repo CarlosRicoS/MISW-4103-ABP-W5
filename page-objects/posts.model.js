@@ -132,7 +132,7 @@ class Posts extends PageObject {
 
     async draftAPost(){
         let goBackToPosts = await this.getElementByAttribute('a[data-test-link="posts"]');
-        await goBackToPosts.click();
+        await goBackToPosts.click({force: true});
         return;
     }
 

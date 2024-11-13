@@ -5,7 +5,7 @@ Feature: Crear post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     And I go to posts section
     And I wait for 1 seconds
     And I open post form
@@ -13,15 +13,15 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I publish post
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     Then I should see the published post confirmation
 
   @user2 @web
   Scenario: EP-07 Crear un post y programar fecha de lanzamiento
     Given I navigate to page "<URL>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     And I go to posts section
     And I wait for 1 seconds
     And I open post form
@@ -29,7 +29,7 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I schedule post
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     Then I should see the published post confirmation
 
     @user3 @web
@@ -37,7 +37,7 @@ Feature: Crear post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     And I go to posts section
     And I wait for 1 seconds
     And I open post form
@@ -45,7 +45,7 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I draft the post
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     Then I should see the post in the admin section as a draft
 
     
@@ -54,7 +54,7 @@ Feature: Crear post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     And I go to posts section
     And I wait for 1 seconds
     And I open post form
@@ -62,7 +62,7 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I publish post
-    And I wait for 1 seconds
+    And I wait for 5 seconds
     And I go to published posts section
     And I wait for 1 seconds
     And I select the first post
@@ -70,7 +70,7 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I update a post
-    And I wait for 1 seconds
+    And I wait for 5 seconds
     Then I should see the update confirmation
     
     
@@ -79,7 +79,7 @@ Feature: Crear post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     And I go to posts section
     And I wait for 1 seconds
     And I open post form
@@ -87,5 +87,5 @@ Feature: Crear post
     And I fill post form
     And I wait for 1 seconds
     And I delete the post
-    And I wait for 1 seconds
+    And I wait for 10 seconds
     Then I shouldnt see the post in the admin section

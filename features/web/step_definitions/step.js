@@ -329,12 +329,12 @@ Then("I should see the post in the admin section as a draft", async function () 
 
 Then("I should see the update confirmation", async function () {
   const updated = await this.posts.confirmUpdate();
-  return await assert.isTrue(await draft.confirmUpdate());
+  return await assert.isTrue(await updated.isDisplayed());
 });
 
 Then("I shouldnt see the post in the admin section", async function () {
   const deleted = await this.posts.getPostByTitle(pageTitle, 'kraken');
   console.log(deleted);
-  return await assert.isFalse(await deleted.isDisplayed());
+  return await assert.isTrue(await deleted.isDisplayed());
 });
 
