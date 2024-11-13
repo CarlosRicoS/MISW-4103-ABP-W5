@@ -5,7 +5,8 @@ const { faker } = require("@faker-js/faker");
 const Login = require("../../page-objects/login.model");
 const NavBar = require("../../page-objects/nav-bar.model");
 const Pages = require("../../page-objects/pages.model");
-let login, navBar, pages;
+const Screenshots = require("../../page-objects/shared.model");
+let login, navBar, pages, screenshots;
 
 test.describe("Feature: Crear una página", () => {
     test.beforeEach(async ({ page, browser }) => {
@@ -13,6 +14,7 @@ test.describe("Feature: Crear una página", () => {
         login = new Login(undefined, page);
         navBar = new NavBar(undefined, page);
         pages = new Pages(undefined, page);
+        screenshots = new Screenshots(page);
     });
     test.afterEach(async ({ context }) => {
         await context.clearCookies();
@@ -25,12 +27,17 @@ test.describe("Feature: Crear una página", () => {
             `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
             login
         );
+        await screenshots.pageScreenshot(page, "EP-01","01");
         await navigateToPages("And I go to pages section", navBar);
+        await screenshots.pageScreenshot(page, "EP-01","02");
         await openPageForm("And I open page form", pages);
+        await screenshots.pageScreenshot(page, "EP-01","03");
         let title = faker.lorem.words(3);
         let content = faker.lorem.paragraphs(3);
         await fillPageForm("And I fill page form", title, content, pages);
+        await screenshots.pageScreenshot(page, "EP-01","04");
         await publishPageNow("And I publish page", pages);
+        await screenshots.pageScreenshot(page, "EP-01","05");
         await showPublishedPage("Then I should see the published page confirmation", pages);
     });
     test("EP-02 Crear una página nueva y guardarla como borrador", async ({ page }) => {
