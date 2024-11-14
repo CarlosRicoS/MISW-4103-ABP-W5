@@ -10,6 +10,7 @@ Ejercicio de pruebas autoamtizadas E2E
 - Santiago Gómez Perdomo / [s.gomezp2345@uniandes.edu.co](s.gomezp2345@uniandes.edu.co)
 
 ## Requerimientos
+
 - **ghost:** v5.96.0
 - **NodeJS:** v20.18.0
 - **@playwright/test:** v1.48.2
@@ -20,17 +21,37 @@ Ejercicio de pruebas autoamtizadas E2E
 
 ## Ghost
 
+Para ejecutar la versión base de la ABP se ejecutarán los siguientes comandos desde la raíz de este proyecto
+
+```shell
+
+    docker build --no-cache -t ghost-abp:base .
+```
+
+Una vez descargada la imagen, se ejecutará el siguiente comando para iniciar el contendor de la aplicación. La aplicación se abrirá sobre [http://localhost:3031](http://localhost:3031)
+
+```shell
+
+    docker run -p 3031:2368 -d --rm --name ghost-v4.5 -e NODE_ENV=development ghost-abp:base
+```
+
+Para finalizar la ejecución de la instancia del contenedor se debe ejecutar el siguiente comando
+
+```shell
+
+    docker container stop ghost-v4.5
+```
+
 Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
 
 ```shell
+
     docker run --name some-ghost -e NODE_ENV=development -p 2368:2368 ghost:5.96.0
     docker rm some-ghost
 ```
 
 **Username:** "jamie@example.com"
 **Password:** "}WTdx6}h}ZLJTz4"
-
-
 
 ## Kraken
 
@@ -81,6 +102,7 @@ Una vez finalizada la ejecución de las pruebas, el reporte completo de las prue
 ```shell
     reports/*/index.html
 ```
+
 Para visualizar las pruebas se debe abrir el archivo **index.html** en un navegador.
 
 ## Playwright
