@@ -20,6 +20,7 @@ test.describe("Feature: Crear Post", () => {
         await test.context.close();
     });
     test("EP-06 Crear un post en el mismo instante", async ({ page }) => {
+        let title = faker.lorem.words(3);
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
             `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -27,11 +28,12 @@ test.describe("Feature: Crear Post", () => {
         );
         await navigateToPosts("And I go to posts section", navBar);
         await openPostForm("And I open post form", posts);
-        await fillPostForm("And I fill post form", posts);
+        await fillPostForm("And I fill post form", title, posts);
         await publishPost("And I publish post", posts);
         await showPublishedPost("Then I should see the published post confirmation", posts);
     });
     test("EP-07 Crear un post y programar fecha de lanzamiento", async ({ page }) => {
+        let title = faker.lorem.words(3);
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
             `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -39,11 +41,12 @@ test.describe("Feature: Crear Post", () => {
         );
         await navigateToPosts("And I go to posts section", navBar);
         await openPostForm("And I open post form", posts);
-        await fillPostForm("And I fill post form", posts);
+        await fillPostForm("And I fill post form", title, posts);
         await schedulePost("And I schedule post", posts);
         await showPublishedPost("Then I should see the published post confirmation", posts);
     });
-    test("EP-08 Guardar un post en la seccion de borradores y luego crearlo", async ({ page }) => {
+    test("EP-08 Guardar un post en la seccion de borradores", async ({ page }) => {
+        let title = faker.lorem.words(3);
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
             `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -51,36 +54,42 @@ test.describe("Feature: Crear Post", () => {
         );
         await navigateToPosts("And I go to posts section", navBar);
         await openPostForm("And I open post form", posts);
-        await fillPostForm("And I fill post form", posts);
+        await fillPostForm("And I fill post form",title, posts);
         await draftAPost("And I draft the post", posts);
-        //PPENDIENTE SELECCIONAR PRIMER DRAFTTT
-        await publishPost("And I publish post", posts);
-        await showPublishedPost("Then I should see the published post confirmation", posts);
+        await showAdminPostSection("Then I should see the post in the admin section as a draft", title, posts);
 
     });
-    test("EP-09 Actualizar un post ya publicado", async ({ page }) => {
-        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
-        await loginWithCredentials(
-            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
-            login
-        );
-        await draftPosts("And I draft and publish post", posts);
-        await updatePost("And I update a post", navBar);
-        //PPENDIENTE SELECCIONAR PRIMER POST 
-        await showPublishedPost("Then I should see the published post confirmation", posts);
-    });
-    test("EP-10 Eliminar un post desde los borradores", async ({ page }) => {
+    test("EP-09 Actualizar un post", async ({ page }) => {
+
+        let title = 'post a actualizar';
+        let title2 = faker.lorem.words(3);
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
             `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
             login
         );
         await navigateToPosts("And I go to posts section", navBar);
-        await draftPosts("And I draft and publish post", posts);
-        //PPENDIENTE SELECCIONAR PRIMER Borrador
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form",title, posts);
+        await publishPost("And I publish post", posts);
+        await publishedPosts("And I go to published posts section", posts);
+        await selectPostByTitle("And I select the first post", title, posts)
+        await fillPostForm("And I fill post form",title2, posts);
+        await updatePost("And I update a post", posts);
+        await confirmUpdate("Then I should see the update confirmation", posts);
+    });
+    test("EP-10 Eliminar un post", async ({ page }) => {
+        let title = faker.lorem.words(3);
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+            `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+            login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form",title, posts);
         await deletePosts("And I delete the post", posts);
-
-        await showPublishedPost("Then I should see the published post confirmation", posts);
+        await postDeleted("Then I shouldnt see the post in the admin section", title, posts);
         
     });
 
@@ -111,9 +120,9 @@ async function openPostForm(label, posts) {
     });
 }
 
-async function fillPostForm(label, posts) {
+async function fillPostForm(label, title, posts) {
     await test.step(label, async () => {
-        await posts.fillTitle(faker.lorem.words(3));
+        await posts.fillTitle(title);
         await posts.fillContent(faker.lorem.paragraphs(3));
     });
 }
@@ -132,9 +141,16 @@ async function schedulePost(label, posts) {
 
 async function draftPosts(label, posts) {
     await test.step(label, async () => {
-        await posts.draftPost();
+        await posts.draftPosts();
     });
 }
+
+async function publishedPosts(label, posts) {
+    await test.step(label, async () => {
+        await posts.publishedPosts();
+    });
+}
+
 
 async function draftAPost(label, posts) {
     await test.step(label, async () => {
@@ -142,15 +158,42 @@ async function draftAPost(label, posts) {
     });
 }
 
+async function selectPostByTitle(label, title, posts) {
+    await test.step(label, async () => {
+        await posts.selectPostByTitle(title);
+    });
+}
+
+
 async function updatePost(label, posts) {
     await test.step(label, async () => {
         await posts.updatePost();
     });
 }
 
-async function deletePost(label, posts) {
+async function deletePosts(label, posts) {
     await test.step(label, async () => {
-        await posts.deletePost();
+        await posts.deletePosts();
+    });
+}
+
+
+
+async function showAdminPostSection(label, title, posts) {
+    await test.step(label, async () => {
+        await expect(await posts.getPostByTitle(title)).toBeVisible();
+    });
+}
+
+async function postDeleted(label, title, posts) {
+    await test.step(label, async () => {
+        await expect(await posts.getPostByTitle(title)).toBeHidden();
+    });
+}
+
+async function confirmUpdate(label, posts) {
+    await test.step(label, async () => {
+        await expect(await posts.confirmUpdate()).toBeVisible();
     });
 }
 

@@ -75,8 +75,32 @@ When("I fill post form", async function () {
     return;
 });
 
+When("I schedule post", async function () {
+  return await this.posts.schedulePost();
+});
+
+When("I draft the post", async function () {
+  return await this.posts.draftAPost();
+});
+
 When("I publish post", async function () {
     return await this.posts.publishPost();
+});
+
+When("I delete the post", async function () {
+  return await this.posts.deletePosts();
+});
+
+When("I go to published posts section", async function () {
+  return await this.posts.publishedPosts();
+});
+
+When("I select the first post", async function () {
+  return await this.posts.selectPostByTitle(pageTitle, 'kraken');
+});
+
+When("I update a post", async function () {
+  return await this.posts.updatePost();
 });
 
 When("I select the all filter", async function () {
@@ -296,3 +320,21 @@ Then("I should see the published post confirmation", async function () {
     const published = await this.posts.getPublishedModal();
     return await assert.isTrue(await published.isDisplayed());
 });
+
+Then("I should see the post in the admin section as a draft", async function () {
+  const draft = await this.posts.getPostByTitle(pageTitle, 'kraken');
+  console.log(draft);
+  return await assert.isTrue(await draft.isDisplayed());
+});
+
+Then("I should see the update confirmation", async function () {
+  const updated = await this.posts.confirmUpdate();
+  return await assert.isTrue(await updated.isDisplayed());
+});
+
+Then("I shouldnt see the post in the admin section", async function () {
+  const deleted = await this.posts.getPostByTitle(pageTitle, 'kraken');
+  console.log(deleted);
+  return await assert.isTrue(await deleted.isDisplayed());
+});
+
