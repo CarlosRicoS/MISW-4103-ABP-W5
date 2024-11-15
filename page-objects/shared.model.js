@@ -31,10 +31,12 @@ const screenShotConfig = {
 class Screenshots {
   driver = undefined;
   page = undefined;
+  version = undefined;
 
-  constructor(driver, page) {
+  constructor(driver, page, version) {
     this.driver = driver;
     this.page = page;
+    this.version = version;
     this.createDirectory(this.config.outputPath);
   }
 
@@ -62,6 +64,10 @@ class Screenshots {
     return !!this.driver;
   }
 
+  get isBS(){
+    return !!this.version;
+  }
+
   get config() {
     return {
       ...screenShotConfig,
@@ -69,7 +75,7 @@ class Screenshots {
       outputPath: this.isKraken
         ? properties.KRAKEN_OUTPUT_DIRECTORY
         : properties.PLAYWRIGHT_OUTPUT_DIRECTORY,
-      prefix: properties.PREFIX,
+      prefix: this.isBS ? properties.PREFIX_BS : properties.PREFIX,
     };
   }
 }

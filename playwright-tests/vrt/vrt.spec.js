@@ -21,7 +21,7 @@ test.describe("Feature: Crear una página", () => {
     pages = new Pages(undefined, page, "bs");
     posts = new Posts(undefined, page, "bs");
     members = new Members(undefined, page, "bs");
-    screenshots = new Screenshots(undefined, page);
+    screenshots = new Screenshots(undefined, page, "bs");
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
