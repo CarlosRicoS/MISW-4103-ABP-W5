@@ -2,12 +2,13 @@ class PageObject {
   driver = undefined;
   page = undefined;
 
-  constructor(driver, page) {
+  constructor(driver, page, version) {
     if (this.constructor == PageObject) {
       throw new Error("Abstract classes can't be instantiated.");
     }
     this.driver = driver;
     this.page = page;
+    this.version = version;
   }
 
   async fillInput(input, value) {
@@ -40,6 +41,10 @@ class PageObject {
 
   get isKraken() {
     return !!this.driver;
+  }
+
+  get isRC() {
+    return !!this.version;
   }
 }
 

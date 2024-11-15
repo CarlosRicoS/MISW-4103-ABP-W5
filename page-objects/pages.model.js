@@ -1,8 +1,8 @@
 const PageObject = require("./page-object.abstract.model");
 
 class Pages extends PageObject {
-    constructor(driver, page) {
-        super(driver, page);
+    constructor(driver, page, version) {
+        super(driver, page, version);
     }
 
     async openNewPageForm() {
