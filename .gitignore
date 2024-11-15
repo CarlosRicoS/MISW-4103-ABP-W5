@@ -138,4 +138,6 @@ reports/*
 tests-examples/*
 .idea
 /playwright-screenshots/
+/kraken-screenshots/
 .DS_Store
+/**/*.png
