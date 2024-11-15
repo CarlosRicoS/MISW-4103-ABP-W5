@@ -73,9 +73,9 @@ test.describe("Feature: Editar una página", () => {
   test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
-    navBar = new NavBar(undefined, page);
-    pages = new Pages(undefined, page);
-    screenshots = new Screenshots(undefined, page);
+    navBar = new NavBar(undefined, page, "bs");
+    pages = new Pages(undefined, page, "bs");
+    screenshots = new Screenshots(undefined, page, "bs");
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
@@ -148,9 +148,9 @@ test.describe("Feature: Crear Post", () => {
   test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
-    navBar = new NavBar(undefined, page);
-    posts = new Posts(undefined, page);
-    screenshots = new Screenshots(undefined, page);
+    navBar = new NavBar(undefined, page, "bs");
+    posts = new Posts(undefined, page, "bs");
+    screenshots = new Screenshots(undefined, page, "bs");
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
@@ -198,9 +198,9 @@ test.describe("Feature: Visualizar los post", () => {
   test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
-    navBar = new NavBar(undefined, page);
-    posts = new Posts(undefined, page);
-    screenshots = new Screenshots(undefined, page);
+    navBar = new NavBar(undefined, page, "bs");
+    posts = new Posts(undefined, page, "bs");
+    screenshots = new Screenshots(undefined, page, "bs");
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
@@ -219,7 +219,7 @@ test.describe("Feature: Visualizar los post", () => {
     await selectFilterAll("And I select the all filter", posts);
     await test.step(`The url now shouldn't have parameters `, async () => {
       await expect(await getCurrentUrl(posts)).toEqual(
-        "http://localhost:2368/ghost/#/posts"
+        "http://localhost:2369/ghost/#/posts"
       );
     });
   });
@@ -234,7 +234,7 @@ test.describe("Feature: Visualizar los post", () => {
     await selectFilterAccess("And I select the access filter", posts);
     await test.step(`The url now should have visibility for members parameter`, async () => {
       await expect(await getCurrentUrl(posts)).toEqual(
-        "http://localhost:2368/ghost/#/posts?visibility=members"
+        "http://localhost:2369/ghost/#/posts?visibility=members"
       );
     });
   });
@@ -246,7 +246,7 @@ test.describe("Feature: Registro de un miembro", () => {
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
     members = new Members(undefined, page, "bs");
-    screenshots = new Screenshots(undefined, page);
+    screenshots = new Screenshots(undefined, page, "bs");
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
@@ -404,7 +404,7 @@ async function showUnpublishedPage(label, pages) {
 }
 
 
-async function navigateToPosts(label, login) {
+async function navigateToPosts(label, navBar) {
   await test.step(label, async () => {
     await navBar.goToPosts();
     await screenshotHandler(screenshots, testIds);

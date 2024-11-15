@@ -190,38 +190,33 @@ async function deletePost(label, posts) {
     await posts.deletePost();
     await screenshotHandler(screenshots, testIds);
   });
-  async function deletePosts(label, posts) {
-    await test.step(label, async () => {
-      await posts.deletePosts();
-      await screenshotHandler(screenshots, testIds);
-    });
-  }
 
-  async function showAdminPostSection(label, title, posts) {
-    await test.step(label, async () => {
-      await expect(await posts.getPostByTitle(title)).toBeVisible();
-      await screenshotHandler(screenshots, testIds);
-    });
-  }
+}
 
-  async function postDeleted(label, title, posts) {
-    await test.step(label, async () => {
-      await expect(await posts.getPostByTitle(title)).toBeHidden();
-      await screenshotHandler(screenshots, testIds);
-    });
-  }
+async function showAdminPostSection(label, title, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.getPostByTitle(title)).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
 
-  async function confirmUpdate(label, posts) {
-    await test.step(label, async () => {
-      await expect(await posts.confirmUpdate()).toBeVisible();
-      await screenshotHandler(screenshots, testIds);
-    });
-  }
+async function postDeleted(label, title, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.getPostByTitle(title)).toBeHidden();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
 
-  async function showPublishedPost(label, posts) {
-    await test.step(label, async () => {
-      await expect(await posts.getPublishedModal()).toBeVisible();
-      await screenshotHandler(screenshots, testIds);
-    });
-  }
+async function confirmUpdate(label, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.confirmUpdate()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showPublishedPost(label, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.getPublishedModal()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
 }

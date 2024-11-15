@@ -7,7 +7,7 @@ class NavBar extends PageObject {
 
   async goToMembers() {
     let membersOption = this.isBS
-      ? await this.getElementByAttribute('a[href="#/members/"]')
+      ? await this.getElementByAttribute('li[class="relative"] a[href="#/members/"]')
       : await this.getElementByAttribute('a[href="#/members/"][data-test-nav="members"]');
     return await membersOption.click();
   }
@@ -15,8 +15,8 @@ class NavBar extends PageObject {
 
   async goToPosts() {
     let postsOption = this.isBS
-    ? await this.getElementByAttribute('a[href="#/posts/"]')
-    : await this.getElementByAttribute('a[href="#/posts/"][data-test-nav="posts"]');
+      ? await this.getElementByAttribute('li[class="gh-nav-list-new relative"] a[href="#/posts/"]')
+      : await this.getElementByAttribute('a[href="#/posts/"][data-test-nav="posts"]');
     return await postsOption.click();
   }
 

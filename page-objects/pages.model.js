@@ -28,6 +28,11 @@ class Pages extends PageObject {
         return await this.getElementByAttribute('div[class="gh-publishmenu ember-view"] div[role="button"]');
     }
 
+    async getUpdateMenu() {
+        return await this.getElementByAttribute('div[class="gh-publishmenu ember-view"] div[role="button"]');
+    }
+
+
     async getPreviewButton() {
         return await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-preview"]');
     }
@@ -35,16 +40,18 @@ class Pages extends PageObject {
     async getPublishButton() {
         return this.isBS
           ? this.getElementByAttribute('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]')
-          // ? this.getElementByAttribute('div[class="ember-view"] footer[class="gh-publishmenu-footer"] button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]')
           : this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
     }
 
     async getUpdateButton() {
-        return await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-save"]');
+        return this.isBS
+          ? await this.getElementByAttribute('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]')
+          : await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-save"]');
     }
 
     async getUnpublishButton() {
-        return await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="update-flow"]');
+        return this.isBS ? await this.getElementByAttribute('div[class="gh-publishmenu-radio "] div[class="gh-publishmenu-radio-button"]')
+          : await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="update-flow"]');
     }
 
     async getContinuePublishButton() {
@@ -74,7 +81,9 @@ class Pages extends PageObject {
     }
 
     async getCloseModalButton() {
-        return await this.getElementByAttribute('button[data-test-button="close-publish-flow"]');
+        return this.isBS
+          ? await this.getElementByAttribute('button[class="gh-notification-close"]')
+          : await this.getElementByAttribute('button[data-test-button="close-publish-flow"]');
     }
 
     async getRevertToDraftButton() {
@@ -97,7 +106,9 @@ class Pages extends PageObject {
     }
 
     async returnToPages() {
-        let pagesButton = await this.getElementByAttribute('a[data-test-link="pages"]');
+        let pagesButton = this.isBS
+          ? await this.getElementByAttribute('a[href="#/pages/"]')
+          : await this.getElementByAttribute('a[data-test-link="pages"]');
         return await pagesButton.click();
     }
 
@@ -126,8 +137,16 @@ class Pages extends PageObject {
     }
 
     async updatePage() {
-        let updateButton = await this.getUpdateButton();
-        return await updateButton.click();
+        if (this.isBS) {
+            let updateMenu = await this.getUpdateMenu();
+            let updateButton = await this.getUpdateButton();
+            await updateMenu.click();
+            return await updateButton.click();
+        } else {
+            let updateButton = await this.getUpdateButton();
+            return await updateButton.click();
+
+        }
 
     }
 
@@ -147,7 +166,14 @@ class Pages extends PageObject {
 
     async closePublishedModal() {
         let closeModalButton = await this.getCloseModalButton();
-        return await closeModalButton.click();
+        if (this.isBS){
+            await closeModalButton.click();
+            await this.returnToPages();
+            return;
+        } else {
+            return await closeModalButton.click();
+        }
+
     }
 
     async getPageByTitle(title, tool = 'playwright') {
@@ -177,19 +203,35 @@ class Pages extends PageObject {
         return await pageForm.click();
     }
 
+
     async showUpdatedPage() {
-        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
+        return this.isBS
+          ? await this.getElementByAttribute('article[class="gh-notification gh-notification-passive ember-view"]')
+          : await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
     }
 
     async showUnpublishedPage() {
-        return await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
+        return this.isBS
+          ? await this.getElementByAttribute('article[class="gh-notification gh-notification-passive ember-view"]')
+          : await this.getElementByAttribute('aside[class="gh-notifications"] div[data-test-text="notification-content"] span[class="gh-notification-title"]');
     }
 
     async unPublishPage() {
-        let unpublishButton = await this.getUnpublishButton();
-        let revertButton = await this.getRevertToDraftButton();
-        await unpublishButton.click();
-        return await revertButton.click();
+        if (this.isBS) {
+            let updateMenu = await this.getUpdateMenu();
+            let unpublishButton = await this.getUnpublishButton();
+            let updateButton = await this.getUpdateButton();
+            await updateMenu.click();
+            await unpublishButton.click();
+            await updateButton.click();
+            return;
+        } else {
+            let unpublishButton = await this.getUnpublishButton();
+            let revertButton = await this.getRevertToDraftButton();
+            await unpublishButton.click();
+            return await revertButton.click();
+        }
+
 
     }
 

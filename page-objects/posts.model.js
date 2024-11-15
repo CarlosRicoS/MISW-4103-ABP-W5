@@ -1,8 +1,8 @@
 const PageObject = require("./page-object.abstract.model");
 
 class Posts extends PageObject {
-    constructor(driver, page) {
-        super(driver, page);
+    constructor(driver, page, version) {
+        super(driver, page, version);
     }
 
 
@@ -74,32 +74,45 @@ class Posts extends PageObject {
     }
 
     async openPostForm() {
-        let button = await this.getElementByAttribute(
-            'a[data-test-new-post-button]'
-        );
+        let button = this.isBS
+          ? await this.getElementByAttribute('section[class="view-actions"] a[href="#/editor/post/"]')
+          : await this.getElementByAttribute('a[data-test-new-post-button]');
         return await button.click();
     }
 
     async fillTitle(name) {
-        let inputTitle = await this.getElementByAttribute("textarea[placeholder=\"Post title\"]");
+        let inputTitle = this.isBS
+          ? await this.getElementByAttribute('textarea[placeholder="Post Title"]')
+          : await this.getElementByAttribute("textarea[placeholder=\"Post title\"]");
         await this.fillInput(inputTitle, name);
         return;
     }
 
     async fillContent(content) {
-        let inputContent = await await this.getElementByAttribute('div[data-secondary-instance="false"] p[data-koenig-dnd-droppable="true"]');
+        let inputContent = this.isBS
+          ? await this.getElementByAttribute('div[data-placeholder="Begin writing your post..."]')
+          : await this.getElementByAttribute('div[data-secondary-instance="false"] p[data-koenig-dnd-droppable="true"]');
         await inputContent.click();
         return await this.fillInput(inputContent, content);
     }
 
     async publishPost() {
-        let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
-        let continueButton = await this.getElementByAttribute('button[data-test-button="continue"]');
-        let confirmButton = await this.getElementByAttribute('button[data-test-button="confirm-publish"]');
-        await publishButton.click();
-        await continueButton.click();
-        await confirmButton.click({force: true});
-        return;
+        if (this.isBS) {
+            let publishMenu = await this.getElementByAttribute('div[class="gh-publishmenu ember-view"] div[role="button"]')
+            let publishButton = await this.getElementByAttribute('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+            await publishMenu.click();
+            await publishButton.click();
+            return;
+        } else {
+            let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
+            let continueButton = await this.getElementByAttribute('button[data-test-button="continue"]');
+            let confirmButton = await this.getElementByAttribute('button[data-test-button="confirm-publish"]');
+            await publishButton.click();
+            await continueButton.click();
+            await confirmButton.click({force: true});
+            return;
+        }
+
     }
 
     async publishedPosts() {
@@ -111,23 +124,27 @@ class Posts extends PageObject {
     }
 
     async schedulePost() {
-        let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
-        let scheduleButton = await this.getElementByAttribute('div[data-test-setting="publish-at"] button[class="gh-publish-setting-title "]');
-        let programSchedule = await this.getElementByAttribute('div[class="gh-publish-schedule"] div[class="gh-radio "]');
-        let continueButton = await this.getElementByAttribute('button[data-test-button="continue"]');
-        let confirmButton = await this.getElementByAttribute('button[data-test-button="confirm-publish"]');
-        await publishButton.click();
-        await scheduleButton.click();
-        await programSchedule.click();
-        await continueButton.click();
-        await confirmButton.click({force: true});
-        return;
-    }
-
-    async draftPosts() {
-        let goToDrafts = await this.getElementByAttribute('a[href="#/posts/?type=draft"]'); 
-        await goToDrafts.click();
-        return;
+        if (this.isBS) {
+            let publishMenu = await this.getElementByAttribute('div[class="gh-publishmenu ember-view"] div[role="button"]');
+            let publishButton = await this.getElementByAttribute('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]');
+            let scheduleButton = await this.getElementByAttribute('div[class="gh-publishmenu-radio "] div[class="gh-publishmenu-radio-button"]');
+            await publishMenu.click();
+            await scheduleButton.click();
+            await publishButton.click();
+            return;
+        } else {
+            let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
+            let scheduleButton = await this.getElementByAttribute('div[data-test-setting="publish-at"] button[class="gh-publish-setting-title "]');
+            let programSchedule = await this.getElementByAttribute('div[class="gh-publish-schedule"] div[class="gh-radio "]');
+            let continueButton = await this.getElementByAttribute('button[data-test-button="continue"]');
+            let confirmButton = await this.getElementByAttribute('button[data-test-button="confirm-publish"]');
+            await publishButton.click();
+            await scheduleButton.click();
+            await programSchedule.click();
+            await continueButton.click();
+            await confirmButton.click({force: true});
+            return;
+        }
     }
 
     async draftAPost(){
@@ -180,7 +197,9 @@ class Posts extends PageObject {
     }
 
     async getPublishedModal() {
-        return await this.getElementByAttribute('div[data-test-publish-flow="complete"]')
+        return this.isBS
+          ? await this.getElementByAttribute('article[class="gh-notification gh-notification-passive ember-view"]')
+          : await this.getElementByAttribute('div[data-test-publish-flow="complete"]')
     }
 
     async confirmUpdate() {
