@@ -1,5 +1,6 @@
 {
     "URL": "http://localhost:2368/ghost/",
+    "URL_BS": "http://localhost:2369/ghost/",
     "USERNAME": "jamie@example.com",
     "PASSWORD": "}WTdx6}h}ZLJTz4",
     "NEW_MEMBER_ERROR_MSG": "Please enter an email.",

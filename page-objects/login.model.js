@@ -1,20 +1,27 @@
 const PageObject = require("./page-object.abstract.model");
 
 class Login extends PageObject {
-  constructor(driver, page) {
+  constructor(driver, page, version) {
     super(driver, page);
+    this.version = version;
   }
 
   async getEmailInput() {
-    return await this.getElementById("#identification");
+    return this.isRC
+      ? await this.getElementByAttribute('input[name="identification"]')
+      : await this.getElementById("#identification");
   }
 
   async getPasswordInput() {
-    return await this.getElementById("#password");
+    return this.isRC
+      ? await this.getElementByAttribute('input[name="password"]')
+      : await this.getElementById("#password");
   }
 
   async getSubmitButton() {
-    return await this.getElementById("#ember5");
+    return this.isRC
+      ? await this.getElementByAttribute('button[type="submit"]')
+      : await this.getElementById("#ember5");
   }
 
   async login(email, password) {
@@ -24,6 +31,10 @@ class Login extends PageObject {
     await this.fillInput(passwordInput, password);
     let submitButton = await this.getSubmitButton();
     return await submitButton.click();
+  }
+
+  get isRC() {
+    return !!this.version;
   }
 }
 
