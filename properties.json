@@ -3,5 +3,8 @@
     "USERNAME": "jamie@example.com",
     "PASSWORD": "}WTdx6}h}ZLJTz4",
     "NEW_MEMBER_ERROR_MSG": "Please enter an email.",
-    "EMAIL_MSG_MEMBER_CREATION": "Invalid Email."
+    "EMAIL_MSG_MEMBER_CREATION": "Invalid Email.",
+    "KRAKEN_OUTPUT_DIRECTORY": "./kraken-screenshots",
+    "PLAYWRIGHT_OUTPUT_DIRECTORY": "./playwright-screenshots",
+    "PREFIX": "rc"
 }
