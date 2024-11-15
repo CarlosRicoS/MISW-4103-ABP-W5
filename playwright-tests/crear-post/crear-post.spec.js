@@ -137,6 +137,7 @@ async function fillPostForm(label, title, posts) {
   await test.step(label, async () => {
     await posts.fillTitle(title);
     await posts.fillContent(faker.lorem.paragraphs(3));
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
@@ -171,6 +172,7 @@ async function draftAPost(label, posts) {
 async function selectPostByTitle(label, title, posts) {
   await test.step(label, async () => {
     await posts.selectPostByTitle(title);
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
@@ -220,5 +222,6 @@ async function showPublishedPost(label, posts) {
 async function publishedPosts(label, posts) {
   await test.step(label, async () => {
     await posts.publishedPosts();
+    await screenshotHandler(screenshots, testIds);
   });
 }
