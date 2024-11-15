@@ -43,7 +43,7 @@ class PageObject {
     return !!this.driver;
   }
 
-  get isRC() {
+  get isBS() {
     return !!this.version;
   }
 }

@@ -7,17 +7,25 @@ class Pages extends PageObject {
 
     async openNewPageForm() {
         let newPageButton = await this.getElementByAttribute(
-            'a[href="#/editor/page/"]'
+          'a[href="#/editor/page/"]'
         );
         return await newPageButton.click();
     }
 
     async getPageTitleInput() {
-        return await this.getElementByAttribute('textarea[placeholder="Page title"]');
+        return this.isBS
+          ? await this.getElementByAttribute('textarea[placeholder="Page Title"]')
+          : await this.getElementByAttribute('textarea[placeholder="Page title"]');
     }
 
     async getPageContentInput() {
-        return await this.getElementByAttribute('div[data-secondary-instance="false"] p[data-koenig-dnd-droppable="true"]');
+        return this.isBS
+          ? await this.getElementByAttribute('div[data-placeholder="Begin writing your page..."]')
+          : await this.getElementByAttribute('div[data-secondary-instance="false"] p[data-koenig-dnd-droppable="true"]');
+    }
+
+    async getPublishMenu() {
+        return await this.getElementByAttribute('div[class="gh-publishmenu ember-view"] div[role="button"]');
     }
 
     async getPreviewButton() {
@@ -25,7 +33,10 @@ class Pages extends PageObject {
     }
 
     async getPublishButton() {
-        return await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
+        return this.isBS
+          ? this.getElementByAttribute('button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]')
+          // ? this.getElementByAttribute('div[class="ember-view"] footer[class="gh-publishmenu-footer"] button[class="gh-btn gh-btn-black gh-publishmenu-button gh-btn-icon ember-view"]')
+          : this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]');
     }
 
     async getUpdateButton() {
@@ -48,16 +59,18 @@ class Pages extends PageObject {
         return await this.getElementByAttribute('button[data-test-psm-trigger]');
     }
 
-    async getTagInput(){
+    async getTagInput() {
         return await this.getElementByAttribute('div[id="tag-input"] input[class="ember-power-select-trigger-multiple-input"]');
     }
 
-    async selectFirstTag(){
+    async selectFirstTag() {
         return await this.getElementByAttribute('li[data-option-index="0"]');
     }
 
     async getPublishedModal() {
-        return await this.getElementByAttribute('div[data-test-publish-flow="complete"]')
+        return this.isBS
+          ? await this.getElementByAttribute('article[class="gh-notification gh-notification-passive ember-view"]')
+          : await this.getElementByAttribute('div[data-test-publish-flow="complete"]');
     }
 
     async getCloseModalButton() {
@@ -89,12 +102,21 @@ class Pages extends PageObject {
     }
 
     async publishPageNow() {
-        let publishButton = await this.getPublishButton();
-        let continueButton = await this.getContinuePublishButton();
-        let confirmButton = await this.getConfirmPublishButton();
-        await publishButton.click();
-        await continueButton.click();
-        return await confirmButton.click();
+        if (this.isBS) {
+            let publishMenu = await this.getPublishMenu();
+            let publishButton = await this.getPublishButton();
+            await publishMenu.click();
+            await publishButton.click();
+            return;
+        } else {
+            let publishButton = await this.getPublishButton();
+            let continueButton = await this.getContinuePublishButton();
+            let confirmButton = await this.getConfirmPublishButton();
+            await publishButton.click();
+            await continueButton.click();
+            return await confirmButton.click();
+        }
+
     }
 
     async previewPage() {
@@ -128,29 +150,29 @@ class Pages extends PageObject {
         return await closeModalButton.click();
     }
 
-    async getPageByTitle(title, tool='playwright') {
+    async getPageByTitle(title, tool = 'playwright') {
         if (tool === 'kraken') {
             return await this.getElementByAttribute(`a.gh-post-list-title:nth-child(1)`);
-        } else{
+        } else {
             return await this.getElementByAttribute(`a.gh-post-list-title:has-text("${title}")`);
         }
     }
 
-    async goToPublishedPages(){
+    async goToPublishedPages() {
         let optionLists = await this.getElementByAttribute('span[class="ember-power-select-selected-item"]');
         await optionLists.click();
         let publishedPagesButton = await this.getElementByAttribute('li[data-option-index="2"]');
         return await publishedPagesButton.click();
     }
 
-    async goToTagPages(){
+    async goToTagPages() {
         let tagsLists = await this.getElementByAttribute('div[data-test-tag-select="true"] span[class="ember-power-select-selected-item"]');
         await tagsLists.click();
         let tagPagesButton = await this.getElementByAttribute('li[data-option-index="1"]');
         return await tagPagesButton.click();
     }
 
-    async openCurrentPageForm(title, tool='playwright') {
+    async openCurrentPageForm(title, tool = 'playwright') {
         let pageForm = await this.getPageByTitle(title, tool);
         return await pageForm.click();
     }
@@ -171,7 +193,7 @@ class Pages extends PageObject {
 
     }
 
-    async showTagPage(title, tool='playwright') {
+    async showTagPage(title, tool = 'playwright') {
         return await this.getPageByTitle(title, tool);
     }
 }

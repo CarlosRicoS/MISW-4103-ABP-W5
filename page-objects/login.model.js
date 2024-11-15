@@ -6,19 +6,19 @@ class Login extends PageObject {
   }
 
   async getEmailInput() {
-    return this.isRC
+    return this.isBS
       ? await this.getElementByAttribute('input[name="identification"]')
       : await this.getElementById("#identification");
   }
 
   async getPasswordInput() {
-    return this.isRC
+    return this.isBS
       ? await this.getElementByAttribute('input[name="password"]')
       : await this.getElementById("#password");
   }
 
   async getSubmitButton() {
-    return this.isRC
+    return this.isBS
       ? await this.getElementByAttribute('button[type="submit"]')
       : await this.getElementById("#ember5");
   }
