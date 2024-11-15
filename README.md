@@ -10,48 +10,41 @@ Ejercicio de pruebas autoamtizadas E2E
 - Santiago Gómez Perdomo / [s.gomezp2345@uniandes.edu.co](s.gomezp2345@uniandes.edu.co)
 
 ## Requerimientos
-
-- **ghost:** v5.96.0
+- **ghost-base:** v4.5
+- **ghost-rc:** v5.96.0
 - **NodeJS:** v20.18.0
 - **@playwright/test:** v1.48.2
 - **@types/node:** v22.9.0
 - **kraken-node:** v1.0.24
 - **chai:** v4.3.6
 - **@faker-js/faker:** v9.2.0
+- **pixelmatch:** v5.3.0
 
 ## Ghost
 
-Para ejecutar la versión base de la ABP se ejecutarán los siguientes comandos desde la raíz de este proyecto
-
+Se debe iniciar dos instancías de ghost para la ejecución de las pruebas, tanto para la version base como para la version rc. Por favor realizar los siguientes pasos antes de ejecutar las pruebas:
+ - Iniciar una instancia de ghost con la version base
 ```shell
-
-    docker build --no-cache -t ghost-abp:base .
+     docker run -p 2369:2368 -d --rm --name ghost-base -e NODE_ENV=development ghost:4.5
 ```
+ - Registrarse con las siguientes credenciales en al version base:
+   - **Username:** "jamie@example.com"
+   - **Password:** "}WTdx6}h}ZLJTz4"
 
-Una vez descargada la imagen, se ejecutará el siguiente comando para iniciar el contendor de la aplicación. La aplicación se abrirá sobre [http://localhost:3031](http://localhost:3031)
-
+ - Iniciar una instancia de ghost con la version rc
 ```shell
-
-    docker run -p 3031:2368 -d --rm --name ghost-v4.5 -e NODE_ENV=development ghost-abp:base
+     docker run -p 2368:2368 -d --rm --name ghost-rc -e NODE_ENV=development ghost:5.96.0
 ```
+- Registrarse con las siguientes credenciales en al version base:
+    - **Username:** "jamie@example.com"
+    - **Password:** "}WTdx6}h}ZLJTz4"
 
 Para finalizar la ejecución de la instancia del contenedor se debe ejecutar el siguiente comando
 
 ```shell
-
-    docker container stop ghost-v4.5
+    docker container stop ghost-base
+    docker container stop ghost-rc
 ```
-
-Es necesario crear una nueva instancia de ghost con las credenciales definidas en el archivo properties
-
-```shell
-
-    docker run --name some-ghost -e NODE_ENV=development -p 2368:2368 ghost:5.96.0
-    docker rm some-ghost
-```
-
-**Username:** "jamie@example.com"
-**Password:** "}WTdx6}h}ZLJTz4"
 
 ## Kraken
 
