@@ -1,0 +1,23 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\_EP_01_step-10_bs_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-112213\\_EP_01_step-10_bs_0_document_0_.png",
+        "selector": "document",
+        "fileName": "_EP_01_step-10_bs_0_document_0_.png",
+        "label": "step-10_bs",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./kraken-screenshots/_EP_01_step-10_0_document_0_.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "error": "Reference file not found C:\\Users\\santi\\OneDrive\\Escritorio\\Académico\\MISO_Andes\\ciclo2\\Pruebas_automatizadas\\MISW-4103-ABP-W5\\backstop_data\\bitmaps_reference\\_EP_01_step-10_bs_0_document_0_.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "_EP_01"
+}

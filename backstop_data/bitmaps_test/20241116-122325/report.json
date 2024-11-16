@@ -1,0 +1,78 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-1_0__0_.png",
+        "test": "..\\bitmaps_test\\20241116-122325\\EP_01_step-1_0__0_.png",
+        "selector": "",
+        "fileName": "EP_01_step-1_0__0_.png",
+        "label": "01_step-1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./kraken-screenshots/EP_1_step-01_0_document_0_.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "engineErrorMsg": "page.goto: net::ERR_FILE_NOT_FOUND at file:///C:/Users/santi/OneDrive/Escritorio/Acad%C3%A9mico/MISO_Andes/ciclo2/Pruebas_automatizadas/MISW-4103-ABP-W5/kraken-screenshots/EP_1_step-01_0_document_0_.png\nCall log:\n  \u001b[2m- navigating to \"file:///C:/Users/santi/OneDrive/Escritorio/Acad%C3%A9mico/MISO_Andes/ciclo2/Pruebas_automatizadas/MISW-4103-ABP-W5/kraken-screenshots/EP_1_step-01_0_document_0_.png\", waiting until \"load\"\u001b[22m\n",
+        "error": "Reference file not found C:\\Users\\santi\\OneDrive\\Escritorio\\Académico\\MISO_Andes\\ciclo2\\Pruebas_automatizadas\\MISW-4103-ABP-W5\\kraken-screenshots-reference\\EP_01_step-1_0__0_.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-122325\\EP_01_step-2_0_document_0_.png",
+        "selector": "document",
+        "fileName": "EP_01_step-2_0_document_0_.png",
+        "label": "01_step-2",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./kraken-screenshots/EP_01_step-2_0_document_0_.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": -483,
+            "height": -420
+          },
+          "rawMisMatchPercentage": 8.628807646075815,
+          "misMatchPercentage": "8.63",
+          "analysisTime": 70
+        },
+        "diffImage": "..\\bitmaps_test\\20241116-122325\\failed_diff_EP_01_step-2_0_document_0_.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-122325\\EP_01_step-3_0_document_0_.png",
+        "selector": "document",
+        "fileName": "EP_01_step-3_0_document_0_.png",
+        "label": "01_step-3",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./kraken-screenshots/EP_01_step-3_0_document_0_.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": -483,
+            "height": -420
+          },
+          "rawMisMatchPercentage": 8.631299656982028,
+          "misMatchPercentage": "8.63",
+          "analysisTime": 68
+        },
+        "diffImage": "..\\bitmaps_test\\20241116-122325\\failed_diff_EP_01_step-3_0_document_0_.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "EP"
+}
