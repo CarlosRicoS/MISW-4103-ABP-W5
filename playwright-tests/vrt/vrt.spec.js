@@ -1,7 +1,7 @@
-const { test, expect } = require("@playwright/test");
+const {test, expect} = require("@playwright/test");
 
 const properties = require("../../properties.json");
-const { faker } = require("@faker-js/faker");
+const {faker} = require("@faker-js/faker");
 const Login = require("../../page-objects/login.model");
 const NavBar = require("../../page-objects/nav-bar.model");
 const Pages = require("../../page-objects/pages.model");
@@ -13,12 +13,13 @@ const screenshotHandler = require("../utils").screenshotHandler;
 const pixelmatchHandler = require("../utils").pixelmatchHandler;
 const testIds = require("../utils").testIds;
 
-let login, navBar, pages, posts, members, screenshots, pixelmatch;
+let login, navBar, pages, posts, members, screenshots;
 
+let pixelmatch = new PixelmatchModel();
 let reportInfo = [];
 
 test.describe("Feature: Crear una página", () => {
-  test.beforeEach(async ({ page, browser }, testInfo) => {
+  test.beforeEach(async ({page, browser}, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
@@ -26,17 +27,13 @@ test.describe("Feature: Crear una página", () => {
     posts = new Posts(undefined, page, "bs");
     members = new Members(undefined, page, "bs");
     screenshots = new Screenshots(undefined, page, "bs");
-    pixelmatch = new PixelmatchModel();
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ context }) => {
+  test.afterEach(async ({context}) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
-  });
-  test.afterAll(async () => {
-    await pixelmatch.generateReport(reportInfo);
   });
   test("EP-01 Crear una página nueva y publicarla de inmediato", async ({page,}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
@@ -78,7 +75,7 @@ test.describe("Feature: Crear una página", () => {
 });
 
 test.describe("Feature: Editar una página", () => {
-  test.beforeEach(async ({ page, browser }, testInfo) => {
+  test.beforeEach(async ({page, browser}, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
@@ -87,7 +84,7 @@ test.describe("Feature: Editar una página", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ context }) => {
+  test.afterEach(async ({context}) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
@@ -153,7 +150,7 @@ test.describe("Feature: Editar una página", () => {
 
 
 test.describe("Feature: Crear Post", () => {
-  test.beforeEach(async ({ page, browser }, testInfo) => {
+  test.beforeEach(async ({page, browser}, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
@@ -162,15 +159,12 @@ test.describe("Feature: Crear Post", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ context }) => {
+  test.afterEach(async ({context}) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
   });
-  test.afterAll(async () => {
-    await pixelmatch.generateReport(reportInfo);
-  });
-  test("EP-06 Crear un post en el mismo instante", async ({ page }) => {
+  test("EP-06 Crear un post en el mismo instante", async ({page}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
       `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -206,7 +200,7 @@ test.describe("Feature: Crear Post", () => {
 
 
 test.describe("Feature: Visualizar los post", () => {
-  test.beforeEach(async ({ page, browser }, testInfo) => {
+  test.beforeEach(async ({page, browser}, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
@@ -215,15 +209,12 @@ test.describe("Feature: Visualizar los post", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ context }) => {
+  test.afterEach(async ({context}) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
   });
-  test.afterAll(async () => {
-    await pixelmatch.generateReport(reportInfo);
-  });
-  test("EP-011 Ver todos los posts", async ({ page }) => {
+  test("EP-011 Ver todos los posts", async ({page}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
       `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -238,7 +229,7 @@ test.describe("Feature: Visualizar los post", () => {
     });
   });
 
-  test("EP-012 Ver posts para miembros", async ({ page }) => {
+  test("EP-012 Ver posts para miembros", async ({page}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
       `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -255,7 +246,7 @@ test.describe("Feature: Visualizar los post", () => {
 });
 
 test.describe("Feature: Registro de un miembro", () => {
-  test.beforeEach(async ({ page, browser }, testInfo) => {
+  test.beforeEach(async ({page, browser}, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page, "bs");
     navBar = new NavBar(undefined, page, "bs");
@@ -264,13 +255,10 @@ test.describe("Feature: Registro de un miembro", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ page, context }) => {
+  test.afterEach(async ({page, context}) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
-  });
-  test.afterAll(async () => {
-    await pixelmatch.generateReport(reportInfo);
   });
   test("EP-017 Guardar miembro nuevo con formulario vacío.", async ({
                                                                       page,
@@ -289,7 +277,7 @@ test.describe("Feature: Registro de un miembro", () => {
       );
     });
   });
-  test("EP-018 Guardar miembro nuevo con email inválido.", async ({ page }) => {
+  test("EP-018 Guardar miembro nuevo con email inválido.", async ({page}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
       `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -312,6 +300,11 @@ test.describe("Feature: Registro de un miembro", () => {
     });
   });
 });
+
+test.afterAll(async () => {
+  await pixelmatch.generateReport(reportInfo);
+});
+
 
 async function startLogin(label, page) {
   await test.step(label, async () => {

@@ -18,7 +18,8 @@
   },
   "scripts": {
     "kraken-run": "rm -rf reports/ kraken-screenshots/; kraken-node run",
-    "playwright-run": "rm playwright-screenshots/*.png; npx playwright test --headed --workers=1 && npx playwright show-report"
+    "playwright-run": "rm playwright-screenshots/*.png; npx playwright test --headed --workers=1 crear-pagina crear-post editar-pagina registro-miembro visualización-post && npx playwright show-report",
+    "playwright-vrt": "npx playwright test --headed --workers=1 vrt"
   },
   "repository": {
     "type": "git",

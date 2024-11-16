@@ -1,7 +1,8 @@
 import fs from 'fs';
-import { PNG } from 'pngjs';
+import {PNG} from 'pngjs';
 import pixelmatch from 'pixelmatch';
-import { options } from "../vrt.config";
+import {options} from "../vrt.config";
+
 const properties = require("../properties.json");
 
 const pixelmatchConfig = {
@@ -18,20 +19,20 @@ class PixelmatchModel {
 
   async createDirectory(directory) {
     if (!fs.existsSync(directory)) {
-      fs.mkdirSync(directory, { recursive: true });
+      fs.mkdirSync(directory, {recursive: true});
     }
   }
 
 
   async compareImages(scenario, step) {
     let resultInfo = {}
-    const beforePath = `${this.config.screenshotsPath}/${scenario}_step-${step}_bs.png`
-    const afterPath = `${this.config.screenshotsPath}/${scenario}_step-${step}_rc.png`
+    const beforePath = `${this.config.screenshotsPath}/${scenario}_step-${step}_${properties.PREFIX_BS}.png`
+    const afterPath = `${this.config.screenshotsPath}/${scenario}_step-${step}_${properties.PREFIX}.png`
     const diffPath = `${this.config.screenshotsPath}/${scenario}_step-${step}_diff.png`
     const img1 = PNG.sync.read(fs.readFileSync(beforePath));
     const img2 = PNG.sync.read(fs.readFileSync(afterPath));
-    const { width, height } = img1;
-    const diff = new PNG({ width, height });
+    const {width, height} = img1;
+    const diff = new PNG({width, height});
     const numDiffPixels = pixelmatch(
       img1.data,
       img2.data,
@@ -65,11 +66,11 @@ class PixelmatchModel {
         <div class="imgline">
             <div class="imgcontainer">
                 <span class="imgname">Reference</span>
-                <img class="img2" src=".${this.config.screenshotsPath}/${stepInfo.scenario}_step-${stepInfo.step}_bs.png" alt="Reference image">
+                <img class="img2" src=".${this.config.screenshotsPath}/${stepInfo.scenario}_step-${stepInfo.step}_${properties.PREFIX_BS}.png" alt="Reference image">
             </div>
             <div class="imgcontainer">
                 <span class="imgname">Test</span>
-                <img class="img2" src=".${this.config.screenshotsPath}/${stepInfo.scenario}_step-${stepInfo.step}_rc.png" alt="Test image">
+                <img class="img2" src=".${this.config.screenshotsPath}/${stepInfo.scenario}_step-${stepInfo.step}_${properties.PREFIX}.png" alt="Test image">
             </div>
         </div>
         <div class="imgline">
@@ -85,12 +86,12 @@ class PixelmatchModel {
     return `
     <html>
         <head>
-            <title>Visual Regression Testing Report</title>
+            <title>Pixelmatch - Playwright | VRT Report</title>
             <link href="index.css" type="text/css" rel="stylesheet">
         </head>
         <body>
             <header>
-                <h1>Visual Regression Testing Report</h1>
+                <h1>Pixelmatch - Playwright | VRT Report</h1>
                 <p>Generated for BASE URL: <a href="${bs_url}" target="_blank">${bs_url}</a></p>
                 <p>Generated for RC URL: <a href="${rc_url}" target="_blank">${rc_url}</a></p>
             </header>
