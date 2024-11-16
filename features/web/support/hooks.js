@@ -9,6 +9,12 @@ const Screenshots = require("../../../page-objects/shared.model");
 
 
 Before(async function (scenario) {
+  const tags = scenario.pickle.tags
+    .map((tag) => tag.name)
+    .filter((name) => name === "@bs");
+  this.version = tags[0] ? "bs" : undefined;
+  console.log("###############################################################", this.version);
+  console.log("######------>>>>", this.version);
   this.deviceClient = new WebClient("chrome", {}, this.userId);
   this.driver = await this.deviceClient.startKrakenForUserId(this.userId);
   this.login = new Login(this.driver, undefined, this.version);

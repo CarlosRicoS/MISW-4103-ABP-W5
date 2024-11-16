@@ -1,7 +1,7 @@
 Feature: Crear post
 
   @user1 @web
-  Scenario: EP-06 Crear un post en el mismo instante
+  Scenario: EP_06 Crear un post en el mismo instante
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -17,7 +17,7 @@ Feature: Crear post
     Then I should see the published post confirmation
 
   @user2 @web
-  Scenario: EP-07 Crear un post y programar fecha de lanzamiento
+  Scenario: EP_07 Crear un post y programar fecha de lanzamiento
     Given I navigate to page "<URL>"
     And I wait for 10 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -33,7 +33,7 @@ Feature: Crear post
     Then I should see the published post confirmation
 
     @user3 @web
-  Scenario: EP-08 Guardar un post en la seccion de borradores
+  Scenario: EP_08 Guardar un post en la seccion de borradores
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -50,7 +50,7 @@ Feature: Crear post
 
     
     @user4 @web
-  Scenario: EP-09 Actualizar un post
+  Scenario: EP_09 Actualizar un post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -75,7 +75,7 @@ Feature: Crear post
     
     
     @user5 @web
-  Scenario: EP-10 Eliminar un post
+  Scenario: EP_10 Eliminar un post
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
