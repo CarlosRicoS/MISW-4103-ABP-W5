@@ -1,0 +1,24 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\EP_01_step-10_0__0_.png",
+        "test": "..\\bitmaps_test\\20241116-115713\\EP_01_step-10_0__0_.png",
+        "selector": "",
+        "fileName": "EP_01_step-10_0__0_.png",
+        "label": "01_step-10",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "./kraken-screenshots/_EP_01_step-10_0_document_0_.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "engineErrorMsg": "page.goto: net::ERR_FILE_NOT_FOUND at file:///C:/Users/santi/OneDrive/Escritorio/Acad%C3%A9mico/MISO_Andes/ciclo2/Pruebas_automatizadas/MISW-4103-ABP-W5/kraken-screenshots/_EP_01_step-10_0_document_0_.png\nCall log:\n  \u001b[2m- navigating to \"file:///C:/Users/santi/OneDrive/Escritorio/Acad%C3%A9mico/MISO_Andes/ciclo2/Pruebas_automatizadas/MISW-4103-ABP-W5/kraken-screenshots/_EP_01_step-10_0_document_0_.png\", waiting until \"load\"\u001b[22m\n",
+        "error": "Reference file not found C:\\Users\\santi\\OneDrive\\Escritorio\\Académico\\MISO_Andes\\ciclo2\\Pruebas_automatizadas\\MISW-4103-ABP-W5\\backstop_data\\bitmaps_reference\\EP_01_step-10_0__0_.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "EP"
+}

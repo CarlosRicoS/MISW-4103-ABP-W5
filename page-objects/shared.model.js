@@ -15,7 +15,7 @@ const playWrightScreenShot = async (config) => {
 const krakenScreenShot = async (config) => {
   const { driver, scenario, step, outputPath, prefix } = config;
   return await driver.saveScreenshot(
-    `${outputPath}/${scenario}_${step}_${prefix}.png`
+    `${outputPath}/${scenario}_${step}_0_document_0_.png`
   );
 };
 
@@ -72,7 +72,9 @@ class Screenshots {
       ...screenShotConfig,
       driver: this.isKraken ? this.driver : this.page,
       outputPath: this.isKraken
-        ? properties.KRAKEN_OUTPUT_DIRECTORY
+        ? this.isBS 
+            ? properties.KRAKEN_OUTPUT_DIRECTORY_BS
+            : properties.KRAKEN_OUTPUT_DIRECTORY_RC
         : properties.PLAYWRIGHT_OUTPUT_DIRECTORY,
       prefix: this.isBS ? properties.PREFIX_BS : properties.PREFIX,
     };

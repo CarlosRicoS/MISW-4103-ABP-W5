@@ -1,7 +1,7 @@
 Feature: App base
 
  @user1 @web
-  Scenario: EP-01 Crear una página nueva y publicarla de inmediato
+  Scenario: EP_01 Crear una página nueva y publicarla de inmediato
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -18,7 +18,7 @@ Feature: App base
 
 
  @user2 @web
-  Scenario: EP-02 Crear una página nueva y guardarla como borrador
+  Scenario: EP_02 Crear una página nueva y guardarla como borrador
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -34,7 +34,7 @@ Feature: App base
     Then I should see the page in the admin section as a draft
 
  @user3 @web
-  Scenario: EP-04 Editar título y contenido de una página existente y publicarla
+  Scenario: EP_04 Editar título y contenido de una página existente y publicarla
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -60,7 +60,7 @@ Feature: App base
     Then I should see the updated notification
 
  @user4 @web
-  Scenario: EP-05 Editar página publicada, cambiar a borrador y previsualizar
+  Scenario: EP_05 Editar página publicada, cambiar a borrador y previsualizar
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -74,7 +74,7 @@ Feature: App base
     Then I should see revert to draft notification 
 
  @user5 @web
-  Scenario: EP-06 Crear un post en el mismo instante
+  Scenario: EP_06 Crear un post en el mismo instante
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -90,7 +90,7 @@ Feature: App base
     Then I should see the published post confirmation
 
  @user6 @web
-  Scenario: EP-07 Crear un post y programar fecha de lanzamiento
+  Scenario: EP_07 Crear un post y programar fecha de lanzamiento
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -106,7 +106,7 @@ Feature: App base
     Then I should see the published post confirmation
 
  @user7 @web
-  Scenario: EP-011 Ver todos los posts
+  Scenario: EP_011 Ver todos los posts
     Given I navigate to page "<URL_BS>"
     And I wait for 5 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -118,7 +118,7 @@ Feature: App base
     Then The url now shouldn't have parameters
 
   @user8 @web
-  Scenario: EP-012 Ver posts para miembros
+  Scenario: EP_012 Ver posts para miembros
     Given I navigate to page "<URL_BS>"
     And I wait for 5 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -130,7 +130,7 @@ Feature: App base
     Then The url now should have visibility for members parameter
 
  @user9 @web
-  Scenario: EP-017 Guardar miembro nuevo con formulario vacío.
+  Scenario: EP_017 Guardar miembro nuevo con formulario vacío.
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -142,7 +142,7 @@ Feature: App base
     Then Form should display error "<NEW_MEMBER_ERROR_MSG>" for empty email
 
  @user10 @web
-  Scenario: EP-018 Guardar miembro nuevo con email inválido.
+  Scenario: EP_018 Guardar miembro nuevo con email inválido.
     Given I navigate to page "<URL_BS>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"

@@ -18,7 +18,7 @@ Before(async function (scenario) {
   this.pages = new Pages(this.driver, undefined, this.version);
   this.screenShots = new Screenshots(this.driver, undefined, this.version);
   this.stepCounter = 1;
-  this.scenarioId = scenario.pickle.name.toString().match(/^(EP-\d{0,5})/)[0];
+  this.scenarioId = scenario.pickle.name.toString().match(/^(EP_\d{0,5})/)[0];
   this.stepCount = "";
 });
 
