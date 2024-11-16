@@ -8,10 +8,14 @@ const Pages = require("../../page-objects/pages.model");
 const Screenshots = require("../../page-objects/shared.model");
 const Posts = require("../../page-objects/posts.model");
 const Members = require("../../page-objects/members.model");
+const PixelmatchModel = require("../../page-objects/pixelmatch.model");
 const screenshotHandler = require("../utils").screenshotHandler;
+const pixelmatchHandler = require("../utils").pixelmatchHandler;
 const testIds = require("../utils").testIds;
 
-let login, navBar, pages, posts, members, screenshots;
+let login, navBar, pages, posts, members, screenshots, pixelmatch;
+
+let reportInfo = [];
 
 test.describe("Feature: Crear una página", () => {
   test.beforeEach(async ({ page, browser }, testInfo) => {
@@ -22,6 +26,7 @@ test.describe("Feature: Crear una página", () => {
     posts = new Posts(undefined, page, "bs");
     members = new Members(undefined, page, "bs");
     screenshots = new Screenshots(undefined, page, "bs");
+    pixelmatch = new PixelmatchModel();
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
@@ -29,6 +34,9 @@ test.describe("Feature: Crear una página", () => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
+  });
+  test.afterAll(async () => {
+    await pixelmatch.generateReport(reportInfo);
   });
   test("EP-01 Crear una página nueva y publicarla de inmediato", async ({page,}) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
@@ -159,6 +167,9 @@ test.describe("Feature: Crear Post", () => {
     await context.clearPermissions();
     await test.context.close();
   });
+  test.afterAll(async () => {
+    await pixelmatch.generateReport(reportInfo);
+  });
   test("EP-06 Crear un post en el mismo instante", async ({ page }) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
@@ -209,6 +220,9 @@ test.describe("Feature: Visualizar los post", () => {
     await context.clearPermissions();
     await test.context.close();
   });
+  test.afterAll(async () => {
+    await pixelmatch.generateReport(reportInfo);
+  });
   test("EP-011 Ver todos los posts", async ({ page }) => {
     await startLogin(`Given I navigate to page "${properties.URL_BS}"`, page);
     await loginWithCredentials(
@@ -255,6 +269,9 @@ test.describe("Feature: Registro de un miembro", () => {
     await context.clearPermissions();
     await test.context.close();
   });
+  test.afterAll(async () => {
+    await pixelmatch.generateReport(reportInfo);
+  });
   test("EP-017 Guardar miembro nuevo con formulario vacío.", async ({
                                                                       page,
                                                                     }) => {
@@ -300,6 +317,7 @@ async function startLogin(label, page) {
   await test.step(label, async () => {
     await page.goto(properties.URL_BS);
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -307,6 +325,7 @@ async function loginWithCredentials(label, login) {
   await test.step(label, async () => {
     await login.login(properties.USERNAME, properties.PASSWORD);
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -314,6 +333,7 @@ async function navigateToPages(label, navBar) {
   await test.step(label, async () => {
     await navBar.goToPages();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -321,6 +341,7 @@ async function returnToPages(label, pages) {
   await test.step(label, async () => {
     await pages.returnToPages();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -328,6 +349,7 @@ async function openPageForm(label, pages) {
   await test.step(label, async () => {
     await pages.openNewPageForm();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -336,6 +358,7 @@ async function fillPageForm(label, title, content, pages) {
     await pages.fillPageTitle(title);
     await pages.fillPageContent(content);
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -343,6 +366,7 @@ async function publishPageNow(label, pages) {
   await test.step(label, async () => {
     await pages.publishPageNow();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -350,6 +374,7 @@ async function showPublishedPage(label, pages) {
   await test.step(label, async () => {
     await expect(await pages.getPublishedPage()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -357,6 +382,7 @@ async function showAdminPageSection(label, title, pages) {
   await test.step(label, async () => {
     await expect(await pages.getPageByTitle(title)).toBeVisible();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -365,6 +391,7 @@ async function closePublishedModal(label, pages) {
   await test.step(label, async () => {
     await pages.closePublishedModal();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -372,6 +399,7 @@ async function openCurrentPageForm(label, title, pages) {
   await test.step(label, async () => {
     await pages.openCurrentPageForm(title);
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -379,6 +407,7 @@ async function updatePage(label, pages) {
   await test.step(label, async () => {
     await pages.updatePage();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -386,6 +415,7 @@ async function showUpdatedPage(label, pages) {
   await test.step(label, async () => {
     await expect(await pages.showUpdatedPage()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -393,6 +423,7 @@ async function unPublishPage(label, pages) {
   await test.step(label, async () => {
     await pages.unPublishPage();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -400,6 +431,7 @@ async function showUnpublishedPage(label, pages) {
   await test.step(label, async () => {
     await expect(await pages.showUnpublishedPage()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -408,6 +440,7 @@ async function navigateToPosts(label, navBar) {
   await test.step(label, async () => {
     await navBar.goToPosts();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -415,6 +448,7 @@ async function openPostForm(label, posts) {
   await test.step(label, async () => {
     await posts.openPostForm();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -423,6 +457,7 @@ async function fillPostForm(label, posts) {
     await posts.fillTitle(faker.lorem.words(3));
     await posts.fillContent(faker.lorem.paragraphs(3));
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -430,6 +465,7 @@ async function publishPost(label, posts) {
   await test.step(label, async () => {
     await posts.publishPost();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -437,6 +473,7 @@ async function schedulePost(label, posts) {
   await test.step(label, async () => {
     await posts.schedulePost();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -444,6 +481,7 @@ async function showPublishedPost(label, posts) {
   await test.step(label, async () => {
     await expect(await posts.getPublishedModal()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -452,6 +490,7 @@ async function selectFilterAccess(label, posts) {
     await posts.selectAccess();
     await posts.selectThirdFilterOption();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -471,6 +510,7 @@ async function navigateToMembers(label, navBar) {
   await test.step(label, async () => {
     await navBar.goToMembers();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -478,6 +518,7 @@ async function openMemberForm(label, members) {
   await test.step(label, async () => {
     await members.openNewMemberForm();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -486,6 +527,7 @@ async function fillFormWrongEmail(label, members) {
     await members.fillName(faker.person.fullName());
     await members.fillEmail(faker.word.sample());
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
 
@@ -493,5 +535,7 @@ async function saveNewMemberForm(label, members) {
   await test.step(label, async () => {
     await members.saveNewMember();
     await screenshotHandler(screenshots, testIds);
+    reportInfo.push(await pixelmatchHandler(pixelmatch, testIds));
   });
 }
+
