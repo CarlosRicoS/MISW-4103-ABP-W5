@@ -141,3 +141,4 @@ tests-examples/*
 /kraken-screenshots/
 .DS_Store
 /**/*.png
+/vrt-playwright/

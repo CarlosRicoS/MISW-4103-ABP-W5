@@ -7,6 +7,7 @@
     "EMAIL_MSG_MEMBER_CREATION": "Invalid Email.",
     "KRAKEN_OUTPUT_DIRECTORY": "./kraken-screenshots",
     "PLAYWRIGHT_OUTPUT_DIRECTORY": "./playwright-screenshots",
+    "VRT_PLAYWRIGHT": "./vrt-playwright",
     "PREFIX": "rc",
     "PREFIX_BS": "bs"
 }

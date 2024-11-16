@@ -5,8 +5,7 @@ const playWrightScreenShot = async (config) => {
   const { driver, scenario, step, outputPath, prefix } = config;
   return await driver
     .screenshot({
-      path: `${outputPath}/${scenario}_step-${step}_${prefix}.png`,
-      fullPage: true,
+      path: `${outputPath}/${scenario}_step-${step}_${prefix}.png`
     })
     .catch((err) => {
       console.log(err);
