@@ -4,174 +4,169 @@ report({
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-1_0_document_0_.png",
         "label": "01_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.223826556040927,
-          "misMatchPercentage": "7.22",
-          "analysisTime": 178
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.26664516696473073,
+          "misMatchPercentage": "0.27",
+          "analysisTime": 205
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-2_0_document_0_.png",
         "label": "01_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 173
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 357
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-3_0_document_0_.png",
         "label": "01_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631299656982028,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 191
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.11071857867425,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 308
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-4_0_document_0_.png",
         "label": "01_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.734190389633234,
-          "misMatchPercentage": "15.73",
-          "analysisTime": 220
+          "rawMisMatchPercentage": 27.223093611656747,
+          "misMatchPercentage": "27.22",
+          "analysisTime": 296
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_01_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-5_0_document_0_.png",
         "label": "01_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.240303145797297,
-          "misMatchPercentage": "9.24",
-          "analysisTime": 150
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 6.397724940631505,
+          "misMatchPercentage": "6.40",
+          "analysisTime": 255
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-6_0_document_0_.png",
         "label": "01_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.49434166935413,
-          "misMatchPercentage": "9.49",
-          "analysisTime": 215
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 7.199492802486147,
+          "misMatchPercentage": "7.20",
+          "analysisTime": 266
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-7_0_document_0_.png",
         "label": "01_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -179,26 +174,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.133882398008045,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 302
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5104864968396858,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 337
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-8_0_document_0_.png",
         "label": "01_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -206,26 +200,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.132254357402796,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 173
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5060812104960737,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 265
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-9_0_document_0_.png",
         "label": "01_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -233,26 +226,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.938804826661559,
-          "misMatchPercentage": "5.94",
-          "analysisTime": 229
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 5.193593181382877,
+          "misMatchPercentage": "5.19",
+          "analysisTime": 359
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-10_0_document_0_.png",
         "label": "01_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -260,26 +252,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.957670944263551,
-          "misMatchPercentage": "5.96",
-          "analysisTime": 237
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 5.250766136755411,
+          "misMatchPercentage": "5.25",
+          "analysisTime": 308
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-11_0_document_0_.png",
         "label": "01_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -287,26 +278,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.617601991955564,
-          "misMatchPercentage": "5.62",
-          "analysisTime": 224
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 5.125119708868033,
+          "misMatchPercentage": "5.13",
+          "analysisTime": 342
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-12_0_document_0_.png",
         "label": "01_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -314,26 +304,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.29960735491285,
-          "misMatchPercentage": "19.30",
-          "analysisTime": 354
+          "rawMisMatchPercentage": 49.7013024324842,
+          "misMatchPercentage": "49.70",
+          "analysisTime": 320
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-12_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_01_step-12_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_01_step-13_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_01_step-13_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_01_step-13_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_01_step-13_0_document_0_.png",
         "label": "01_step-13",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_01_step-13_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -341,188 +331,183 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.29960735491285,
-          "misMatchPercentage": "19.30",
-          "analysisTime": 264
+          "rawMisMatchPercentage": 49.7013024324842,
+          "misMatchPercentage": "49.70",
+          "analysisTime": 391
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_01_step-13_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_01_step-13_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-1_0_document_0_.png",
         "label": "02_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.232621888651089,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 238
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.2906857427658389,
+          "misMatchPercentage": "0.29",
+          "analysisTime": 220
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-2_0_document_0_.png",
         "label": "02_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 328
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 406
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-3_0_document_0_.png",
         "label": "02_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631666129174118,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 300
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.11108505086634,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 354
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-4_0_document_0_.png",
         "label": "02_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.73067225658917,
-          "misMatchPercentage": "15.73",
-          "analysisTime": 235
+          "rawMisMatchPercentage": 27.207262012958456,
+          "misMatchPercentage": "27.21",
+          "analysisTime": 269
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_02_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-5_0_document_0_.png",
         "label": "02_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.240303145797297,
-          "misMatchPercentage": "9.24",
-          "analysisTime": 209
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 5.293397636987305,
+          "misMatchPercentage": "5.29",
+          "analysisTime": 253
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-6_0_document_0_.png",
         "label": "02_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.496467208068252,
-          "misMatchPercentage": "9.50",
-          "analysisTime": 243
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 7.202058107830778,
+          "misMatchPercentage": "7.20",
+          "analysisTime": 224
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-7_0_document_0_.png",
         "label": "02_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -530,26 +515,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.133882398008045,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 204
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5104864968396858,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 279
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-8_0_document_0_.png",
         "label": "02_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -557,26 +541,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.132254357402796,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 170
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5060812104960737,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 286
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-9_0_document_0_.png",
         "label": "02_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -584,26 +567,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.959442635510439,
-          "misMatchPercentage": "5.96",
-          "analysisTime": 186
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 5.282034093085616,
+          "misMatchPercentage": "5.28",
+          "analysisTime": 288
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-10_0_document_0_.png",
         "label": "02_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -611,26 +593,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.958676498755028,
-          "misMatchPercentage": "5.96",
-          "analysisTime": 318
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 5.280693353763647,
+          "misMatchPercentage": "5.28",
+          "analysisTime": 322
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-11_0_document_0_.png",
         "label": "02_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -638,242 +619,234 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.090356253591266,
-          "misMatchPercentage": "6.09",
-          "analysisTime": 300
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 5.460160888718637,
+          "misMatchPercentage": "5.46",
+          "analysisTime": 357
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-12_0_document_0_.png",
         "label": "02_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.083482365358117,
-          "misMatchPercentage": "10.08",
-          "analysisTime": 187
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-12_0_document_0_.png"
+          "rawMisMatchPercentage": 7.871822686094579,
+          "misMatchPercentage": "7.87",
+          "analysisTime": 246
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_02_step-13_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_02_step-13_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_02_step-13_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_02_step-13_0_document_0_.png",
         "label": "02_step-13",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_02_step-13_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.083482365358117,
-          "misMatchPercentage": "10.08",
-          "analysisTime": 216
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_02_step-13_0_document_0_.png"
+          "rawMisMatchPercentage": 7.871822686094579,
+          "misMatchPercentage": "7.87",
+          "analysisTime": 228
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-1_0_document_0_.png",
         "label": "04_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.228663988976517,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 184
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.2779325104811047,
+          "misMatchPercentage": "0.28",
+          "analysisTime": 194
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-2_0_document_0_.png",
         "label": "04_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 235
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 332
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-3_0_document_0_.png",
         "label": "04_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631299656982028,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 269
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.111891289688939,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 380
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-4_0_document_0_.png",
         "label": "04_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.734263684071653,
-          "misMatchPercentage": "15.73",
-          "analysisTime": 191
+          "rawMisMatchPercentage": 27.226538450262396,
+          "misMatchPercentage": "27.23",
+          "analysisTime": 266
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_04_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-5_0_document_0_.png",
         "label": "04_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.56587704125011,
-          "misMatchPercentage": "9.57",
-          "analysisTime": 146
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 6.323550968952476,
+          "misMatchPercentage": "6.32",
+          "analysisTime": 244
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-6_0_document_0_.png",
         "label": "04_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.074760327186373,
-          "misMatchPercentage": "10.07",
-          "analysisTime": 193
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 7.838766894368056,
+          "misMatchPercentage": "7.84",
+          "analysisTime": 236
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-7_0_document_0_.png",
         "label": "04_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -881,26 +854,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.134026048649684,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 195
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5112047500478836,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 370
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-8_0_document_0_.png",
         "label": "04_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -908,26 +880,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.132254357402796,
-          "misMatchPercentage": "5.13",
-          "analysisTime": 254
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 1.5065600459682054,
+          "misMatchPercentage": "1.51",
+          "analysisTime": 355
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-9_0_document_0_.png",
         "label": "04_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -935,26 +906,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.981708484964566,
-          "misMatchPercentage": "5.98",
-          "analysisTime": 228
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 5.1018004213752155,
+          "misMatchPercentage": "5.10",
+          "analysisTime": 339
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-10_0_document_0_.png",
         "label": "04_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -962,26 +932,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.984868799080636,
-          "misMatchPercentage": "5.98",
-          "analysisTime": 260
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 5.110706761156866,
+          "misMatchPercentage": "5.11",
+          "analysisTime": 400
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-11_0_document_0_.png",
         "label": "04_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -989,26 +958,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.622103045393603,
-          "misMatchPercentage": "5.62",
-          "analysisTime": 206
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 4.948860371576327,
+          "misMatchPercentage": "4.95",
+          "analysisTime": 361
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-12_0_document_0_.png",
         "label": "04_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1016,26 +984,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": 787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.320340930856158,
-          "misMatchPercentage": "19.32",
-          "analysisTime": 301
+          "rawMisMatchPercentage": 49.81047692013024,
+          "misMatchPercentage": "49.81",
+          "analysisTime": 414
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-12_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_04_step-12_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-13_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-13_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-13_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-13_0_document_0_.png",
         "label": "04_step-13",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-13_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1043,26 +1011,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": 787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.320340930856158,
-          "misMatchPercentage": "19.32",
-          "analysisTime": 296
+          "rawMisMatchPercentage": 49.81047692013024,
+          "misMatchPercentage": "49.81",
+          "analysisTime": 390
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-13_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_04_step-13_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-14_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-14_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-14_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-14_0_document_0_.png",
         "label": "04_step-14",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-14_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1070,107 +1038,104 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.321968971461406,
-          "misMatchPercentage": "19.32",
-          "analysisTime": 312
+          "rawMisMatchPercentage": 49.81263167975484,
+          "misMatchPercentage": "49.81",
+          "analysisTime": 412
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-14_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_04_step-14_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-15_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-15_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-15_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-15_0_document_0_.png",
         "label": "04_step-15",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-15_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.178325368671025,
-          "misMatchPercentage": "10.18",
-          "analysisTime": 254
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-15_0_document_0_.png"
+          "rawMisMatchPercentage": 8.727755137940132,
+          "misMatchPercentage": "8.73",
+          "analysisTime": 275
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-16_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-16_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-16_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-16_0_document_0_.png",
         "label": "04_step-16",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-16_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.178325368671025,
-          "misMatchPercentage": "10.18",
-          "analysisTime": 168
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-16_0_document_0_.png"
+          "rawMisMatchPercentage": 8.727755137940132,
+          "misMatchPercentage": "8.73",
+          "analysisTime": 315
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-17_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-17_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-17_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-17_0_document_0_.png",
         "label": "04_step-17",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-17_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.874681169192882,
-          "misMatchPercentage": "7.87",
-          "analysisTime": 183
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-17_0_document_0_.png"
+          "rawMisMatchPercentage": 1.7276232079509808,
+          "misMatchPercentage": "1.73",
+          "analysisTime": 430
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-18_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-18_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-18_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-18_0_document_0_.png",
         "label": "04_step-18",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-18_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1178,26 +1143,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.837243823022409,
-          "misMatchPercentage": "5.84",
-          "analysisTime": 236
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-18_0_document_0_.png"
+          "rawMisMatchPercentage": 4.712507182532082,
+          "misMatchPercentage": "4.71",
+          "analysisTime": 568
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-19_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-19_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-19_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-19_0_document_0_.png",
         "label": "04_step-19",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-19_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1205,26 +1169,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.987215092894082,
-          "misMatchPercentage": "6.99",
-          "analysisTime": 203
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-19_0_document_0_.png"
+          "rawMisMatchPercentage": 6.794340164719402,
+          "misMatchPercentage": "6.79",
+          "analysisTime": 772
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-20_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-20_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-20_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-20_0_document_0_.png",
         "label": "04_step-20",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-20_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1232,26 +1195,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.987598161271786,
-          "misMatchPercentage": "6.99",
-          "analysisTime": 180
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-20_0_document_0_.png"
+          "rawMisMatchPercentage": 6.795824554683011,
+          "misMatchPercentage": "6.80",
+          "analysisTime": 498
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-21_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-21_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-21_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-21_0_document_0_.png",
         "label": "04_step-21",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-21_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1259,26 +1221,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.9096916299559465,
-          "misMatchPercentage": "6.91",
-          "analysisTime": 207
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-21_0_document_0_.png"
+          "rawMisMatchPercentage": 7.2960160888718635,
+          "misMatchPercentage": "7.30",
+          "analysisTime": 579
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-22_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-22_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-22_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-22_0_document_0_.png",
         "label": "04_step-22",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-22_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1286,26 +1247,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.309327714997127,
-          "misMatchPercentage": "7.31",
-          "analysisTime": 278
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-22_0_document_0_.png"
+          "rawMisMatchPercentage": 8.599358360467344,
+          "misMatchPercentage": "8.60",
+          "analysisTime": 624
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_04_step-23_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_04_step-23_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_04_step-23_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_04_step-23_0_document_0_.png",
         "label": "04_step-23",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_04_step-23_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1313,215 +1273,208 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.309327714997127,
-          "misMatchPercentage": "7.31",
-          "analysisTime": 223
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_04_step-23_0_document_0_.png"
+          "rawMisMatchPercentage": 8.599358360467344,
+          "misMatchPercentage": "8.60",
+          "analysisTime": 545
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-1_0_document_0_.png",
         "label": "05_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.22705151133132,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 228
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.27478084962913013,
+          "misMatchPercentage": "0.27",
+          "analysisTime": 418
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-2_0_document_0_.png",
         "label": "05_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 216
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 714
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-3_0_document_0_.png",
         "label": "05_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631226362543611,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 204
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 5.970198481339236,
+          "misMatchPercentage": "5.97",
+          "analysisTime": 613
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-4_0_document_0_.png",
         "label": "05_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.731331906534932,
-          "misMatchPercentage": "15.73",
-          "analysisTime": 162
+          "rawMisMatchPercentage": 27.213858512416078,
+          "misMatchPercentage": "27.21",
+          "analysisTime": 469
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_05_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-5_0_document_0_.png",
         "label": "05_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.240303145797297,
-          "misMatchPercentage": "9.24",
-          "analysisTime": 180
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 5.293397636987305,
+          "misMatchPercentage": "5.29",
+          "analysisTime": 430
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-6_0_document_0_.png",
         "label": "05_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.074760327186373,
-          "misMatchPercentage": "10.07",
-          "analysisTime": 179
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 7.838766894368056,
+          "misMatchPercentage": "7.84",
+          "analysisTime": 424
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-7_0_document_0_.png",
         "label": "05_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.771262716585066,
-          "misMatchPercentage": "7.77",
-          "analysisTime": 181
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.4021959013750036,
+          "misMatchPercentage": "1.40",
+          "analysisTime": 370
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-8_0_document_0_.png",
         "label": "05_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1529,26 +1482,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.854003064547022,
-          "misMatchPercentage": "5.85",
-          "analysisTime": 204
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 4.982283087531124,
+          "misMatchPercentage": "4.98",
+          "analysisTime": 581
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-9_0_document_0_.png",
         "label": "05_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1556,26 +1508,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.908159356445125,
-          "misMatchPercentage": "5.91",
-          "analysisTime": 223
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 5.796973759816127,
+          "misMatchPercentage": "5.80",
+          "analysisTime": 699
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-10_0_document_0_.png",
         "label": "05_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1583,26 +1534,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.989657153801954,
-          "misMatchPercentage": "5.99",
-          "analysisTime": 348
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 6.00407010151312,
+          "misMatchPercentage": "6.00",
+          "analysisTime": 479
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_05_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_05_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_05_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_05_step-11_0_document_0_.png",
         "label": "05_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_05_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1610,26 +1560,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.989657153801954,
-          "misMatchPercentage": "5.99",
-          "analysisTime": 350
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_05_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 6.00407010151312,
+          "misMatchPercentage": "6.00",
+          "analysisTime": 590
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-1_0_document_0_.png",
         "label": "06_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1637,26 +1586,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": 483,
-            "height": 346
+            "width": 0,
+            "height": -74
           },
-          "rawMisMatchPercentage": 7.865262573946811,
-          "misMatchPercentage": "7.87",
-          "analysisTime": 158
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.28907326512064263,
+          "misMatchPercentage": "0.29",
+          "analysisTime": 406
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-2_0_document_0_.png",
         "label": "06_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1664,26 +1612,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -483,
-            "height": -346
+            "width": 0,
+            "height": 74
           },
-          "rawMisMatchPercentage": 9.364364292557575,
-          "misMatchPercentage": "9.36",
-          "analysisTime": 272
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 2.3771585212114106,
+          "misMatchPercentage": "2.38",
+          "analysisTime": 715
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-3_0_document_0_.png",
         "label": "06_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1691,26 +1638,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -483,
-            "height": -346
+            "width": 0,
+            "height": 74
           },
-          "rawMisMatchPercentage": 9.367074280777098,
-          "misMatchPercentage": "9.37",
-          "analysisTime": 549
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 5.007402738280219,
+          "misMatchPercentage": "5.01",
+          "analysisTime": 758
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-4_0_document_0_.png",
         "label": "06_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1718,26 +1664,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -483,
-            "height": -346
+            "width": 0,
+            "height": 74
           },
-          "rawMisMatchPercentage": 17.107757102161774,
-          "misMatchPercentage": "17.11",
-          "analysisTime": 441
+          "rawMisMatchPercentage": 26.000469084405875,
+          "misMatchPercentage": "26.00",
+          "analysisTime": 600
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_06_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-5_0_document_0_.png",
         "label": "06_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1745,26 +1691,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -483,
-            "height": -346
+            "width": 0,
+            "height": -74
           },
-          "rawMisMatchPercentage": 10.400695669917058,
-          "misMatchPercentage": "10.40",
-          "analysisTime": 422
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 5.138599783048462,
+          "misMatchPercentage": "5.14",
+          "analysisTime": 686
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-6_0_document_0_.png",
         "label": "06_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1772,26 +1717,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": 483,
-            "height": 346
+            "width": 0,
+            "height": -74
           },
-          "rawMisMatchPercentage": 11.167861452649332,
-          "misMatchPercentage": "11.17",
-          "analysisTime": 374
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 7.239291682547129,
+          "misMatchPercentage": "7.24",
+          "analysisTime": 679
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-7_0_document_0_.png",
         "label": "06_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1799,26 +1743,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": -787,
+            "height": 74
           },
-          "rawMisMatchPercentage": 5.565240936878391,
-          "misMatchPercentage": "5.57",
-          "analysisTime": 435
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.4447423865159932,
+          "misMatchPercentage": "1.44",
+          "analysisTime": 727
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-8_0_document_0_.png",
         "label": "06_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1826,26 +1769,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": -787,
+            "height": 74
           },
-          "rawMisMatchPercentage": 5.565240936878391,
-          "misMatchPercentage": "5.57",
-          "analysisTime": 393
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 1.443401647194024,
+          "misMatchPercentage": "1.44",
+          "analysisTime": 538
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-9_0_document_0_.png",
         "label": "06_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1853,26 +1795,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": -787,
+            "height": 74
           },
-          "rawMisMatchPercentage": 6.387404838524906,
-          "misMatchPercentage": "6.39",
-          "analysisTime": 465
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 4.819814211836813,
+          "misMatchPercentage": "4.82",
+          "analysisTime": 471
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-10_0_document_0_.png",
         "label": "06_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1880,26 +1821,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": -787,
+            "height": 74
           },
-          "rawMisMatchPercentage": 6.396413284593995,
-          "misMatchPercentage": "6.40",
-          "analysisTime": 414
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 4.841792760007661,
+          "misMatchPercentage": "4.84",
+          "analysisTime": 594
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-11_0_document_0_.png",
         "label": "06_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1907,26 +1847,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": -787,
+            "height": 74
           },
-          "rawMisMatchPercentage": 6.105331125482967,
-          "misMatchPercentage": "6.11",
-          "analysisTime": 559
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 4.962986018004214,
+          "misMatchPercentage": "4.96",
+          "analysisTime": 582
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-12_0_document_0_.png",
         "label": "06_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1934,26 +1873,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": 787,
+            "height": -74
           },
-          "rawMisMatchPercentage": 20.999937513668883,
-          "misMatchPercentage": "21.00",
-          "analysisTime": 520
+          "rawMisMatchPercentage": 49.708820149396665,
+          "misMatchPercentage": "49.71",
+          "analysisTime": 646
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-12_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_06_step-12_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_06_step-13_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_06_step-13_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_06_step-13_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_06_step-13_0_document_0_.png",
         "label": "06_step-13",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_06_step-13_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -1961,188 +1900,183 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -346
+            "width": 787,
+            "height": -74
           },
-          "rawMisMatchPercentage": 20.999937513668883,
-          "misMatchPercentage": "21.00",
-          "analysisTime": 622
+          "rawMisMatchPercentage": 49.707814594905194,
+          "misMatchPercentage": "49.71",
+          "analysisTime": 759
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_06_step-13_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_06_step-13_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-1_0_document_0_.png",
         "label": "07_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.23518719399572,
-          "misMatchPercentage": "7.24",
-          "analysisTime": 404
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.2992611920607464,
+          "misMatchPercentage": "0.30",
+          "analysisTime": 457
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-2_0_document_0_.png",
         "label": "07_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 355
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 616
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-3_0_document_0_.png",
         "label": "07_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631299656982028,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 320
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.111158345304759,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 640
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-4_0_document_0_.png",
         "label": "07_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.735363100647923,
-          "misMatchPercentage": "15.74",
-          "analysisTime": 380
+          "rawMisMatchPercentage": 27.22558562256296,
+          "misMatchPercentage": "27.23",
+          "analysisTime": 427
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_07_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-5_0_document_0_.png",
         "label": "07_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.564117974728077,
-          "misMatchPercentage": "9.56",
-          "analysisTime": 280
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 5.855346096338209,
+          "misMatchPercentage": "5.86",
+          "analysisTime": 618
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-6_0_document_0_.png",
         "label": "07_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.269576944501452,
-          "misMatchPercentage": "10.27",
-          "analysisTime": 419
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 8.188088187868305,
+          "misMatchPercentage": "8.19",
+          "analysisTime": 596
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-7_0_document_0_.png",
         "label": "07_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2150,26 +2084,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.117601991955564,
-          "misMatchPercentage": "5.12",
-          "analysisTime": 453
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 1.4447423865159932,
+          "misMatchPercentage": "1.44",
+          "analysisTime": 873
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-8_0_document_0_.png",
         "label": "07_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2177,26 +2110,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.115973951350316,
-          "misMatchPercentage": "5.12",
-          "analysisTime": 322
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 1.4403371001723808,
+          "misMatchPercentage": "1.44",
+          "analysisTime": 853
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-9_0_document_0_.png",
         "label": "07_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2204,26 +2136,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.0143171806167395,
-          "misMatchPercentage": "6.01",
-          "analysisTime": 378
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 5.444502968779927,
+          "misMatchPercentage": "5.44",
+          "analysisTime": 916
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-10_0_document_0_.png",
         "label": "07_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2231,26 +2162,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 6.02365447232331,
-          "misMatchPercentage": "6.02",
-          "analysisTime": 452
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 5.4640394560429035,
+          "misMatchPercentage": "5.46",
+          "analysisTime": 720
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-11_0_document_0_.png",
         "label": "07_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2258,26 +2188,25 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 5.6629955947136565,
-          "misMatchPercentage": "5.66",
-          "analysisTime": 325
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 5.324506799463704,
+          "misMatchPercentage": "5.32",
+          "analysisTime": 833
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-12_0_document_0_.png",
         "label": "07_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2285,26 +2214,26 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.16409691629956,
-          "misMatchPercentage": "19.16",
-          "analysisTime": 413
+          "rawMisMatchPercentage": 49.3135893506991,
+          "misMatchPercentage": "49.31",
+          "analysisTime": 702
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-12_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_07_step-12_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_07_step-13_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_07_step-13_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_07_step-13_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_07_step-13_0_document_0_.png",
         "label": "07_step-13",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_07_step-13_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
@@ -2312,1069 +2241,1034 @@ report({
         "diff": {
           "isSameDimensions": false,
           "dimensionDifference": {
-            "width": -1270,
-            "height": -420
+            "width": -787,
+            "height": 0
           },
-          "rawMisMatchPercentage": 19.17827044627466,
-          "misMatchPercentage": "19.18",
-          "analysisTime": 539
+          "rawMisMatchPercentage": 49.33298218732043,
+          "misMatchPercentage": "49.33",
+          "analysisTime": 781
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_07_step-13_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_07_step-13_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-1_0_document_0_.png",
         "label": "011_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.232621888651089,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 432
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.291272098273183,
+          "misMatchPercentage": "0.29",
+          "analysisTime": 672
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-2_0_document_0_.png",
         "label": "011_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 288
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 687
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-3_0_document_0_.png",
         "label": "011_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631666129174118,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 344
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.110938461989504,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 646
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-4_0_document_0_.png",
         "label": "011_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.743132311120231,
-          "misMatchPercentage": "15.74",
-          "analysisTime": 350
+          "rawMisMatchPercentage": 27.251531853762938,
+          "misMatchPercentage": "27.25",
+          "analysisTime": 439
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_011_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-5_0_document_0_.png",
         "label": "011_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.608461109970975,
-          "misMatchPercentage": "9.61",
-          "analysisTime": 319
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 6.821586678002873,
+          "misMatchPercentage": "6.82",
+          "analysisTime": 293
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-6_0_document_0_.png",
         "label": "011_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.305857691518368,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 336
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 9.179835234102436,
+          "misMatchPercentage": "9.18",
+          "analysisTime": 234
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-7_0_document_0_.png",
         "label": "011_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.345436688264094,
-          "misMatchPercentage": "10.35",
-          "analysisTime": 375
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 9.280834970242458,
+          "misMatchPercentage": "9.28",
+          "analysisTime": 306
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-8_0_document_0_.png",
         "label": "011_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.368890908557859,
-          "misMatchPercentage": "10.37",
-          "analysisTime": 352
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 9.361678735817526,
+          "misMatchPercentage": "9.36",
+          "analysisTime": 369
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_011_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_011_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_011_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_011_step-9_0_document_0_.png",
         "label": "011_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_011_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.371676097217742,
-          "misMatchPercentage": "10.37",
-          "analysisTime": 328
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_011_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 9.36592981324577,
+          "misMatchPercentage": "9.37",
+          "analysisTime": 232
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-1_0_document_0_.png",
         "label": "012_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.236872966079335,
-          "misMatchPercentage": "7.24",
-          "analysisTime": 258
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.3041719194347533,
+          "misMatchPercentage": "0.30",
+          "analysisTime": 215
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-2_0_document_0_.png",
         "label": "012_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 439
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 383
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-3_0_document_0_.png",
         "label": "012_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631299656982028,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 414
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.111158345304759,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 387
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-4_0_document_0_.png",
         "label": "012_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.742399366736052,
-          "misMatchPercentage": "15.74",
-          "analysisTime": 399
+          "rawMisMatchPercentage": 27.25365739247706,
+          "misMatchPercentage": "27.25",
+          "analysisTime": 331
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_012_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-5_0_document_0_.png",
         "label": "012_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.608461109970975,
-          "misMatchPercentage": "9.61",
-          "analysisTime": 347
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 6.821586678002873,
+          "misMatchPercentage": "6.82",
+          "analysisTime": 263
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-6_0_document_0_.png",
         "label": "012_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.305857691518368,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 426
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 9.179835234102436,
+          "misMatchPercentage": "9.18",
+          "analysisTime": 333
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-7_0_document_0_.png",
         "label": "012_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.45483596704682,
-          "misMatchPercentage": "9.45",
-          "analysisTime": 250
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 6.462150752000937,
+          "misMatchPercentage": "6.46",
+          "analysisTime": 298
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-8_0_document_0_.png",
         "label": "012_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.455788794746255,
-          "misMatchPercentage": "9.46",
-          "analysisTime": 188
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 6.464056407399807,
+          "misMatchPercentage": "6.46",
+          "analysisTime": 299
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_012_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_012_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_012_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_012_step-9_0_document_0_.png",
         "label": "012_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_012_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.455788794746255,
-          "misMatchPercentage": "9.46",
-          "analysisTime": 116
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_012_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 6.464056407399807,
+          "misMatchPercentage": "6.46",
+          "analysisTime": 223
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-1_0_document_0_.png",
         "label": "017_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.232621888651089,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 110
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.291198803834765,
+          "misMatchPercentage": "0.29",
+          "analysisTime": 184
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-2_0_document_0_.png",
         "label": "017_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 174
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 328
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-3_0_document_0_.png",
         "label": "017_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631299656982028,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 156
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 5.970125186900818,
+          "misMatchPercentage": "5.97",
+          "analysisTime": 304
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-4_0_document_0_.png",
         "label": "017_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.739687472514586,
-          "misMatchPercentage": "15.74",
-          "analysisTime": 159
+          "rawMisMatchPercentage": 27.238925210355035,
+          "misMatchPercentage": "27.24",
+          "analysisTime": 225
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_017_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-5_0_document_0_.png",
         "label": "017_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 11.972280043390308,
-          "misMatchPercentage": "11.97",
-          "analysisTime": 169
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 15.36874431968102,
+          "misMatchPercentage": "15.37",
+          "analysisTime": 245
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-6_0_document_0_.png",
         "label": "017_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.30754346360198,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 135
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 8.05659796534639,
+          "misMatchPercentage": "8.06",
+          "analysisTime": 297
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-7_0_document_0_.png",
         "label": "017_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.408469905303585,
-          "misMatchPercentage": "10.41",
-          "analysisTime": 175
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 8.209123691694273,
+          "misMatchPercentage": "8.21",
+          "analysisTime": 285
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-8_0_document_0_.png",
         "label": "017_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.408176727549913,
-          "misMatchPercentage": "10.41",
-          "analysisTime": 143
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 8.20853733618693,
+          "misMatchPercentage": "8.21",
+          "analysisTime": 269
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_017_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_017_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_017_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_017_step-9_0_document_0_.png",
         "label": "017_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_017_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.408176727549913,
-          "misMatchPercentage": "10.41",
-          "analysisTime": 140
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_017_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 8.20853733618693,
+          "misMatchPercentage": "8.21",
+          "analysisTime": 245
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-1_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-1_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-1_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-1_0_document_0_.png",
         "label": "018_step-1",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-1_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 7.233428127473688,
-          "misMatchPercentage": "7.23",
-          "analysisTime": 195
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-1_0_document_0_.png"
+          "rawMisMatchPercentage": 0.2960362367703539,
+          "misMatchPercentage": "0.30",
+          "analysisTime": 202
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-2_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-2_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-2_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-2_0_document_0_.png",
         "label": "018_step-2",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-2_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.628807646075815,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 148
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-2_0_document_0_.png"
+          "rawMisMatchPercentage": 4.086238236242634,
+          "misMatchPercentage": "4.09",
+          "analysisTime": 399
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-3_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-3_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-3_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-3_0_document_0_.png",
         "label": "018_step-3",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-3_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 8.631666129174118,
-          "misMatchPercentage": "8.63",
-          "analysisTime": 165
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-3_0_document_0_.png"
+          "rawMisMatchPercentage": 4.111378228620012,
+          "misMatchPercentage": "4.11",
+          "analysisTime": 436
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-4_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-4_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-4_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-4_0_document_0_.png",
         "label": "018_step-4",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-4_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 15.731038728781261,
-          "misMatchPercentage": "15.73",
-          "analysisTime": 179
+          "rawMisMatchPercentage": 27.212759095839807,
+          "misMatchPercentage": "27.21",
+          "analysisTime": 278
         },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-4_0_document_0_.png"
+        "diffImage": "..\\bitmaps_test\\20241116-231136\\failed_diff_EP_018_step-4_0_document_0_.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-5_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-5_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-5_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-5_0_document_0_.png",
         "label": "018_step-5",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-5_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 9.521387317130376,
-          "misMatchPercentage": "9.52",
-          "analysisTime": 153
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-5_0_document_0_.png"
+          "rawMisMatchPercentage": 7.253437509161804,
+          "misMatchPercentage": "7.25",
+          "analysisTime": 252
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-6_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-6_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-6_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-6_0_document_0_.png",
         "label": "018_step-6",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-6_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": 483,
-            "height": 420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 11.972280043390308,
-          "misMatchPercentage": "11.97",
-          "analysisTime": 147
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-6_0_document_0_.png"
+          "rawMisMatchPercentage": 15.36874431968102,
+          "misMatchPercentage": "15.37",
+          "analysisTime": 248
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-7_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-7_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-7_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-7_0_document_0_.png",
         "label": "018_step-7",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-7_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.306590635902548,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 141
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-7_0_document_0_.png"
+          "rawMisMatchPercentage": 8.054912193262776,
+          "misMatchPercentage": "8.05",
+          "analysisTime": 229
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-8_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-8_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-8_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-8_0_document_0_.png",
         "label": "018_step-8",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-8_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.30754346360198,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 142
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-8_0_document_0_.png"
+          "rawMisMatchPercentage": 8.05659796534639,
+          "misMatchPercentage": "8.06",
+          "analysisTime": 252
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-9_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-9_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-9_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-9_0_document_0_.png",
         "label": "018_step-9",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-9_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.305637808203114,
-          "misMatchPercentage": "10.31",
-          "analysisTime": 141
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-9_0_document_0_.png"
+          "rawMisMatchPercentage": 8.598097276378668,
+          "misMatchPercentage": "8.60",
+          "analysisTime": 265
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-10_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-10_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-10_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-10_0_document_0_.png",
         "label": "018_step-10",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-10_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.304025330557916,
-          "misMatchPercentage": "10.30",
-          "analysisTime": 144
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-10_0_document_0_.png"
+          "rawMisMatchPercentage": 8.59501890996511,
+          "misMatchPercentage": "8.60",
+          "analysisTime": 286
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-11_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-11_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-11_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-11_0_document_0_.png",
         "label": "018_step-11",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 20,
         "url": "./kraken-screenshots/EP_018_step-11_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.41052214957929,
-          "misMatchPercentage": "10.41",
-          "analysisTime": 148
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-11_0_document_0_.png"
+          "rawMisMatchPercentage": 8.654753877275793,
+          "misMatchPercentage": "8.65",
+          "analysisTime": 162
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\..\\kraken-screenshots-reference\\EP_018_step-12_0_document_0_.png",
-        "test": "..\\bitmaps_test\\20241116-184720\\EP_018_step-12_0_document_0_.png",
+        "test": "..\\bitmaps_test\\20241116-231136\\EP_018_step-12_0_document_0_.png",
         "selector": "document",
         "fileName": "EP_018_step-12_0_document_0_.png",
         "label": "018_step-12",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.1,
+        "misMatchThreshold": 30,
         "url": "./kraken-screenshots/EP_018_step-12_0_document_0_.png",
         "referenceUrl": "",
         "expect": 0,
         "viewportLabel": "",
         "diff": {
-          "isSameDimensions": false,
+          "isSameDimensions": true,
           "dimensionDifference": {
-            "width": -483,
-            "height": -420
+            "width": 0,
+            "height": 0
           },
-          "rawMisMatchPercentage": 10.410155677387198,
-          "misMatchPercentage": "10.41",
-          "analysisTime": 106
-        },
-        "diffImage": "..\\bitmaps_test\\20241116-184720\\failed_diff_EP_018_step-12_0_document_0_.png"
+          "rawMisMatchPercentage": 8.654020932891612,
+          "misMatchPercentage": "8.65",
+          "analysisTime": 129
+        }
       },
-      "status": "fail"
+      "status": "pass"
     }
   ],
   "id": "EP"
