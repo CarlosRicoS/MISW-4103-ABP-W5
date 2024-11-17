@@ -1,7 +1,14 @@
 {
     "URL": "http://localhost:2368/ghost/",
+    "URL_BS": "http://localhost:2369/ghost/",
     "USERNAME": "jamie@example.com",
     "PASSWORD": "}WTdx6}h}ZLJTz4",
     "NEW_MEMBER_ERROR_MSG": "Please enter an email.",
-    "EMAIL_MSG_MEMBER_CREATION": "Invalid Email."
+    "EMAIL_MSG_MEMBER_CREATION": "Invalid Email.",
+    "KRAKEN_OUTPUT_DIRECTORY_BS": "./kraken-screenshots-reference",
+    "KRAKEN_OUTPUT_DIRECTORY_RC": "./kraken-screenshots",
+    "PLAYWRIGHT_OUTPUT_DIRECTORY": "./playwright-screenshots",
+    "VRT_PLAYWRIGHT": "./vrt-playwright",
+    "PREFIX": "rc",
+    "PREFIX_BS": "bs"
 }

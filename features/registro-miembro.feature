@@ -1,7 +1,7 @@
 Feature: Registro de un miembro
 
   @user1 @web
-  Scenario: EP-017 Guardar miembro nuevo con formulario vacío.
+  Scenario: EP_017 Guardar miembro nuevo con formulario vacío.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -14,7 +14,7 @@ Feature: Registro de un miembro
 
 
   @user2 @web
-  Scenario: EP-018 Guardar miembro nuevo con email inválido.
+  Scenario: EP_018 Guardar miembro nuevo con email inválido.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -29,7 +29,7 @@ Feature: Registro de un miembro
     Then Form should display error "<EMAIL_MSG_MEMBER_CREATION>" for invalid email
 
   @user3 @web
-  Scenario: EP-019 Mostrar advertencia al intentar salir de formulario de creación de miembro.
+  Scenario: EP_019 Mostrar advertencia al intentar salir de formulario de creación de miembro.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -44,7 +44,7 @@ Feature: Registro de un miembro
     And the browser redirects to members list
 
   @user4 @web
-  Scenario: EP-020 Guardar nuevo miembro exitoso.
+  Scenario: EP_020 Guardar nuevo miembro exitoso.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"

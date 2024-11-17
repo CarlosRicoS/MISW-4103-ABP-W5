@@ -137,3 +137,8 @@ reports/*
 .kraken/*
 tests-examples/*
 .idea
+/playwright-screenshots/
+/kraken-screenshots/
+.DS_Store
+/**/*.png
+/vrt-playwright/

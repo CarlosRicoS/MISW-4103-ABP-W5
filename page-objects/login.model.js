@@ -1,20 +1,26 @@
 const PageObject = require("./page-object.abstract.model");
 
 class Login extends PageObject {
-  constructor(driver, page) {
-    super(driver, page);
+  constructor(driver, page, version) {
+    super(driver, page, version);
   }
 
   async getEmailInput() {
-    return await this.getElementById("#identification");
+    return this.isBS
+      ? await this.getElementByAttribute('input[name="identification"]')
+      : await this.getElementById("#identification");
   }
 
   async getPasswordInput() {
-    return await this.getElementById("#password");
+    return this.isBS
+      ? await this.getElementByAttribute('input[name="password"]')
+      : await this.getElementById("#password");
   }
 
   async getSubmitButton() {
-    return await this.getElementById("#ember5");
+    return this.isBS
+      ? await this.getElementByAttribute('button[type="submit"]')
+      : await this.getElementById("#ember5");
   }
 
   async login(email, password) {

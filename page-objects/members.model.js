@@ -1,19 +1,23 @@
 const PageObject = require("./page-object.abstract.model");
 
 class Members extends PageObject {
-  constructor(driver, page) {
-    super(driver, page);
+  constructor(driver, page, version) {
+    super(driver, page, version);
   }
 
   async openNewMemberForm() {
-    let newMemberButton = await this.getElementByAttribute(
+    let newMemberButton = this.isBS
+      ? await this.getElementByAttribute('div[class="view-actions-top-row"] a[href="#/members/new/"]')
+      : await this.getElementByAttribute(
       'a[href="#/members/new/"][data-test-new-member-button="true"]'
     );
     return await newMemberButton.click();
   }
 
   async saveNewMember() {
-    let saveNewMemberButton = await this.getElementByAttribute(
+    let saveNewMemberButton = this.isBS
+      ? await this.getElementByAttribute('section[class="view-actions"] button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]')
+      : await this.getElementByAttribute(
       'button[data-test-button="save"]'
     );
     return await saveNewMemberButton.click();

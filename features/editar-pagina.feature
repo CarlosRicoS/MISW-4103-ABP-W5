@@ -1,6 +1,6 @@
 Feature: Editar Página
   @user1 @web
-    Scenario: EP-04 Editar título y contenido de una página existente y publicarla
+    Scenario: EP_04 Editar título y contenido de una página existente y publicarla
       Given I navigate to page "<URL>"
       And I wait for 1 seconds
       When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -26,7 +26,7 @@ Feature: Editar Página
       Then I should see the updated notification
 
   @user2 @web
-    Scenario: EP-05 Editar página publicada, cambiar a borrador y previsualizar
+    Scenario: EP_05 Editar página publicada, cambiar a borrador y previsualizar
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"
@@ -40,7 +40,7 @@ Feature: Editar Página
     Then I should see revert to draft notification
 
   @user3 @web
-  Scenario: EP-16 Editar una página asignando un tag
+  Scenario: EP_16 Editar una página asignando un tag
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
     When I login with email "<USERNAME>" and password "<PASSWORD>"

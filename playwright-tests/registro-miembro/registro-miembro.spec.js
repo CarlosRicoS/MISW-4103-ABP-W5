@@ -1,20 +1,26 @@
 const { test, expect } = require("@playwright/test");
-
 const properties = require("../../properties.json");
 const { faker } = require("@faker-js/faker");
 const Login = require("../../page-objects/login.model");
 const NavBar = require("../../page-objects/nav-bar.model");
 const Members = require("../../page-objects/members.model");
-let login, navBar, members;
+const Screenshots = require("../../page-objects/shared.model");
+const screenshotHandler = require("../utils").screenshotHandler;
+const testIds = require("../utils").testIds;
+
+let login, navBar, members, screenshots;
 
 test.describe("Feature: Registro de un miembro", () => {
-  test.beforeEach(async ({ page, browser }) => {
+  test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page);
     navBar = new NavBar(undefined, page);
     members = new Members(undefined, page);
+    screenshots = new Screenshots(undefined, page);
+    testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
+    testIds.stepCounter = 1;
   });
-  test.afterEach(async ({ context }) => {
+  test.afterEach(async ({ page, context }) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
@@ -103,42 +109,49 @@ test.describe("Feature: Registro de un miembro", () => {
 async function startLogin(label, page) {
   await test.step(label, async () => {
     await page.goto(properties.URL);
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function loginWithCredentials(label, login) {
   await test.step(label, async () => {
     await login.login(properties.USERNAME, properties.PASSWORD);
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function navigateToMembers(label, navBar) {
   await test.step(label, async () => {
     await navBar.goToMembers();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function openMemberForm(label, members) {
   await test.step(label, async () => {
     await members.openNewMemberForm();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function onWarningModalOpen(label, members) {
   await test.step(label, async () => {
     await expect(await members.getWarningModal()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function closeNewMemberForm(label, members) {
   await test.step(label, async () => {
     await members.discardChanges();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function browserRedirectsToMemberList(label, page) {
   await test.step(label, async () => {
     await expect(await page.url()).toMatch(/\/members$/);
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
@@ -146,6 +159,7 @@ async function fillFormWrongEmail(label, members) {
   await test.step(label, async () => {
     await members.fillName(faker.person.fullName());
     await members.fillEmail(faker.word.sample());
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
@@ -153,23 +167,27 @@ async function fillFormRightData(label, members) {
   await test.step(label, async () => {
     await members.fillName(faker.person.fullName());
     await members.fillEmail(faker.internet.email());
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function saveNewMemberForm(label, members) {
   await test.step(label, async () => {
     await members.saveNewMember();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function showMemberActions(label, members) {
   await test.step(label, async () => {
     await expect(await members.getMemberActionsButton()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
   });
 }
 
 async function showSignUpInfo(label, members) {
   await test.step(label, async () => {
     await expect(await members.getSignupInfo()).toEqual("SIGNUP INFO");
+    await screenshotHandler(screenshots, testIds);
   });
 }
