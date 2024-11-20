@@ -6,9 +6,12 @@ const Members = require("../../../page-objects/members.model");
 const Posts = require("../../../page-objects/posts.model");
 const Pages = require("../../../page-objects/pages.model");
 const Screenshots = require("../../../page-objects/shared.model");
-
+const user = require("../../../data-models/user.dto");
 
 Before(async function (scenario) {
+  const userData = user.getNextUser();
+  console.log("####### ---->>>> UserData ", userData.userName);
+  console.log("####### ---->>>> UserData ", userData.password);
   const tags = scenario.pickle.tags
     .map((tag) => tag.name)
     .filter((name) => name === "@bs");

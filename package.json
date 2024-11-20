@@ -14,9 +14,15 @@
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
     "@playwright/test": "^1.48.2",
-    "@types/node": "^22.9.0"
+    "@types/node": "^22.9.0",
+    "cross-env": "^7.0.3"
   },
   "scripts": {
+    "kraken-all": "rm -rf reports/ kraken-screenshots/; npm run kraken-priori; npm run kraken-ps-rand; npm run kraken-rand",
+    "kraken-priori": "cross-env DATA_TYPE=priori kraken-node run",
+    "kraken-ps-rand": "cross-env DATA_TYPE=ps-rand kraken-node run",
+    "kraken-rand": "cross-env DATA_TYPE=rand kraken-node run",
+    "test": "echo $npm_config_testvarname",
     "kraken-run": "rm -rf reports/ kraken-screenshots/; kraken-node run",
     "playwright-run": "rm playwright-screenshots/*.png; npx playwright test --headed --workers=1 crear-pagina crear-post editar-pagina registro-miembro visualización-post && npx playwright show-report",
     "playwright-vrt": "npx playwright test --headed --workers=1 vrt"
