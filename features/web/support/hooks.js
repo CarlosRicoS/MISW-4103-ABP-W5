@@ -6,15 +6,16 @@ const Members = require("../../../page-objects/members.model");
 const Posts = require("../../../page-objects/posts.model");
 const Pages = require("../../../page-objects/pages.model");
 const Screenshots = require("../../../page-objects/shared.model");
-
+const user = require("../../../data-models/user.dto");
 
 Before(async function (scenario) {
+  const userData = user.getNextUser();
+  console.log("####### ---->>>> UserData ", userData.userName);
+  console.log("####### ---->>>> UserData ", userData.password);
   const tags = scenario.pickle.tags
     .map((tag) => tag.name)
     .filter((name) => name === "@bs");
   this.version = tags[0] ? "bs" : undefined;
-  console.log("###############################################################", this.version);
-  console.log("######------>>>>", this.version);
   this.deviceClient = new WebClient("chrome", {}, this.userId);
   this.driver = await this.deviceClient.startKrakenForUserId(this.userId);
   this.login = new Login(this.driver, undefined, this.version);
