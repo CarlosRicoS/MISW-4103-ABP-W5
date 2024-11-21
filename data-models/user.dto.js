@@ -22,6 +22,10 @@ class User extends DataGenerator {
     this.password = user["password"];
     return this;
   }
+
+  getUsers() {
+    return this.getDataArray();
+  }
 }
 
 module.exports = new User();

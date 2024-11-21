@@ -37,9 +37,22 @@ class DataGenerator {
 
   getNextData() {
     if (this.data_type !== "priori") return;
-    console.warn(this.dataGenerator);
-
     return this.dataGenerator.next();
+  }
+
+  getDataArray() {
+    if (this.data_type !== "priori") return;
+    return this.dataGenerator.data;
+  }
+
+  getPseudoRandomData(count) {
+    if (this.data_type !== "ps-rand") return;
+    throw new Error("Not implemented method");
+  }
+
+  getRandomData(count) {
+    if (this.data_type !== "rand") return;
+    throw new Error("Not implemented method");
   }
 
   get dataGenerator() {
