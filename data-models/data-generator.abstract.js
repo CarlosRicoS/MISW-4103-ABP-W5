@@ -5,7 +5,7 @@ const getRecords = async (schemaName, count = 10) => {
 };
 
 const priori_data = require("./priori-db.json");
-const faker = require("@faker-js/faker");
+const faker = require("@faker-js/faker").faker;
 const getSection = (sectionName) => {
   return {
     index: 0,
@@ -56,24 +56,16 @@ class DataGenerator {
     return await this.dataGenerator(this.sectionName, count);
   }
 
-  getRandomData(count) {
-    if (this.data_type !== "rand") return;
-    throw new Error("Not implemented method");
-  }
-
   get dataGenerator() {
-    let generator;
     switch (this.data_type) {
       case "priori":
         return getSection(this.sectionName);
       case "ps-rand":
         return getRecords;
       case "rand":
-        return faker;
       default:
-        break;
+        return faker;
     }
-    return generator;
   }
 
   async dataArray() {
@@ -83,9 +75,8 @@ class DataGenerator {
       case "ps-rand":
         return await this.getPseudoRandomData(10);
       case "rand":
-        return faker;
       default:
-        break;
+        return null;
     }
   }
 }

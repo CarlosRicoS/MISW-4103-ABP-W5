@@ -10,7 +10,7 @@ const Members = require("../../page-objects/members.model");
 const PostPage = require("../../data-models/post-page.dto");
 const { screenshotHandler, testIds, getScenarios } = require("../utils");
 
-let login, navBar, pages, posts, members, screenshots, datapool;
+let login, navBar, pages, posts, members, screenshots, datapool, randomData;
 
 const scenarios = getScenarios(4);
 
@@ -39,7 +39,10 @@ test.describe("Feature: Crear una página", () => {
     test(`EP-01-${
       index + 1
     } Crear una página nueva y publicarla de inmediato`, async ({ page }) => {
-      const { title, plaintext } = datapool[index];
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -59,7 +62,10 @@ test.describe("Feature: Crear una página", () => {
     test(`EP-02-${
       index + 1
     } Crear una página nueva y guardarla como borrador`, async ({ page }) => {
-      const { title, plaintext } = datapool[index];
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -82,7 +88,10 @@ test.describe("Feature: Crear una página", () => {
     } Crear una página nueva y previsualizar la publicación`, async ({
       page,
     }) => {
-      const { title, plaintext } = datapool[index];
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -122,7 +131,10 @@ test.describe("Feature: Crear Post", () => {
     test(`EP-06-${index + 1} Crear un post en el mismo instante`, async ({
       page,
     }) => {
-      const { title, plaintext } = datapool[index];
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -142,7 +154,10 @@ test.describe("Feature: Crear Post", () => {
     test(`EP-07-${
       index + 1
     } Crear un post y programar fecha de lanzamiento`, async ({ page }) => {
-      const { title, plaintext } = datapool[index];
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
