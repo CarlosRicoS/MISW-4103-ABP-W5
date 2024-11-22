@@ -29,6 +29,12 @@ class PageObject {
       : await this.page.locator(cssAttr);
   }
 
+  async getFirstElementByAttribute(cssAttr) {
+    return this.isKraken
+      ? await this.driver.$(cssAttr)
+      : await this.page.locator(cssAttr).first();
+  }
+
   async getCurrentUrl() {
     return this.isKraken
       ? await this.driver.getCurrentUrl()

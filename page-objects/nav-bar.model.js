@@ -21,10 +21,18 @@ class NavBar extends PageObject {
   }
 
   async goToPages() {
-      let pagesOption = this.isBS
-        ? await this.getElementByAttribute('a[href="#/pages/"]')
-        : await this.getElementByAttribute('a[href="#/pages/"][data-test-nav="pages"]');
-      return await pagesOption.click();
+    let pagesOption = this.isBS
+      ? await this.getElementByAttribute('a[href="#/pages/"]')
+      : await this.getElementByAttribute('a[href="#/pages/"][data-test-nav="pages"]');
+    return await pagesOption.click();
+  }
+
+
+  async goToTags() {
+    let tagsOption = this.isBS
+      ? await this.getElementByAttribute('a[href="#/tags/"]')
+      : await this.getElementByAttribute('a[href="#/tags/"][data-test-nav="tags"]');
+    return await tagsOption.click();
   }
 }
 

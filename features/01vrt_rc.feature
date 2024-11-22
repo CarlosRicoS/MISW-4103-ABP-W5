@@ -1,6 +1,6 @@
 Feature: App rc
 
- @user1 @web
+  @user1 @web
   Scenario: EP_01 Crear una página nueva y publicarla de inmediato
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -17,7 +17,7 @@ Feature: App rc
     Then I should see the published page confirmation
 
 
- @user2 @web
+  @user2 @web
   Scenario: EP_02 Crear una página nueva y guardarla como borrador
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -33,7 +33,7 @@ Feature: App rc
     And I wait for 1 seconds
     Then I should see the page in the admin section as a draft
 
- @user3 @web
+  @user3 @web
   Scenario: EP_04 Editar título y contenido de una página existente y publicarla
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -59,7 +59,7 @@ Feature: App rc
     And I wait for 1 seconds
     Then I should see the updated notification
 
- @user4 @web
+  @user4 @web
   Scenario: EP_05 Editar página publicada, cambiar a borrador y previsualizar
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -71,9 +71,9 @@ Feature: App rc
     And I wait for 1 seconds
     And I edit published status to unpublished
     And I wait for 1 seconds
-    Then I should see revert to draft notification 
+    Then I should see revert to draft notification
 
- @user5 @web
+  @user5 @web
   Scenario: EP_06 Crear un post en el mismo instante
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -89,7 +89,7 @@ Feature: App rc
     And I wait for 2 seconds
     Then I should see the published post confirmation
 
- @user6 @web
+  @user6 @web
   Scenario: EP_07 Crear un post y programar fecha de lanzamiento
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -105,7 +105,7 @@ Feature: App rc
     And I wait for 2 seconds
     Then I should see the published post confirmation
 
- @user7 @web
+  @user7 @web
   Scenario: EP_011 Ver todos los posts
     Given I navigate to page "<URL>"
     And I wait for 5 seconds
@@ -129,7 +129,7 @@ Feature: App rc
     And I wait for 10 seconds
     Then The url now should have visibility for members parameter
 
- @user9 @web
+  @user9 @web
   Scenario: EP_017 Guardar miembro nuevo con formulario vacío.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
@@ -141,7 +141,7 @@ Feature: App rc
     And I wait for 1 seconds
     Then Form should display error "<NEW_MEMBER_ERROR_MSG>" for empty email
 
- @user10 @web
+  @user10 @web
   Scenario: EP_018 Guardar miembro nuevo con email inválido.
     Given I navigate to page "<URL>"
     And I wait for 1 seconds
