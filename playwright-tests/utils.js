@@ -11,14 +11,27 @@ exports.screenshotHandler = async (screenshots, params) => {
 
 exports.pixelmatchHandler = async (pixelmatch, params) => {
   let stepInfo = {
-    'scenario': params.scenarioId,
-    'step': params.stepCounter - 1,
-    'result': undefined
+    scenario: params.scenarioId,
+    step: params.stepCounter - 1,
+    result: undefined,
   };
-  stepInfo.result = await pixelmatch.compareImages(params.scenarioId, params.stepCounter - 1);
+  stepInfo.result = await pixelmatch.compareImages(
+    params.scenarioId,
+    params.stepCounter - 1
+  );
   return stepInfo;
 };
 
 exports.reportPixelmatchHandler = async (pixelmatch, params) => {
   await pixelmatch.generateReport(params);
-}
+};
+
+exports.getScenarios = (count) => {
+  let index = 0;
+  const scenarioList = [];
+  while (index < count) {
+    scenarioList.push({ index: index });
+    index++;
+  }
+  return scenarioList;
+};

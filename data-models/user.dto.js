@@ -26,6 +26,11 @@ class User extends DataGenerator {
   getUsers() {
     return this.getDataArray();
   }
+
+  async getPseudoRandomUsers(count) {
+    let x = await super.getPseudoRandomData(count);
+    console.log(x);
+  }
 }
 
 module.exports = new User();
