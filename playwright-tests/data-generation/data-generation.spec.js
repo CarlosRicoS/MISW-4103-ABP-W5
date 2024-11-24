@@ -1,5 +1,4 @@
 const { test, expect } = require("@playwright/test");
-
 const properties = require("../../properties.json");
 const Login = require("../../page-objects/login.model");
 const NavBar = require("../../page-objects/nav-bar.model");
@@ -10,6 +9,7 @@ const Members = require("../../page-objects/members.model");
 const Tags = require("../../page-objects/tags.model");
 const PostPage = require("../../data-models/post-page.dto");
 const TagDto = require("../../data-models/tag.dto");
+const MemberDto = require("../../data-models/member.dto");
 const { screenshotHandler, testIds, getScenarios } = require("../utils");
 
 let login, navBar, pages, posts, members, screenshots, datapool, randomData, tags;
@@ -175,10 +175,6 @@ test.describe("Feature: Crear Post", () => {
   });
 });
 
-
-
-
-
 test.describe("Feature: Crear tags", () => {
   test.beforeAll(async () => {
     datapool = await TagDto.dataArray();
@@ -257,6 +253,105 @@ test.describe("Feature: Crear tags", () => {
 
 });
 
+test.describe("Feature: Crear miembros", () => {
+  test.beforeAll(async () => {
+    datapool = await MemberDto.dataArray();
+  });
+  test.beforeEach(async ({ page, browser }, testInfo) => {
+    test.context = await browser.newContext();
+    login = new Login(undefined, page);
+    navBar = new NavBar(undefined, page);
+    members = new Members(undefined, page);
+    screenshots = new Screenshots(undefined, page);
+    testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
+    testIds.stepCounter = 1;
+  });
+  test.afterEach(async ({ context }) => {
+    await context.clearCookies();
+    await context.clearPermissions();
+    await test.context.close();
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-10-${index + 1} Crear un miembro`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember(
+        "Then I should see the created member",name,
+        members
+      );
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-11-${index + 1} Editar un miembro`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      let { name1, email1, note1 } = datapool?.[index] ?? {
+        name1: MemberDto.dataGenerator.lorem.words(1),
+        email1: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note1: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await selectMember("And I select the created member",name,members);
+      await fillMembersForm("And I edit the members form",name1, email1, note1);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember("Then I should see the edited member",name1,members);
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-12-${index + 1} Crear un miembro sin nombre`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: "",
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: "",
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember(
+        "Then I should see the created member",email,
+        members
+      );
+    });
+  });
+
+});
+
+
 async function startLogin(label, page) {
   await test.step(label, async () => {
     await page.goto(properties.URL);
@@ -285,6 +380,13 @@ async function navigateToTags(label, navBar) {
   });
 }
 
+async function navigateToMembers(label, navBar) {
+  await test.step(label, async () => {
+    await navBar.goToMembers();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
 async function returnToPages(label, pages) {
   await test.step(label, async () => {
     await pages.returnToPages();
@@ -306,6 +408,13 @@ async function openTagsForm(label, tags) {
   });
 }
 
+async function openMembersForm(label, members) {
+  await test.step(label, async () => {
+    await members.openNewMemberForm();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
 async function fillPageForm(label, title, content, pages) {
   await test.step(label, async () => {
     await pages.fillPageTitle(title);
@@ -322,6 +431,14 @@ async function fillTagsForm(label, name, color, description, tags) {
     await tags.saveButton();
     await screenshotHandler(screenshots, testIds);
   });
+}
+
+async function fillMembersForm(label,name, email, note) {
+  await members.fillName(name);
+  await members.fillEmail(email);
+  await members.fillNote(note);
+  await members.saveNewMember();
+  await screenshotHandler(screenshots, testIds);
 }
 
 async function publishPageNow(label, pages) {
@@ -353,7 +470,19 @@ async function showTag(label, name, tags) {
   });
 }
 
+async function showMember(label,name,members) {
+  await test.step(label, async () => {
+    await expect(await members.getMemberName(name)).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
 
+async function selectMember(label,name,members) {
+  await test.step(label, async () => {
+    await members.selectMemberName(name);
+    await screenshotHandler(screenshots, testIds);
+  });
+}
 
 async function previewPage(label, pages) {
   await test.step(label, async () => {
