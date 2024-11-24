@@ -18,10 +18,6 @@ const scenarios = getScenarios(4);
 
 
 
-
-
-
-
 test.describe("Feature: Crear una página", () => {
   test.beforeAll(async () => {
     datapool = await PostPage.dataArray();
@@ -178,16 +174,6 @@ test.describe("Feature: Crear Post", () => {
       });
   });
 });
-
-
-
-
-
-
-
-
-
-
 
 
 
