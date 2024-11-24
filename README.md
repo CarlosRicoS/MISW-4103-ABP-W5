@@ -159,6 +159,7 @@ El reporte de las pruebas de regresión visual se encontrará en la carpeta **./
 **.
 Este podrá ser visualizado en cualquier navegador.
 
+
 ## Pruebas con datos
 
 Para la ejecución de las pruebas aleatorias, se debe realizar instalación de los paquetes agregados nuevamente por medio del comando
@@ -205,3 +206,17 @@ Para la ejecución de todas las pruebas con los 3 tipos de datos, se debe ejecut
 
     npm run playwright-all
 ```
+
+### Backstop
+
+En el caso de Backsttop se desarrollo un script que toma las capturas de las pruebas de la nueva version y las compara con 
+las capturas de la versión base , compara las imagenes según el porcentaje de aceptación genera el reporte VRT.
+Use el siguiente comando dentro de la raíz del repositorio para correr las pruebas:
+
+```
+    backstop test
+```
+
+El reporte de las pruebas de regresión visual se encontrará en la carpeta **.\backstop_data\html_report
+**.
+
