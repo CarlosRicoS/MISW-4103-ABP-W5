@@ -1,3 +1,4 @@
+const { time } = require("console");
 const PageObject = require("./page-object.abstract.model");
 
 class Pages extends PageObject {
@@ -129,6 +130,11 @@ class Pages extends PageObject {
     }
 
   }
+  
+  async tryPublish() {
+    let publishButton = await this.getPublishButton();
+    await publishButton.click({timeout: 5000});
+  }
 
   async previewPage() {
     let previewButton = await this.getPreviewButton();
@@ -163,6 +169,12 @@ class Pages extends PageObject {
   async getPublishedPage() {
     return await this.getPublishedModal();
   }
+
+  async getErrorPage() {
+    return await this.getElementByAttribute('[data-test-task-button-state="failure"]');
+  }
+
+  
 
   async closePublishedModal() {
     let closeModalButton = await this.getCloseModalButton();

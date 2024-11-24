@@ -1,5 +1,11 @@
+const mockaroo = require("./mockaroo-client");
+
+const getRecords = async (schemaName, count = 10) => {
+  return await mockaroo.get(schemaName, count);
+};
+
 const priori_data = require("./priori-db.json");
-const faker = require("@faker-js/faker");
+const faker = require("@faker-js/faker").faker;
 const getSection = (sectionName) => {
   return {
     index: 0,
@@ -45,29 +51,33 @@ class DataGenerator {
     return this.dataGenerator.data;
   }
 
-  getPseudoRandomData(count) {
+  async getPseudoRandomData(count) {
     if (this.data_type !== "ps-rand") return;
-    throw new Error("Not implemented method");
-  }
-
-  getRandomData(count) {
-    if (this.data_type !== "rand") return;
-    throw new Error("Not implemented method");
+    return await this.dataGenerator(this.sectionName, count);
   }
 
   get dataGenerator() {
-    let generator;
     switch (this.data_type) {
       case "priori":
         return getSection(this.sectionName);
       case "ps-rand":
-        return faker;
+        return getRecords;
       case "rand":
-        return faker;
       default:
-        break;
+        return faker;
     }
-    return generator;
+  }
+
+  async dataArray() {
+    switch (this.data_type) {
+      case "priori":
+        return this.getDataArray();
+      case "ps-rand":
+        return await this.getPseudoRandomData(10);
+      case "rand":
+      default:
+        return null;
+    }
   }
 }
 

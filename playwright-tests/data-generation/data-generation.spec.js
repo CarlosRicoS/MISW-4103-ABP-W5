@@ -1,5 +1,4 @@
-const {test, expect} = require("@playwright/test");
-
+const { test, expect } = require("@playwright/test");
 const properties = require("../../properties.json");
 const Login = require("../../page-objects/login.model");
 const NavBar = require("../../page-objects/nav-bar.model");
@@ -7,16 +6,23 @@ const Pages = require("../../page-objects/pages.model");
 const Screenshots = require("../../page-objects/shared.model");
 const Posts = require("../../page-objects/posts.model");
 const Members = require("../../page-objects/members.model");
+const Tags = require("../../page-objects/tags.model");
 const PostPage = require("../../data-models/post-page.dto");
-const {screenshotHandler, testIds} = require("../utils");
+const TagDto = require("../../data-models/tag.dto");
+const MemberDto = require("../../data-models/member.dto");
+const { screenshotHandler, testIds, getScenarios } = require("../utils");
 
-let login, navBar, pages, posts, members, screenshots, page_data_tuple, post_data_tuple;
+let login, navBar, pages, posts, members, screenshots, datapool, randomData, tags;
 
-page_data_tuple = PostPage.getPostPages().slice(0, 10);
-post_data_tuple = PostPage.getPostPages().slice(10, 20);
+const scenarios = getScenarios(4);
+
+
 
 test.describe("Feature: Crear una página", () => {
-  test.beforeEach(async ({page, browser}, testInfo) => {
+  test.beforeAll(async () => {
+    datapool = await PostPage.dataArray();
+  });
+  test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page);
     navBar = new NavBar(undefined, page);
@@ -27,35 +33,41 @@ test.describe("Feature: Crear una página", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5}-\d{0,3})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({context}) => {
+  test.afterEach(async ({ context }) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
   });
 
-  page_data_tuple.forEach((tuple, index) => {
-    test(`EP-01-${index + 1} Crear una página nueva y publicarla de inmediato`, async ({page,}) => {
-      const {title, plaintext} = tuple;
-      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
-      await loginWithCredentials(
-        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
-        login
-      );
-      await navigateToPages("And I go to pages section", navBar);
-      await openPageForm("And I open page form", pages);
-      await fillPageForm("And I fill page form", title, plaintext, pages);
-      await publishPageNow("And I publish page", pages);
-      await showPublishedPage(
-        "Then I should see the published page confirmation",
-        pages
-      );
-    });
+  scenarios.forEach((key, index) => {
+    test(`EP-01-${index + 1
+      } Crear una página nueva y publicarla de inmediato`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(3),
+          plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+        };
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+          `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+          login
+        );
+        await navigateToPages("And I go to pages section", navBar);
+        await openPageForm("And I open page form", pages);
+        await fillPageForm("And I fill page form", title, plaintext, pages);
+        await publishPageNow("And I publish page", pages);
+        await showPublishedPage(
+          "Then I should see the published page confirmation",
+          pages
+        );
+      });
   });
-  page_data_tuple.forEach((tuple, index) => {
-    test(
-      `EP-02-${index + 1} Crear una página nueva y guardarla como borrador`,
-      async ({page,}) => {
-        const {title, plaintext} = tuple;
+  scenarios.forEach((key, index) => {
+    test(`EP-02-${index + 1
+      } Crear una página nueva y guardarla como borrador`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(3),
+          plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+        };
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
           `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -72,11 +84,36 @@ test.describe("Feature: Crear una página", () => {
         );
       });
   });
-  page_data_tuple.forEach((tuple, index) => {
-    test(
-      `EP-03-${index + 1} Crear una página nueva y previsualizar la publicación`,
-      async ({page,}) => {
-        const {title, plaintext} = tuple;
+  scenarios.forEach((key, index) => {
+    test(`EP-03-${index + 1
+      } Crear una página nueva y previsualizar la publicación`, async ({
+        page,
+      }) => {
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToPages("And I go to pages section", navBar);
+      await openPageForm("And I open page form", pages);
+      await fillPageForm("And I fill page form", title, plaintext, pages);
+      await previewPage("And I preview page", pages);
+      await showPreviewPage(
+        "Then I should see the preview of the new page",
+        pages
+      );
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-21-${index + 1} Página con titulo mayor a 255 caracteres`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(1),
+          plaintext: PostPage.dataGenerator.lorem.words(1000),
+        };
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
           `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -84,18 +121,21 @@ test.describe("Feature: Crear una página", () => {
         );
         await navigateToPages("And I go to pages section", navBar);
         await openPageForm("And I open page form", pages);
-        await fillPageForm("And I fill page form", title, plaintext, pages);
-        await previewPage("And I preview page", pages);
-        await showPreviewPage(
-          "Then I should see the preview of the new page",
+        await fillPageForm("And I fill page form", plaintext, title, pages);
+        await publishPageNow("And I publish page", pages);
+        await showErrorPage(
+          "Then I should see the error",
           pages
         );
-      });
+    });
   });
 });
 
 test.describe("Feature: Crear Post", () => {
-  test.beforeEach(async ({page, browser}, testInfo) => {
+  test.beforeAll(async () => {
+    datapool = await PostPage.dataArray();
+  });
+  test.beforeEach(async ({ page, browser }, testInfo) => {
     test.context = await browser.newContext();
     login = new Login(undefined, page);
     navBar = new NavBar(undefined, page);
@@ -104,14 +144,19 @@ test.describe("Feature: Crear Post", () => {
     testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
     testIds.stepCounter = 1;
   });
-  test.afterEach(async ({context}) => {
+  test.afterEach(async ({ context }) => {
     await context.clearCookies();
     await context.clearPermissions();
     await test.context.close();
   });
-  post_data_tuple.forEach((tuple, index) => {
-    test(`EP-06-${index + 1} Crear un post en el mismo instante`, async ({page}) => {
-      const {title, plaintext} = tuple;
+  scenarios.forEach((key, index) => {
+    test(`EP-06-${index + 1} Crear un post en el mismo instante`, async ({
+      page,
+    }) => {
+      let { title, plaintext } = datapool?.[index] ?? {
+        title: PostPage.dataGenerator.lorem.words(3),
+        plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+      };
       await startLogin(`Given I navigate to page "${properties.URL}"`, page);
       await loginWithCredentials(
         `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -127,11 +172,13 @@ test.describe("Feature: Crear Post", () => {
       );
     });
   });
-  post_data_tuple.forEach((tuple, index) => {
-    test(
-      `EP-07-${index + 1} Crear un post y programar fecha de lanzamiento`,
-      async ({page,}) => {
-        const {title, plaintext} = tuple;
+  scenarios.forEach((key, index) => {
+    test(`EP-07-${index + 1
+      } Crear un post y programar fecha de lanzamiento`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(3),
+          plaintext: PostPage.dataGenerator.lorem.paragraphs(3),
+        };
         await startLogin(`Given I navigate to page "${properties.URL}"`, page);
         await loginWithCredentials(
           `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
@@ -147,6 +194,203 @@ test.describe("Feature: Crear Post", () => {
         );
       });
   });
+  scenarios.forEach((key, index) => {
+    test(`EP-22-${index + 1} Post con titulo mayor a 255 caracteres`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(1),
+          plaintext: PostPage.dataGenerator.lorem.words(1000),
+        };
+        await startLogin(`Given I navigate to post "${properties.URL}"`, page);
+        await loginWithCredentials(
+          `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+          login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form", plaintext, title, posts);
+        await publishPost("And I publish post", posts);
+        await showErrorPost(
+          "Then I should see the error",
+          posts
+      );
+    });
+  });
+});
+
+test.describe("Feature: Crear tags", () => {
+  test.beforeAll(async () => {
+    datapool = await TagDto.dataArray();
+  });
+  test.beforeEach(async ({ page, browser }, testInfo) => {
+    test.context = await browser.newContext();
+    login = new Login(undefined, page);
+    navBar = new NavBar(undefined, page);
+    tags = new Tags(undefined, page, "rc");
+    screenshots = new Screenshots(undefined, page);
+    testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
+    testIds.stepCounter = 1;
+  });
+  test.afterEach(async ({ context }) => {
+    await context.clearCookies();
+    await context.clearPermissions();
+    await test.context.close();
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-08-${index + 1} Crear un tag`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: TagDto.dataGenerator.lorem.words(3),
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '#' }),
+        description: TagDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await publishTag("And I create the tag", tags);
+      await navigateToTags("And I come back to tags section", navBar);
+      await showTag(
+        "Then I should see the created tag", name,
+        tags
+      );
+    });
+  });
+
+
+  scenarios.forEach((key, index) => {
+    test(`EP-09-${index + 1} Crear un tag y cambiar un tag existente`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: TagDto.dataGenerator.lorem.words(3),
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '#' }),
+        description: TagDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await publishTag("And I create the tag", tags);
+      await navigateToTags("And I come back to tags section", navBar);
+      await selectTag("And I select the created tag", name, tags);
+      await fillTagsForm("And I refill the tag form", name, accent_color, description, tags);
+      await publishTag("And I save the tag", tags);
+      await navigateToTags("And I come back to tags section", navBar);
+      await showTag(
+        "Then I should see the updated tag", name,
+        tags
+      );
+
+    });
+  });
+
+});
+
+test.describe("Feature: Crear miembros", () => {
+  test.beforeAll(async () => {
+    datapool = await MemberDto.dataArray();
+  });
+  test.beforeEach(async ({ page, browser }, testInfo) => {
+    test.context = await browser.newContext();
+    login = new Login(undefined, page);
+    navBar = new NavBar(undefined, page);
+    members = new Members(undefined, page);
+    screenshots = new Screenshots(undefined, page);
+    testIds.scenarioId = testInfo.title.match(/^(EP-\d{0,5})/)[0];
+    testIds.stepCounter = 1;
+  });
+  test.afterEach(async ({ context }) => {
+    await context.clearCookies();
+    await context.clearPermissions();
+    await test.context.close();
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-10-${index + 1} Crear un miembro`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember(
+        "Then I should see the created member",name,
+        members
+      );
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-11-${index + 1} Editar un miembro`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      let { name1, email1, note1 } = datapool?.[index] ?? {
+        name1: MemberDto.dataGenerator.lorem.words(1),
+        email1: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note1: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await selectMember("And I select the created member",name,members);
+      await fillMembersForm("And I edit the members form",name1, email1, note1);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember("Then I should see the edited member",name1,members);
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-12-${index + 1} Crear un miembro sin nombre`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: "",
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: "",
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await navigateToMembers("And I come back to members section", navBar);
+      await showMember(
+        "Then I should see the created member",email,
+        members
+      );
+    });
+  });
+
 });
 
 
@@ -171,6 +415,20 @@ async function navigateToPages(label, navBar) {
   });
 }
 
+async function navigateToTags(label, navBar) {
+  await test.step(label, async () => {
+    await navBar.goToTags();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function navigateToMembers(label, navBar) {
+  await test.step(label, async () => {
+    await navBar.goToMembers();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
 async function returnToPages(label, pages) {
   await test.step(label, async () => {
     await pages.returnToPages();
@@ -185,17 +443,99 @@ async function openPageForm(label, pages) {
   });
 }
 
-async function fillPageForm(label, title, content, pages) {
+async function openTagsForm(label, tags) {
   await test.step(label, async () => {
-    await pages.fillPageTitle(title);
-    await pages.fillPageContent(content);
+    await tags.selectCreate();
     await screenshotHandler(screenshots, testIds);
   });
+}
+
+async function openMembersForm(label, members) {
+  await test.step(label, async () => {
+    await members.openNewMemberForm();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function fillPageForm(label, title, content, pages) {
+  await test.step(label, async () => {
+    await pages.fillPageContent(content);
+    await pages.fillPageTitle(title);
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function fillTagsForm(label, name, color, description, tags) {
+  await test.step(label, async () => {
+    await tags.putName(name);
+    await tags.putDescription(description);
+    await tags.putColor(color);
+    await tags.saveButton();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function fillMembersForm(label,name, email, note) {
+  await members.fillName(name);
+  await members.fillEmail(email);
+  await members.fillNote(note);
+  await members.saveNewMember();
+  await screenshotHandler(screenshots, testIds);
 }
 
 async function publishPageNow(label, pages) {
   await test.step(label, async () => {
     await pages.publishPageNow();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function tryPublishPage(label, pages) {
+  await test.step(label, async () => {
+    await pages.tryPublish();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function tryPublishPost(label, posts) {
+  await test.step(label, async () => {
+    await posts.tryPublish();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function publishTag(label, tags) {
+  await test.step(label, async () => {
+    await tags.saveButton();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+
+async function selectTag(label, name, tags) {
+  await test.step(label, async () => {
+    await tags.selectTag(name);
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showTag(label, name, tags) {
+  await test.step(label, async () => {
+    await expect(await tags.getTag(name)).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showMember(label,name,members) {
+  await test.step(label, async () => {
+    await expect(await members.getMemberName(name)).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function selectMember(label,name,members) {
+  await test.step(label, async () => {
+    await members.selectMemberName(name);
     await screenshotHandler(screenshots, testIds);
   });
 }
@@ -224,6 +564,20 @@ async function showAdminPageSection(label, title, pages) {
 async function showPreviewPage(label, pages) {
   await test.step(label, async () => {
     await expect(await pages.getPreviewPage()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showErrorPage(label, pages) {
+  await test.step(label, async () => {
+    await expect(await pages.getErrorPage()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showErrorPost(label, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.getErrorPost()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
   });
 }
@@ -284,11 +638,10 @@ async function openPostForm(label, posts) {
   });
 }
 
-
 async function fillPostForm(label, title, content, posts) {
   await test.step(label, async () => {
-    await posts.fillTitle(title);
     await posts.fillContent(content);
+    await posts.fillTitle(title);
     await screenshotHandler(screenshots, testIds);
   });
 }

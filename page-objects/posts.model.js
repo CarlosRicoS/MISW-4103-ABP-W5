@@ -169,6 +169,14 @@ class Posts extends PageObject {
         return;
     }
 
+    async tryPublish() {
+        let publishButton = await this.getElementByAttribute('header[class="gh-editor-header br2 pe-none"] button[data-test-button="publish-flow"]')
+        await publishButton.click({timeout: 5000});
+    }
+    async getErrorPost() {
+        return await this.getElementByAttribute('[data-test-task-button-state="failure"]');
+      }
+
     async getPostByTitle(title, tool='playwright') {
         if (tool === 'kraken') {
             return await this.getElementByAttribute(`a.gh-post-list-title:nth-child(1)`);

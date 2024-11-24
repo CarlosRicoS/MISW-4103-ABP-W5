@@ -20,6 +20,7 @@ Ejercicio de pruebas autoamtizadas E2E
 - **chai:** v4.3.6
 - **@faker-js/faker:** v9.2.0
 - **pixelmatch:** v5.3.0
+- **cross-env:** v7.0.3
 
 ## Ghost
 
@@ -149,13 +150,62 @@ En el caso de playwright se desarrollo un script que corre las pruebas sobre la 
 las pruebas previamente corridas sobre la version rc y genera el reporte VRT.
 Use el siguiente comando para correr las pruebas:
 
-```
+``` shell
+
     npm run playwright-vrt
 ```
 
 El reporte de las pruebas de regresión visual se encontrará en la carpeta **./vrt-playwright/vrt_playwright_report.html
 **.
 Este podrá ser visualizado en cualquier navegador.
+
+
+## Pruebas con datos
+
+Para la ejecución de las pruebas aleatorias, se debe realizar instalación de los paquetes agregados nuevamente por medio del comando
+
+``` shell
+
+    npm install --force
+```
+
+Posteriormente se realiza la ejecucón de las pruebas de acuerdo al tipo de datos que se requiera.
+
+### Datos a-priori
+
+Para la ejecución de pruebas con datos *a-priori*, se debe ejecutar el siguiente comando.
+
+``` shell
+
+    npm run playwright-priori
+```
+
+### Datos (pseudo) aleatorios dinámicos
+
+Para la ejecución de pruebas con datos *(pseudo) aleatorios dinámicos*, se debe ejecutar el siguiente comando.
+
+``` shell
+
+    npm run playwright-ps-rand
+```
+
+### Datos aleatorios
+
+Para la ejecución de pruebas con datos *aleatorios*, se debe ejecutar el siguiente comando.
+
+``` shell
+
+    npm run playwright-rand
+```
+
+### Ejecución completa de pruebas
+
+Para la ejecución de todas las pruebas con los 3 tipos de datos, se debe ejecutar el siguiente comando.
+
+``` shell
+
+    npm run playwright-all
+```
 
 ### Backstop
 
@@ -169,3 +219,4 @@ Use el siguiente comando dentro de la raíz del repositorio para correr las prue
 
 El reporte de las pruebas de regresión visual se encontrará en la carpeta **.\backstop_data\html_report
 **.
+

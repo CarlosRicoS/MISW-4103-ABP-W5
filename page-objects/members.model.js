@@ -37,6 +37,9 @@ class Members extends PageObject {
   async getEmailFormInput() {
     return await this.getElementById("#member-email");
   }
+  async getNoteFormInput() {
+    return await this.getElementById("#member-note");
+  }
 
   async fillName(name) {
     let inputName = await this.getNameFormInput();
@@ -46,6 +49,10 @@ class Members extends PageObject {
   async fillEmail(email) {
     let inputEmail = await this.getEmailFormInput();
     return await this.fillInput(inputEmail, email);
+  }
+  async fillNote(note) {
+    let inputNote = await this.getNoteFormInput();
+    return await this.fillInput(inputNote, note);
   }
 
   async getWarningModal() {
@@ -64,6 +71,15 @@ class Members extends PageObject {
       'button[data-test-button="member-actions"]'
     );
   }
+  
+  async getMemberName(name) {
+    return await this.getElementByAttribute( `h3.gh-members-list-name:has-text("${name}")` );
+  }
+
+  async selectMemberName(name) {
+    let SelectMember = await this.getElementByAttribute( `h3.gh-members-list-name:has-text("${name}")` );
+    return await SelectMember.click({force: true});
+  }
 
   async getSignupInfo() {
     let signupInfoContent = await this.getElementByAttribute(
@@ -71,6 +87,7 @@ class Members extends PageObject {
     );
     return await this.getInnerText(signupInfoContent);
   }
+
 }
 
 module.exports = Members;

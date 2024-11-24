@@ -1,7 +1,7 @@
 const DataGenerator = require("./data-generator.abstract");
 
 class PostPage extends DataGenerator {
-  sectionName = "post-page";
+  sectionName = "post_page";
   title;
   plaintext;
 
@@ -25,6 +25,10 @@ class PostPage extends DataGenerator {
 
   getPostPages() {
     return super.getDataArray();
+  }
+
+  async getPseudoRandomPostPages(count) {
+    return await super.getPseudoRandomData(count);
   }
 }
 

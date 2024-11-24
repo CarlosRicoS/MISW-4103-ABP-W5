@@ -5,7 +5,7 @@
       "password": "TestPassword"
     }
   ],
-  "post-page": [
+  "post_page": [
     {
       "title": "consequat in consequat ut nulla sed accumsan felis ut at",
       "plaintext": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
