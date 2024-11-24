@@ -108,6 +108,27 @@ test.describe("Feature: Crear una página", () => {
       );
     });
   });
+  scenarios.forEach((key, index) => {
+    test(`EP-21-${index + 1} Página con titulo mayor a 255 caracteres`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(1),
+          plaintext: PostPage.dataGenerator.lorem.words(1000),
+        };
+        await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+        await loginWithCredentials(
+          `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+          login
+        );
+        await navigateToPages("And I go to pages section", navBar);
+        await openPageForm("And I open page form", pages);
+        await fillPageForm("And I fill page form", plaintext, title, pages);
+        await publishPageNow("And I publish page", pages);
+        await showErrorPage(
+          "Then I should see the error",
+          pages
+        );
+    });
+  });
 });
 
 test.describe("Feature: Crear Post", () => {
@@ -172,6 +193,27 @@ test.describe("Feature: Crear Post", () => {
           posts
         );
       });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-22-${index + 1} Post con titulo mayor a 255 caracteres`, async ({ page }) => {
+        let { title, plaintext } = datapool?.[index] ?? {
+          title: PostPage.dataGenerator.lorem.words(1),
+          plaintext: PostPage.dataGenerator.lorem.words(1000),
+        };
+        await startLogin(`Given I navigate to post "${properties.URL}"`, page);
+        await loginWithCredentials(
+          `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+          login
+        );
+        await navigateToPosts("And I go to posts section", navBar);
+        await openPostForm("And I open post form", posts);
+        await fillPostForm("And I fill post form", plaintext, title, posts);
+        await publishPost("And I publish post", posts);
+        await showErrorPost(
+          "Then I should see the error",
+          posts
+      );
+    });
   });
 });
 
@@ -417,8 +459,8 @@ async function openMembersForm(label, members) {
 
 async function fillPageForm(label, title, content, pages) {
   await test.step(label, async () => {
-    await pages.fillPageTitle(title);
     await pages.fillPageContent(content);
+    await pages.fillPageTitle(title);
     await screenshotHandler(screenshots, testIds);
   });
 }
@@ -444,6 +486,20 @@ async function fillMembersForm(label,name, email, note) {
 async function publishPageNow(label, pages) {
   await test.step(label, async () => {
     await pages.publishPageNow();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function tryPublishPage(label, pages) {
+  await test.step(label, async () => {
+    await pages.tryPublish();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function tryPublishPost(label, posts) {
+  await test.step(label, async () => {
+    await posts.tryPublish();
     await screenshotHandler(screenshots, testIds);
   });
 }
@@ -512,6 +568,20 @@ async function showPreviewPage(label, pages) {
   });
 }
 
+async function showErrorPage(label, pages) {
+  await test.step(label, async () => {
+    await expect(await pages.getErrorPage()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showErrorPost(label, posts) {
+  await test.step(label, async () => {
+    await expect(await posts.getErrorPost()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
 async function closePublishedModal(label, pages) {
   await test.step(label, async () => {
     await pages.closePublishedModal();
@@ -570,8 +640,8 @@ async function openPostForm(label, posts) {
 
 async function fillPostForm(label, title, content, posts) {
   await test.step(label, async () => {
-    await posts.fillTitle(title);
     await posts.fillContent(content);
+    await posts.fillTitle(title);
     await screenshotHandler(screenshots, testIds);
   });
 }
