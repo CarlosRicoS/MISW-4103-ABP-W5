@@ -292,6 +292,100 @@ test.describe("Feature: Crear tags", () => {
 
     });
   });
+  scenarios.forEach((key, index) => {
+    test(`EP-23-${index + 1} Error crear un tag sin nombre`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: "",
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '#' }),
+        description: TagDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await showErrorTag(
+        "Then I should see the error tag name",
+        tags
+      );
+    });
+  });
+  scenarios.forEach((key, index) => {
+    test(`EP-24-${index + 1} Error crear un tag  color inválido`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: TagDto.dataGenerator.lorem.words(3),
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '*' }),
+        description: TagDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await showErrorTag(
+        "Then I should see the error tag color",
+        tags
+      );
+    });
+  });
+
+  scenarios.forEach((key, index) => {
+    test(`EP-25-${index + 1} Error crear un tag  descripción muy larga`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: TagDto.dataGenerator.lorem.words(3),
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '#' }),
+        description: TagDto.dataGenerator.lorem.words(700),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await showErrorTag(
+        "Then I should see the error tag description",
+        tags
+      );
+    });
+  });
+
+  scenarios.forEach((key, index) => {
+    test(`EP-26-${index + 1} Error crear un tag  nombre muy largo`, async ({
+      page,
+    }) => {
+      let { name, accent_color, description } = datapool?.[index] ?? {
+        name: TagDto.dataGenerator.lorem.words(200),
+        accent_color: TagDto.dataGenerator.color.rgb({ prefix: '#' }),
+        description: TagDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToTags("And I go to tags section", navBar);
+      await openTagsForm("And I open the tags form", tags);
+      await fillTagsForm("And I fill the tag form", name, accent_color, description, tags);
+      await showErrorTag(
+        "Then I should see the error tag name",
+        tags
+      );
+    });
+  });
 
 });
 
@@ -391,6 +485,102 @@ test.describe("Feature: Crear miembros", () => {
     });
   });
 
+  scenarios.forEach((key, index) => {
+    test(`EP-27-${index + 1} Error crear un miembro sin correo`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: "",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await showErrorMember(
+        "Then I should see the error to create member",
+        members
+      );
+    });
+  });
+
+  scenarios.forEach((key, index) => {
+    test(`EP-28-${index + 1} Error crear un miembro con correo inválido`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await showErrorMember(
+        "Then I should see the error to create member",
+        members
+      );
+    });
+  });
+
+  scenarios.forEach((key, index) => {
+    test(`EP-29-${index + 1} Error crear un miembro con nombre muy largo`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(200),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(2),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await showErrorMember(
+        "Then I should see the error to create member",
+        members
+      );
+    });
+  });
+
+  scenarios.forEach((key, index) => {
+    test(`EP-30-${index + 1} Error crear un miembro con nota muy larga`, async ({
+      page,
+    }) => {
+      let { name, email, note } = datapool?.[index] ?? {
+        name: MemberDto.dataGenerator.lorem.words(1),
+        email: MemberDto.dataGenerator.lorem.words(1)+"@"+MemberDto.dataGenerator.lorem.words(1)+".com",
+        note: MemberDto.dataGenerator.lorem.paragraphs(7),
+      };
+      await startLogin(`Given I navigate to page "${properties.URL}"`, page);
+      await loginWithCredentials(
+        `When I login with email "${properties.USERNAME}" and password "${properties.PASSWORD}"`,
+        login
+      );
+      await navigateToMembers("And I go to members section", navBar);
+      await openMembersForm("And I open the members form", members);
+      await fillMembersForm("And I fill the members form",name, email, note);
+      await showErrorMember(
+        "Then I should see the error to create member",
+        members
+      );
+    });
+  });
+
 });
 
 
@@ -476,11 +666,13 @@ async function fillTagsForm(label, name, color, description, tags) {
 }
 
 async function fillMembersForm(label,name, email, note) {
-  await members.fillName(name);
-  await members.fillEmail(email);
-  await members.fillNote(note);
-  await members.saveNewMember();
-  await screenshotHandler(screenshots, testIds);
+  await test.step(label, async () => {
+    await members.fillName(name);
+    await members.fillEmail(email);
+    await members.fillNote(note);
+    await members.saveNewMember();
+    await screenshotHandler(screenshots, testIds);
+  });
 }
 
 async function publishPageNow(label, pages) {
@@ -578,6 +770,20 @@ async function showErrorPage(label, pages) {
 async function showErrorPost(label, posts) {
   await test.step(label, async () => {
     await expect(await posts.getErrorPost()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showErrorTag(label, tags) {
+  await test.step(label, async () => {
+    await expect(await tags.getErrorTag()).toBeVisible();
+    await screenshotHandler(screenshots, testIds);
+  });
+}
+
+async function showErrorMember(label, members) {
+  await test.step(label, async () => {
+    await expect(await members.getErrorMember()).toBeVisible();
     await screenshotHandler(screenshots, testIds);
   });
 }

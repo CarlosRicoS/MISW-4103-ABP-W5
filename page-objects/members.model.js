@@ -81,6 +81,10 @@ class Members extends PageObject {
     return await SelectMember.click({force: true});
   }
 
+  async getErrorMember() {
+    return await this.getElementByAttribute('[data-test-task-button-state="failure"]');
+  }
+
   async getSignupInfo() {
     let signupInfoContent = await this.getElementByAttribute(
       "section.gh-member-details .gh-member-details-attribution h4.gh-main-section-header"

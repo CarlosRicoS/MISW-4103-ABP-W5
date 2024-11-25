@@ -79,6 +79,10 @@ class Tags extends PageObject {
         return await tagcard;
     }
 
+    async getErrorTag() {
+        return await this.getElementByAttribute('[data-test-task-button-state="failure"]');
+      }
+
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
