@@ -14,7 +14,7 @@ const { screenshotHandler, testIds, getScenarios } = require("../utils");
 
 let login, navBar, pages, posts, members, screenshots, datapool, randomData, tags;
 
-const scenarios = getScenarios(4);
+const scenarios = getScenarios(6);
 
 
 
