@@ -251,6 +251,14 @@ El reporte de las pruebas de regresión visual se encontrará en la carpeta **.\
 
 ### Ejecución estrategia de pruebas
 
+Inicialmente se deben asegurar que todos los paquetes estén correctamente instalados con los comandos
+
+``` shell
+
+    npm install --force
+    npx playwright install
+```
+
 Para realizar la ejecución completa de pruebas automatizadas ejecute el comando y seleccione las opciones de preferencia. Los valores por defecto hacen parte de la estrategia definida por el equipo.
 
 ``` shell
