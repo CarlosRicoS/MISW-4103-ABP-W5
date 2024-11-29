@@ -1,0 +1,16 @@
+{
+  "url": "http://localhost:2368/ghost",
+  "headless": true,
+  "depthLevels": 3,
+  "inputValues": false,
+  "values": {
+    "userInput": "jamie@example.com",
+    "passwordInput": "}WTdx6}h}ZLJTz4",
+    "passwordTwoInput": "}WTdx6}h}ZLJTz4",
+    "nameInput": "Jamie Larson",
+    "emailInput": "jamie@example.com"
+  },
+  "browsers": [
+    "firefox"
+  ]
+}

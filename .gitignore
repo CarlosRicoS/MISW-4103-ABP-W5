@@ -142,3 +142,4 @@ tests-examples/*
 .DS_Store
 /**/*.png
 /vrt-playwright/
+/**/results/
