@@ -16,12 +16,12 @@ inquirer
       default: "ripper",
       choices: [
         {
-          name: "Monkey",
-          value: "monkey",
-        },
-        {
           name: "Ripper",
           value: "ripper",
+        },
+        {
+          name: "No ejecutar",
+          value: "none",
         },
       ],
     },
@@ -40,6 +40,10 @@ inquirer
           name: "Kraken",
           value: "kraken",
         },
+        {
+          name: "No ejecutar",
+          value: "none",
+        },
       ],
     },
     {
@@ -56,6 +60,10 @@ inquirer
         {
           name: "Kraken + Backstop.js",
           value: "kraken",
+        },
+        {
+          name: "No ejecutar",
+          value: "none",
         },
       ],
     },
@@ -82,27 +90,23 @@ inquirer
           name: "Todos",
           value: "all",
         },
+        {
+          name: "No ejecutar",
+          value: "none",
+        },
       ],
-      validate: (input) => {
-        // Ensure at least one selection is made
-        if (input.length === 0) {
-          return "Debe seleccionar al menos un tipo de dato.";
-        }
-        return true; // Validation passed
-      },
     },
   ])
   .then(async (answers) => {
     console.log(answers);
     Object.keys(answers).map(async (key) => {
-      const child = await spawn(
-        "npm",
-        ["run", await scriptMap[key](answers[key])],
-        {
+      const scriptName = await scriptMap[key](answers[key]);
+      if (scriptName) {
+        const child = await spawn("npm", ["run", scriptName], {
           stdio: "inherit",
           shell: true,
-        }
-      );
+        });
+      }
     });
   });
 
@@ -112,18 +116,19 @@ const scriptMap = {
       case "monkey":
         break;
       case "ripper":
-      default:
         return "ripper";
+      default:
+        return undefined;
     }
-    return "test-script";
   },
   e2eTests: async (value) => {
     switch (value) {
       case "playwright":
         return "playwright-run";
       case "kraken":
-      default:
         return "kraken-run";
+      default:
+        return undefined;
     }
   },
   vrtTests: async (value) => {
@@ -131,8 +136,9 @@ const scriptMap = {
       case "playwright":
         return "playwright-vrt";
       case "kraken":
-      default:
         return "kraken-vrt";
+      default:
+        return undefined;
     }
   },
   dataTests: async (value) => {
@@ -144,8 +150,9 @@ const scriptMap = {
       case "rand":
         return "playwright-rand";
       case "all":
-      default:
         return "playwright-all";
+      default:
+        return undefined;
     }
   },
 };
