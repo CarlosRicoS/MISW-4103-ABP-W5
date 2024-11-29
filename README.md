@@ -21,6 +21,8 @@ Ejercicio de pruebas autoamtizadas E2E
 - **@faker-js/faker:** v9.2.0
 - **pixelmatch:** v5.3.0
 - **cross-env:** v7.0.3
+- **inquirer:** v8.2.6
+- **inquirer-tree-prompt:** v1.1.2
 
 ## Ghost
 
@@ -142,6 +144,32 @@ dirección.
     http://localhost:9323
 ```
 
+## Pruebas Automatizadas de Ghost usando RIPpuppet
+
+Se construye el siguiente repositorio en el cual se almacena el código fuente utilizado para correr las pruebas
+automizadas de Ghost usando RIPuppet.
+
+- Repositorio original (código base): https://github.com/TheSoftwareDesignLab/RIPuppetCoursera
+
+### Instrucciones para ejecutar la prueba
+
+- Para el estado coldstart antes de cada prueba, se utiliza docker con los siguientes comandos:
+
+```shell
+
+docker stop ghost-rc
+docker run -p 2368:2368 -d --rm --name ghost-rc -e NODE_ENV=development ghost:5.96.0
+```
+
+- Se ejecuta el siguiente comando para ejecutar el ripper:
+
+``` shell
+
+npm run ripper
+```
+
+- Se varia el archivo config.json para cambiar el browser después de cada prueba, asegurando el estado coldstart.
+
 ## Pruebas de regresión visual
 
 ### Playwright
@@ -159,10 +187,10 @@ El reporte de las pruebas de regresión visual se encontrará en la carpeta **./
 **.
 Este podrá ser visualizado en cualquier navegador.
 
-
 ## Pruebas con datos
 
-Para la ejecución de las pruebas aleatorias, se debe realizar instalación de los paquetes agregados nuevamente por medio del comando
+Para la ejecución de las pruebas aleatorias, se debe realizar instalación de los paquetes agregados nuevamente por medio
+del comando
 
 ``` shell
 
@@ -209,14 +237,31 @@ Para la ejecución de todas las pruebas con los 3 tipos de datos, se debe ejecut
 
 ### Backstop
 
-En el caso de Backsttop se desarrollo un script que toma las capturas de las pruebas de la nueva version y las compara con 
+En el caso de Backsttop se desarrollo un script que toma las capturas de las pruebas de la nueva version y las compara con
 las capturas de la versión base , compara las imagenes según el porcentaje de aceptación genera el reporte VRT.
 Use el siguiente comando dentro de la raíz del repositorio para correr las pruebas:
 
-```
+``` shell
+
     backstop test
 ```
 
 El reporte de las pruebas de regresión visual se encontrará en la carpeta **.\backstop_data\html_report
 **.
 
+### Ejecución estrategia de pruebas
+
+Inicialmente se deben asegurar que todos los paquetes estén correctamente instalados con los comandos
+
+``` shell
+
+    npm install --force
+    npx playwright install
+```
+
+Para realizar la ejecución completa de pruebas automatizadas ejecute el comando y seleccione las opciones de preferencia. Los valores por defecto hacen parte de la estrategia definida por el equipo.
+
+``` shell
+
+    npm start
+```
