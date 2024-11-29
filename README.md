@@ -243,7 +243,7 @@ Use el siguiente comando dentro de la raíz del repositorio para correr las prue
 
 ``` shell
 
-    backstop test
+    npm run kraken-vrt
 ```
 
 El reporte de las pruebas de regresión visual se encontrará en la carpeta **.\backstop_data\html_report
